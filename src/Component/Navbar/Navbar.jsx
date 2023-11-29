@@ -79,9 +79,8 @@ const Navbar = () => {
               </InputRightElement>
             </InputGroup>
           </Box>
-          
         </Box>
-        
+
         <Box>
           <Link href="#" color="white">
             Balance:0 Exposure:0
@@ -113,7 +112,7 @@ const Navbar = () => {
         </Menu>
       </HStack>
 
-      {/* <Stack
+      <Stack
         alignContent={"center"}
         alignItems={"center"}
         justifyContent={"center"}
@@ -123,6 +122,12 @@ const Navbar = () => {
         color="white"
         p={2}
         spacing={14}
+        overflowX={{ base: "auto", md: "visible" }}
+        css={{
+          "&::-webkit-scrollbar": {
+            display: "none",
+          },
+        }}
       >
         <NavLink to="/home">
           <Box>Cricket</Box>
@@ -160,102 +165,7 @@ const Navbar = () => {
         <NavLink to="/home">
           <Box>Lucky 7</Box>
         </NavLink>
-      </Stack> */}
-      <Stack
-      alignContent={"center"}
-      alignItems={"center"}
-      justifyContent={"center"}
-      maxW={"100%"}
-      direction={{ base: "row", md: "row" }}
-      bg="#092844"
-      color="white"
-      p={2}
-      spacing={14}
-      overflowX={{ base: "auto", md: "visible" }}
-      css={{
-        "&::-webkit-scrollbar": {
-          display: "none",
-        },
-      }}
-    >
-      <NavLink to="/home">
-        <Box>Cricket</Box>
-      </NavLink>
-      <NavLink to="/home">
-        <Box>Tennis</Box>
-      </NavLink>
-      <NavLink to="/home">
-        <Box>Football</Box>
-      </NavLink>
-      <NavLink to="/home">
-        <Box>Table tennis</Box>
-      </NavLink>
-      <NavLink to="/home">
-        <Box>Kabaddi</Box>
-      </NavLink>
-      <NavLink to="/home">
-        <Box>Basketball</Box>
-      </NavLink>
-      <NavLink to="/home">
-        <Box>VollyBall</Box>
-      </NavLink>
-      <NavLink to="/home">
-        <Box>Baccart</Box>
-      </NavLink>
-      <NavLink to="/home">
-        <Box>Cards</Box>
-      </NavLink>
-      <NavLink to="/home">
-        <Box>Teenpatti</Box>
-      </NavLink>
-      <NavLink to="/home">
-        <Box>Poker </Box>
-      </NavLink>
-      <NavLink to="/home">
-        <Box>Lucky 7</Box>
-      </NavLink>
-    </Stack>
-
-      {/* Navbar for mobile */}
-      {/* <Box display={{ base: "flex", md: "none" }}>
-        <HStack p="4" bg="teal.500" color="white" spacing="4" w="100%">
-          <Heading size="md" mr="auto">
-            My Website
-          </Heading>
-          <Box flex="1" textAlign="right">
-            <Button onClick={onOpen} colorScheme="teal" variant="outline">
-              Menu
-            </Button>
-          </Box>
-        </HStack>
-        <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
-          <DrawerOverlay>
-            <DrawerContent>
-              <DrawerCloseButton />
-              <DrawerHeader>Menu</DrawerHeader>
-              <DrawerBody>
-                <VStack spacing="4">
-                  <Link href="#" color="teal.500">
-                    Home
-                  </Link>
-                  <Link href="#" color="teal.500">
-                    About
-                  </Link>
-                  <Link href="#" color="teal.500">
-                    Services
-                  </Link>
-                  <Link href="#" color="teal.500">
-                    Contact
-                  </Link>
-                  <Button colorScheme="teal" variant="outline">
-                    Sign In
-                  </Button>
-                </VStack>
-              </DrawerBody>
-            </DrawerContent>
-          </DrawerOverlay>
-        </Drawer>
-      </Box> */}
+      </Stack>
     </Box>
   );
 };
