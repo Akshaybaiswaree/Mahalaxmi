@@ -26,6 +26,7 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import LOGO from "../images/Logo.jpg";
 import { SearchIcon } from "@chakra-ui/icons";
@@ -34,63 +35,90 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
+ 
+    const [isMobile] = useMediaQuery("(max-width: 600px)");
+
   return (
     <Box>
       {/* Navbar for desktop */}
-      <HStack bg="#2b329b" color="white" spacing="4" p={1} w="100%">
-        <Image width={"4rem"} height={"3rem"} m={3} src={LOGO}></Image>
+      <HStack
+      bg="#2b329b"
+      color="white"
+      spacing="4"
+      p={1}
+      w="100%"
+      flexWrap={isMobile ? "wrap" : "nowrap"}
+    >
+      <Image width={"4rem"} height={"3rem"} m={3} src={LOGO} />
 
-        <Box fontWeight={"600"} fontSize={"1.6rem"}>
-          Mahalakshmi
-        </Box>
+      <Box fontWeight={"600"} fontSize={isMobile ? "1.2rem" : "1.6rem"}>
+        Mahalakshmi
+      </Box>
+
+      {isMobile && (
         <Spacer />
-        <Box>
-          <NavLink to="/home">Home</NavLink>
-        </Box>
-        <Box>
-          <Box
-            as="nav"
-            bg="2b329b"
-            p={4}
-            display="flex"
-            justifyContent="space-between"
-            alignItems="center"
-            color="white"
-          >
-            {/* Your other navbar items go here */}
+      )}
 
-            {/* Search Bar */}
-            <InputGroup>
-              <Input
-                type="text"
-                placeholder="Search..."
-                borderRadius="full"
-                bg="white"
+      {isMobile ? (
+        <Box>
+          <IconButton
+            variant="ghost"
+            color="teal.500"
+            icon={<Icon as={SearchIcon} />}
+            aria-label="Search"
+          />
+        </Box>
+      ) : (
+        <Box
+          as="nav"
+          bg="2b329b"
+          p={4}
+          display="flex"
+          justifyContent="space-between"
+          alignItems="center"
+          color="white"
+        >
+          {/* Your other navbar items go here */}
+
+          {/* Search Bar */}
+          <InputGroup>
+            <Input
+              type="text"
+              placeholder="Search..."
+              borderRadius="full"
+              bg="white"
+              color="teal.500"
+              _placeholder={{ color: "teal.300" }}
+            />
+            <InputRightElement>
+              <IconButton
+                variant="ghost"
                 color="teal.500"
-                _placeholder={{ color: "teal.300" }}
+                icon={<Icon as={SearchIcon} />}
+                aria-label="Search"
               />
-              <InputRightElement>
-                <IconButton
-                  variant="ghost"
-                  color="teal.500"
-                  icon={<Icon as={SearchIcon} />}
-                  aria-label="Search"
-                />
-              </InputRightElement>
-            </InputGroup>
-          </Box>
+            </InputRightElement>
+          </InputGroup>
         </Box>
+      )}
 
-        <Box>
-          <Link href="#" color="white">
-            Balance:0 Exposure:0
-          </Link>
-        </Box>
-        <Box>
-          <Link href="#" color="white">
-            Rules
-          </Link>
-        </Box>
+      <Box>
+        <Link href="#" color="white">
+          Balance:0 Exposure:0
+        </Link>
+      </Box>
+
+      {isMobile && (
+        <Spacer />
+      )}
+
+      <Box>
+        <Link href="#" color="white">
+          Rules
+        </Link>
+      </Box>
+
+      {isMobile && (
         <Menu>
           <MenuButton m={3} variant="outline" color="white">
             Mahalakshmi{" "}
@@ -106,11 +134,12 @@ const Navbar = () => {
             <MenuItem>Set Button Values</MenuItem>
             <MenuItem>Change Password</MenuItem>
             <Button marginLeft={"0.8rem"}>SignOut</Button>
-
             {/* Add more items as needed */}
           </MenuList>
         </Menu>
-      </HStack>
+      )}
+    </HStack>
+
 
       <Stack
         alignContent={"center"}
