@@ -57,15 +57,15 @@ const Login = () => {
               </InputRightElement>
             </InputGroup>
 
-            <Button colorScheme="blue" width="100%" mb="1">
                 <NavLink to="mainpage">
+            <Button colorScheme="blue" width="100%" mb="1">
               <Flex justify="space-between" align="center">
                 <Text marginLeft="auto">Login</Text>
 
                 <LoginIcon />
               </Flex>
-                </NavLink>
             </Button>
+                </NavLink>
 
             <Text fontWeight="lighter" fontSize="sm" mb="1">
               This site is protected by reCAPTCHA and the Google{" "}
@@ -73,14 +73,14 @@ const Login = () => {
               <a href="#">Terms of Service</a> apply.
             </Text>
 
+              <NavLink to="mainpage">
             <Button colorScheme="blue" width="100%">
               <Flex justify="space-between" align="center">
-              <NavLink to="mainpage">
                 LogIn with Demo
-                </NavLink>
                 <Icon icon="entypo:login" ml={2} />
               </Flex>
             </Button>
+                </NavLink>
           </Box>
         </Box>
       </Box>

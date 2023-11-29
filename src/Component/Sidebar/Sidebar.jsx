@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ChevronDownIcon, ChevronUpIcon } from "@chakra-ui/icons";
 
 import "./Sidebar.css";
+import { Box } from "@chakra-ui/react";
 
 class Sidebar extends React.Component {
   constructor(props) {
@@ -48,11 +49,15 @@ class Sidebar extends React.Component {
             }}
           >
             Casino
+            <Box>
             {this.state.showSidebar ? (
-              <ChevronUpIcon color="white" />
+              <ChevronUpIcon 
+            
+              color="white" />
             ) : (
               <ChevronDownIcon color="white" />
             )}
+            </Box>
           </h1>
         </button>
         {this.state.showSidebar && (

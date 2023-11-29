@@ -1,0 +1,375 @@
+
+
+import { ChakraProvider, Box, Text, Flex, Center, Tooltip } from "@chakra-ui/react";
+import { Icon } from "@iconify/react";
+import { AspectRatio } from "@chakra-ui/react";
+
+const AndarBahar= () => {
+  return (
+    <>
+      <ChakraProvider>
+        {/* {/ AsideSection /} */}
+        <Box width="100%">
+        <Flex
+          direction={{ base: 'column', md: 'row' }}
+          justify="space-evenly"
+        
+        >
+          {/* {/ AsideSection /} */}
+          <Box
+            flex="1"
+            bgColor="#333"
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            position="relative"
+            width={{ base: '100%', md: '10%' }}
+            height="500px"
+            p={4}
+          >
+            <AspectRatio width="100%" height="500px" borderRadius="10px" controls>
+              <iframe
+                title="naruto"
+                src="https://www.youtube.com/embed/QhBnZ6NPOY0"
+                allowFullScreen
+                style={{ objectFit: 'cover', borderRadius: '10px' }}
+              />
+            </AspectRatio>
+            <Flex
+              position="absolute"
+              bottom="0"
+              width="100%"
+              justifyContent="space-between"
+              padding="10px"
+            >
+              <Text color="white" position="absolute" left="10px">
+                Volume
+              </Text>
+              <Text color="white" position="absolute" right="10px">
+                00:00 / 05:30
+              </Text>
+            </Flex>
+          </Box>
+
+          {/* {/ SmallAsideSection /} */}
+          <Box  width={{ base: '100%', md: '30%' }}>
+          <Flex direction="column">
+            <Box
+              mt={2}
+              width="100%"
+              height="30px"
+              bg="#2e4860"
+              borderTopRadius="5px"
+              borderTopRightRadius="5px"
+            >
+              <Flex align="center" ml={2}>
+                <Text color="white">Place Bet</Text>
+              </Flex>
+            </Box>
+            <Box
+              width="100%"
+              height="30px"
+              bg="#2e4860"
+              mt={1}
+              borderTopRadius="5px"
+              borderTopRightRadius="5px"
+            >
+              <Flex align="center" ml={2}>
+                <Text color="white">My Bet</Text>
+              </Flex>
+            </Box>
+
+            {/* {/ Additional SmallAsideSection content /} */}
+            <Box width="100%" height="30px" bg="#cccccc" mt={1} ml={1} borderBottom="2px"
+              borderBottomColor="black.200">
+              <Flex align="center" justify="space-between" height="100%" px={2} >
+                <Text color="white" fontWeight="600">
+                  Match bet
+                </Text>
+                <Text color="white" fontWeight="600">
+                  Odds
+                </Text>
+                <Text color="white" fontWeight="600">
+                  Stacks
+                </Text>
+              </Flex>
+            </Box>
+            <Box width="99%" height="30px" bg="white" borderBottom="1px"  borderBottomColor="gray.200">
+              <Text textAlign="center">No records Found</Text>
+            </Box>
+          </Flex>
+          </Box>
+        </Flex>
+        </Box>
+
+        {/* {/ CardBahar /} */}
+        <Box width="100%" height="400px" mt={3}>
+          <Text fontWeight="bold">1st Card Bahar 25%:</Text>
+          <Box width="100%" >
+            <Flex
+              justify="space-between"
+              align="center"
+              mr={3}
+              bg="#90ee90"
+              border="1px"
+              borderColor="black.200"
+            >
+              <Text fontWeight="600" m={3}>
+                Bahar
+              </Text>
+              <Box
+                width="40%"
+                height="50px"
+                m={3}
+                bg="#72bbef"
+                position="relative"
+              >
+                <Center height="100%">
+                  <Tooltip label="Locked" placement="top">
+                    <Icon
+                      icon="material-symbols:lock-sharp"
+                      fontSize="20px"
+                      color="white"
+                      zIndex="1"
+                      position="absolute"
+                      top="50%"
+                      left="50%"
+                      transform="translate(-50%, -50%)"
+                    />
+                  </Tooltip>
+                </Center>
+                <Center height="100%">
+                  <Text
+                    fontSize="xl"
+                    fontWeight="bold"
+                    zIndex="1"
+                    color="black"
+                    position="absolute"
+                    top="50%"
+                    left="50%"
+                    transform="translate(-50%, -50%)"
+                  >
+                    123
+                  </Text>
+                </Center>
+              </Box>
+            </Flex>
+            <Flex
+              justify="space-between"
+              align="center"
+              mr={3}
+              bg="#ffa07a"
+              borderBottom="1px"
+              borderBottomColor="black.200"
+              borderLeft="1px"
+              borderLeftColor="black.200"
+              borderRight="1px"
+              borderRightColor="black.200"
+            >
+              <Text fontWeight="600" m={3}>
+                Andar
+              </Text>
+              <Box
+                width="40%"
+                height="50px"
+                m={3}
+                bg="#72bbef"
+                position="relative"
+              >
+                <Center height="100%">
+                  <Tooltip label="Locked" placement="top">
+                    <Icon
+                      icon="material-symbols:lock-sharp"
+                      fontSize="20px"
+                      color="white"
+                      zIndex="1"
+                      position="absolute"
+                      top="50%"
+                      left="50%"
+                      transform="translate(-50%, -50%)"
+                    />
+                  </Tooltip>
+                </Center>
+                <Center height="100%">
+                  <Text
+                    fontSize="xl"
+                    fontWeight="bold"
+                    zIndex="1"
+                    color="black"
+                    position="absolute"
+                    top="50%"
+                    left="50%"
+                    transform="translate(-50%, -50%)"
+                  >
+                    123
+                  </Text>
+                </Center>
+              </Box>
+            </Flex>
+          </Box>
+
+          {/* {/ Last Results /} */}
+          <Box width="100%" height="30px" bg="#2e4860" mt={3}>
+            <Flex align="center" ml={2}>
+              <Text color="white">Last Results</Text>
+            </Flex>
+          </Box>
+
+          {/* {/ Small circles /} */}
+          <Flex justify="flex-end" align="center">
+            {/* {/  for Circle  /}
+             {/ Circle 1 /} */}
+             <Box
+              width="2rem"
+              height="2rem"
+              borderRadius="50%"
+              bgColor="#355e3b"
+              display="flex"
+              align="center"
+              justify="center"
+              margin="5px"
+            >
+              <Text color="white" fontWeight="bold" fontSize="lg" >
+                A
+              </Text>
+            </Box>
+
+            {/* {/ Circle 2 /} */}
+            <Box
+              width="2rem"
+              height="2rem"
+              borderRadius="50%"
+              bgColor="#355e3b"
+              display="flex"
+              align="center"
+              justify="center"
+              margin="5px"
+            >
+              <Text color="white" fontWeight="bold" fontSize="lg">
+                B
+              </Text>
+            </Box>
+            {/* {/ 3rd Circle /} */}
+
+            <Box
+              width="2rem"
+              height="2rem"
+              borderRadius="50%"
+              bgColor="#355e3b"
+              display="flex"
+              align="center"
+              justify="center"
+              margin="5px"
+            >
+              <Text color="white" fontWeight="bold" fontSize="lg">
+                A
+              </Text>
+            </Box>
+            {/* {/ 4TH Circle /} */}
+            <Box
+              width="2rem"
+              height="2rem"
+              borderRadius="50%"
+              bgColor="#355e3b"
+              display="flex"
+              align="center"
+              justify="center"
+              margin="5px"
+            >
+              <Text color="white" fontWeight="bold" fontSize="lg">
+                A
+              </Text>
+            </Box>
+
+            {/* {/ 5th Circle /} */}
+            <Box
+              width="2rem"
+              height="2rem"
+              borderRadius="50%"
+              bgColor="#355e3b"
+              display="flex"
+              align="center"
+              justify="center"
+              margin="5px"
+            >
+              <Text color="white" fontWeight="bold" fontSize="lg">
+                A
+              </Text>
+            </Box>
+            {/* {/ 6th Circle /} */}
+            <Box
+              width="2rem"
+              height="2rem"
+              borderRadius="50%"
+              bgColor="#355e3b"
+              display="flex"
+              align="center"
+              justify="center"
+              margin="5px"
+            >
+              <Text color="white" fontWeight="bold" fontSize="lg">
+                A
+              </Text>
+            </Box>
+
+            {/* {/ 7th Circle /} */}
+            <Box
+              width="2rem"
+              height="2rem"
+              borderRadius="50%"
+              bgColor="#355e3b"
+              display="flex"
+              align="center"
+              justify="center"
+              margin="5px"
+            >
+              <Text color="white" fontWeight="bold" fontSize="lg">
+                A
+              </Text>
+            </Box>
+
+            {/* {/ 8th Circle /} */}
+            <Box
+              width="2rem"
+              height="2rem"
+              borderRadius="50%"
+              bgColor="#355e3b"
+              display="flex"
+              align="center"
+              justify="center"
+              margin="5px"
+            >
+              <Text color="white" fontWeight="bold" fontSize="lg">
+                A
+              </Text>
+            </Box>
+
+            {/* {/ 9th Circle /} */}
+            <Box
+              width="2rem"
+              height="2rem"
+              borderRadius="50%"
+              bgColor="#355e3b"
+              display="flex"
+              align="center"
+              justify="center"
+              margin="5px"
+            >
+              <Text
+                color="white"
+                fontWeight="bold"
+                fontSize="lg"
+                textAlign="center"
+              >
+                A
+              </Text>
+            </Box>
+
+          </Flex>
+        </Box>
+      </ChakraProvider>
+    </>
+  );
+};
+
+export default AndarBahar;
