@@ -145,7 +145,7 @@ const AndarBahar = () => {
         </Box>
 
         {/* {/ CardBahar /} */}
-        <Box width={{ base: "100%", md: "71%" }} height="400px" mt={3}>
+        <Box width={{ base: "100%", md: "62%" }} height="400px" mt={3}>
           <Text fontWeight="bold">1st Card Bahar 25%:</Text>
           <Box width="100%">
             <Flex

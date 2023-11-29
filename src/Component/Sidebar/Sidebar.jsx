@@ -191,7 +191,6 @@ class Sidebar extends React.Component {
                 style={{
                   backgroundColor: "#2B329B",
                   padding: "1em 1em",
-                  marginBottom: "15em",
                   width: "100%",
                   position: "relative",
                   color: "white",

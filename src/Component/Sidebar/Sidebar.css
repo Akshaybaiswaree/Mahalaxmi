@@ -46,14 +46,14 @@
 #Bottom{
     position: relative;
     /* bottom:14em ; */
-    margin-bottom: 5em;
+    /* margin-bottom: 5rem; */
 }
 
 #Politics {
     position: relative;
-    top: 1em;
-    margin-bottom: 12em;
-    background-color: lightgray; /* Light gray background */
+    bottom: 1em;
+    margin-bottom: 4em;
+    background-color: rgb(39, 17, 17); /* Light gray background */
   }
   
   #Politics h2 {
