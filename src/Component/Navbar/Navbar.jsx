@@ -29,7 +29,6 @@ import {
 } from "@chakra-ui/react";
 import LOGO from "../images/Logo.jpg";
 import { SearchIcon } from "@chakra-ui/icons";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
@@ -38,13 +37,12 @@ const Navbar = () => {
   return (
     <Box>
       {/* Navbar for desktop */}
-      <HStack p="4" bg="teal.500" color="white" spacing="4" w="100%">
-        <Image width={"4rem"} height={"3rem"} src={LOGO}></Image>
+      <HStack bg="#2b329b" color="white" spacing="4" p={1} w="100%">
+        <Image width={"4rem"} height={"3rem"} m={3} src={LOGO}></Image>
 
         <Box fontWeight={"600"} fontSize={"1.6rem"}>
-          Cricket Buzz
+          Mahalakshmi
         </Box>
-
         <Spacer />
         <Box>
           <NavLink to="/home">Home</NavLink>
@@ -52,7 +50,7 @@ const Navbar = () => {
         <Box>
           <Box
             as="nav"
-            bg="teal.500"
+            bg="2b329b"
             p={4}
             display="flex"
             justifyContent="space-between"
@@ -81,7 +79,9 @@ const Navbar = () => {
               </InputRightElement>
             </InputGroup>
           </Box>
+          
         </Box>
+        
         <Box>
           <Link href="#" color="white">
             Balance:0 Exposure:0
@@ -92,15 +92,12 @@ const Navbar = () => {
             Rules
           </Link>
         </Box>
-
         <Menu>
-          <MenuButton
-            as={Button}
-            colorScheme="teal"
-            variant="outline"
-            color="blue"
-          >
-            CricketBuzz
+          <MenuButton m={3} variant="outline" color="white">
+            Mahalakshmi{" "}
+            <span>
+              <Icon icon="icon-park:down" />
+            </span>
           </MenuButton>
           <MenuList color={"black"}>
             <MenuItem>Account Statement</MenuItem>
@@ -115,15 +112,16 @@ const Navbar = () => {
           </MenuList>
         </Menu>
       </HStack>
-      <Stack
+
+      {/* <Stack
         alignContent={"center"}
         alignItems={"center"}
         justifyContent={"center"}
         maxW={"100%"}
         direction={{ base: "row", md: "row" }}
-        bg="blue.500"
+        bg="#092844"
         color="white"
-        p={4}
+        p={2}
         spacing={14}
       >
         <NavLink to="/home">
@@ -162,7 +160,61 @@ const Navbar = () => {
         <NavLink to="/home">
           <Box>Lucky 7</Box>
         </NavLink>
-      </Stack>
+      </Stack> */}
+      <Stack
+      alignContent={"center"}
+      alignItems={"center"}
+      justifyContent={"center"}
+      maxW={"100%"}
+      direction={{ base: "row", md: "row" }}
+      bg="#092844"
+      color="white"
+      p={2}
+      spacing={14}
+      overflowX={{ base: "auto", md: "visible" }}
+      css={{
+        "&::-webkit-scrollbar": {
+          display: "none",
+        },
+      }}
+    >
+      <NavLink to="/home">
+        <Box>Cricket</Box>
+      </NavLink>
+      <NavLink to="/home">
+        <Box>Tennis</Box>
+      </NavLink>
+      <NavLink to="/home">
+        <Box>Football</Box>
+      </NavLink>
+      <NavLink to="/home">
+        <Box>Table tennis</Box>
+      </NavLink>
+      <NavLink to="/home">
+        <Box>Kabaddi</Box>
+      </NavLink>
+      <NavLink to="/home">
+        <Box>Basketball</Box>
+      </NavLink>
+      <NavLink to="/home">
+        <Box>VollyBall</Box>
+      </NavLink>
+      <NavLink to="/home">
+        <Box>Baccart</Box>
+      </NavLink>
+      <NavLink to="/home">
+        <Box>Cards</Box>
+      </NavLink>
+      <NavLink to="/home">
+        <Box>Teenpatti</Box>
+      </NavLink>
+      <NavLink to="/home">
+        <Box>Poker </Box>
+      </NavLink>
+      <NavLink to="/home">
+        <Box>Lucky 7</Box>
+      </NavLink>
+    </Stack>
 
       {/* Navbar for mobile */}
       {/* <Box display={{ base: "flex", md: "none" }}>

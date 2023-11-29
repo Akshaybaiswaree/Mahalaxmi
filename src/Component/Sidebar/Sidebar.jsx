@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { ChevronDownIcon, ChevronUpIcon } from "@chakra-ui/icons";
+import { ChevronDownIcon, ChevronUpIcon,} from "@chakra-ui/icons";
 
 import "./Sidebar.css";
 import { Box } from "@chakra-ui/react";
@@ -8,7 +8,7 @@ import { Box } from "@chakra-ui/react";
 class Sidebar extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { showSidebar: false };
+    this.state = { showSidebar: true};
   }
 
   toggleSidebar = () => {
@@ -25,13 +25,13 @@ class Sidebar extends React.Component {
 
   render() {
     return (
-      <div style={{background:"#2b329b"}}>
+      <div className="sideBar_btn_NavLind" style={{background:"#2b329b"}}>
         <button
           onClick={this.toggleSidebar}
           style={{
             backgroundColor: "#2B329B",
             padding: "1em 1em",
-            width: "20%",
+            // width: "10%",
             position: "relative",
             color: "white",
           }}

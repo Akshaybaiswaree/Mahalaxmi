@@ -1,10 +1,7 @@
 .sidebar {
-    width: 20vw; /* 20% of the viewport width */
-    height: 100vh; /* 100% of the viewport height */
+    width: 20vw; 
     background-color: rgb(188, 188, 188);
-    position: fixed;
-    overflow: auto;
- 
+    
 }
 
 .sidebar ul {
@@ -48,7 +45,7 @@
 }
 #Bottom{
     position: relative;
-    bottom:14em ;
+    /* bottom:14em ; */
     margin-bottom: 5em;
 }
 
@@ -71,3 +68,26 @@
     display: block; /* Show the p elements when the .show class is added */
   }
   
+  @media screen and (min-width : 320px){
+        .sideBar_btn_NavLind{
+            display: none;
+        }
+        
+  }
+
+  @media screen and (min-width : 768px){
+    .sideBar_btn_NavLind{
+        display: block;
+    }
+  }
+
+  /* @media screen and (max-width : 1024px){
+    .sideBar_btn_NavLind{
+        display: block;
+    }
+}
+@media screen and (max-width : 1440px){
+    .sideBar_btn_NavLind{
+        display: block;
+    }
+} */

@@ -1,86 +1,129 @@
-
-
-import { ChakraProvider, Box, Text, Flex, Center, Tooltip } from "@chakra-ui/react";
+import {
+  ChakraProvider,
+  Box,
+  Text,
+  Flex,
+  Center,
+  Tooltip,
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+  AccordionIcon,
+  NumberInput,
+  NumberInputField,
+  NumberInputStepper,
+  NumberIncrementStepper,
+  NumberDecrementStepper,
+  Button,
+  WrapItem,
+} from "@chakra-ui/react";
 import { Icon } from "@iconify/react";
 import { AspectRatio } from "@chakra-ui/react";
 
-const AndarBahar= () => {
+const AndarBahar = () => {
   return (
     <>
       <ChakraProvider>
         {/* {/ AsideSection /} */}
         <Box width="100%">
-        <Flex
-          direction={{ base: 'column', md: 'row' }}
-          justify="space-evenly"
-        
-        >
-          {/* {/ AsideSection /} */}
-          <Box
-            flex="1"
-            bgColor="#333"
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-            position="relative"
-            width={{ base: '100%', md: '10%' }}
-            height="500px"
-            p={4}
+          <Flex
+            direction={{ base: "column", md: "row" }}
+            justify="space-evenly"
+            flex="wrap"
+            gap={1}
           >
-            <AspectRatio width="100%" height="500px" borderRadius="10px" controls>
-              <iframe
-                title="naruto"
-                src="https://www.youtube.com/embed/QhBnZ6NPOY0"
-                allowFullScreen
-                style={{ objectFit: 'cover', borderRadius: '10px' }}
-              />
-            </AspectRatio>
-            <Flex
-              position="absolute"
-              bottom="0"
-              width="100%"
-              justifyContent="space-between"
-              padding="10px"
-            >
-              <Text color="white" position="absolute" left="10px">
-                Volume
-              </Text>
-              <Text color="white" position="absolute" right="10px">
-                00:00 / 05:30
-              </Text>
-            </Flex>
-          </Box>
-
-          {/* {/ SmallAsideSection /} */}
-          <Box  width={{ base: '100%', md: '30%' }}>
-          <Flex direction="column">
+            {/* {/ AsideSection /} */}
             <Box
-              mt={2}
-              width="100%"
-              height="30px"
-              bg="#2e4860"
-              borderTopRadius="5px"
-              borderTopRightRadius="5px"
+              flex="1"
+              bgColor="#333"
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+              position="relative"
+              width={{ base: "100%", md: "10%" }}
+              height="500px"
+              p={2}
             >
-              <Flex align="center" ml={2}>
-                <Text color="white">Place Bet</Text>
-              </Flex>
-            </Box>
-            <Box
-              width="100%"
-              height="30px"
-              bg="#2e4860"
-              mt={1}
-              borderTopRadius="5px"
-              borderTopRightRadius="5px"
-            >
-              <Flex align="center" ml={2}>
-                <Text color="white">My Bet</Text>
+              <AspectRatio
+                width="100%"
+                height="500px"
+                borderRadius="10px"
+                controls
+              >
+                <iframe
+                  title="naruto"
+                  src="https://www.youtube.com/embed/QhBnZ6NPOY0"
+                  allowFullScreen
+                  style={{ objectFit: "cover", borderRadius: "10px" }}
+                />
+              </AspectRatio>
+              <Flex
+                position="absolute"
+                bottom="0"
+                width="100%"
+                justifyContent="space-between"
+                padding="10px"
+              >
+                <Text color="white" position="absolute" left="10px" bottom="10px">
+                  Volume
+                </Text>
+                <Text color="white" position="absolute" right="10px" bottom="10px">
+                  00:00 / 05:30
+                </Text>
               </Flex>
             </Box>
 
-            {/* {/ Additional SmallAsideSection content /} */}
-            <Box width="100%" height="30px" bg="#cccccc" mt={1} ml={1} borderBottom="2px"
+            {/* {/ SmallAsideSection /} */}
+            <Accordion width={{ base: "100%", md: "40%" }} >
+              <AccordionItem bg="#092844" color="white" borderLeftRadius="5">
+                <h2>
+                  <AccordionButton>
+                    <Box as="span" flex="1" textAlign="left">
+                      Place Bet
+                    </Box>
+                    <AccordionIcon/>
+                  </AccordionButton>
+                </h2>
+                <AccordionPanel pb={4}>
+                  
+                  <NumberInput>
+                    <NumberInputField />
+                    <NumberInputStepper>
+                      <NumberIncrementStepper  color="white"/>
+                      <NumberDecrementStepper color="white"/>
+                    </NumberInputStepper>
+                  </NumberInput>
+                  <Flex justify="space-around" m={3}>
+                    <WrapItem>
+                      <Button colorScheme="red" size="lg">
+                        Andar
+                      </Button>
+                    </WrapItem>
+                    <WrapItem>
+                      <Button colorScheme="green" size="lg">
+                        Bahar
+                      </Button>
+                    </WrapItem>
+                  </Flex>
+                </AccordionPanel>
+              </AccordionItem>
+              <AccordionItem bg="#092844" color="white" borderLeftRadius="5"> 
+                <h2>
+                  <AccordionButton>
+                    <Box as="span" flex="1" textAlign="left">
+                      My Bet
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+                </h2>
+                <AccordionPanel pb={4}>
+                  <h1>Your Coins</h1>
+                </AccordionPanel>
+              </AccordionItem>
+
+             
+              <Box width="100%" height="30px" bg="#cccccc" mt={1} ml={1} borderBottom="2px"
               borderBottomColor="black.200">
               <Flex align="center" justify="space-between" height="100%" px={2} >
                 <Text color="white" fontWeight="600">
@@ -97,15 +140,14 @@ const AndarBahar= () => {
             <Box width="99%" height="30px" bg="white" borderBottom="1px"  borderBottomColor="gray.200">
               <Text textAlign="center">No records Found</Text>
             </Box>
+            </Accordion>
           </Flex>
-          </Box>
-        </Flex>
         </Box>
 
         {/* {/ CardBahar /} */}
-        <Box width="100%" height="400px" mt={3}>
+        <Box width={{ base: "100%", md: "71%" }} height="400px" mt={3}>
           <Text fontWeight="bold">1st Card Bahar 25%:</Text>
-          <Box width="100%" >
+          <Box width="100%">
             <Flex
               justify="space-between"
               align="center"
@@ -219,7 +261,7 @@ const AndarBahar= () => {
           <Flex justify="flex-end" align="center">
             {/* {/  for Circle  /}
              {/ Circle 1 /} */}
-             <Box
+            <Box
               width="2rem"
               height="2rem"
               borderRadius="50%"
@@ -229,7 +271,7 @@ const AndarBahar= () => {
               justify="center"
               margin="5px"
             >
-              <Text color="white" fontWeight="bold" fontSize="lg" >
+              <Text color="white" fontWeight="bold" fontSize="lg">
                 A
               </Text>
             </Box>
@@ -364,7 +406,6 @@ const AndarBahar= () => {
                 A
               </Text>
             </Box>
-
           </Flex>
         </Box>
       </ChakraProvider>
