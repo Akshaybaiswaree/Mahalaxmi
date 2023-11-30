@@ -30,7 +30,7 @@ import {
   useMediaQuery,
 } from "@chakra-ui/react";
 // import Marquee from "react-marquee-slider";
-import Logo from "@/assets/Logo.png";
+import LOGO from "@/assets/Logo.png";
 import { SearchIcon } from "@chakra-ui/icons";
 import { NavLink } from "react-router-dom";
 // import Marquee from "react-marquee-slider";
@@ -155,7 +155,7 @@ const Navbar = () => {
         bg="#092844"
         color="white"
         p={2}
-        spacing={14}
+        spacing={12}
         overflowX={{ base: "auto", md: "visible" }}
         css={{
           "&::-webkit-scrollbar": {
@@ -205,6 +205,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
-// mr="8rem" mt="1.9rem"
