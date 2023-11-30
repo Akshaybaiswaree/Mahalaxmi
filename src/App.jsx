@@ -12,7 +12,7 @@ import Home from "./Component/Home/Home";
 import AndarBahar from "./Component/Home/Games/Andarbahar";
 
 const router = createBrowserRouter(
-  createRoutesFromElements(
+  createRoutesFromElements( 
     <Route>
       <Route index element={<Login />} />
       <Route path="/" element={<RootLayout />}>
