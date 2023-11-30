@@ -2,6 +2,7 @@ import {
   ChakraProvider,
   Box,
   HStack,
+  Flex,
   VStack,
   Link,
   Button,
@@ -27,18 +28,20 @@ import {
   MenuList,
   MenuItem,
 } from "@chakra-ui/react";
-import LOGO from "../images/Logo.jpg";
+// import Marquee from "react-marquee-slider";
+import Logo from "@/assets/Logo.png";
 import { SearchIcon } from "@chakra-ui/icons";
 import { NavLink } from "react-router-dom";
+// import Marquee from "react-marquee-slider";
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <Box>
+    <Box width="100">
       {/* Navbar for desktop */}
-      <HStack bg="#2b329b" color="white" spacing="4" p={1} w="100%">
-        <Image width={"4rem"} height={"3rem"} m={3} src={LOGO}></Image>
+      <HStack bg="#2b329b" color="white" spacing="2"  w="100%" position="relative">
+        <Image width={"5rem"} height={"4rem"} m={3} src={Logo}></Image>
 
         <Box fontWeight={"600"} fontSize={"1.6rem"}>
           Mahalakshmi
@@ -79,26 +82,31 @@ const Navbar = () => {
               </InputRightElement>
             </InputGroup>
           </Box>
-          
         </Box>
-        
+
         <Box>
           <Link href="#" color="white">
             Balance:0 Exposure:0
           </Link>
         </Box>
-        <Box>
+        <Box >
           <Link href="#" color="white">
             Rules
           </Link>
         </Box>
+        <marquee width="50%" position="absolute" bottom="3rem">
+          <Text>This is an example of html marquee</Text>
+        </marquee>
         <Menu>
-          <MenuButton m={3} variant="outline" color="white">
-            Mahalakshmi{" "}
-            <span>
+
+          <MenuButton variant="outline" color="white">
+            <Text>Mahalakshmi{" "}  <span>
               <Icon icon="icon-park:down" />
-            </span>
+            </span></Text>
+            
           </MenuButton>
+        {/* <marquee>This is an example of html marquee </marquee>   */}
+         
           <MenuList color={"black"}>
             <MenuItem>Account Statement</MenuItem>
             <MenuItem>Profile Loss Report</MenuItem>
@@ -113,7 +121,8 @@ const Navbar = () => {
         </Menu>
       </HStack>
 
-      {/* <Stack
+      
+      <Stack
         alignContent={"center"}
         alignItems={"center"}
         justifyContent={"center"}
@@ -123,6 +132,12 @@ const Navbar = () => {
         color="white"
         p={2}
         spacing={14}
+        overflowX={{ base: "auto", md: "visible" }}
+        css={{
+          "&::-webkit-scrollbar": {
+            display: "none",
+          },
+        }}
       >
         <NavLink to="/home">
           <Box>Cricket</Box>
@@ -160,104 +175,15 @@ const Navbar = () => {
         <NavLink to="/home">
           <Box>Lucky 7</Box>
         </NavLink>
-      </Stack> */}
-      <Stack
-      alignContent={"center"}
-      alignItems={"center"}
-      justifyContent={"center"}
-      maxW={"100%"}
-      direction={{ base: "row", md: "row" }}
-      bg="#092844"
-      color="white"
-      p={2}
-      spacing={14}
-      overflowX={{ base: "auto", md: "visible" }}
-      css={{
-        "&::-webkit-scrollbar": {
-          display: "none",
-        },
-      }}
-    >
-      <NavLink to="/home">
-        <Box>Cricket</Box>
-      </NavLink>
-      <NavLink to="/home">
-        <Box>Tennis</Box>
-      </NavLink>
-      <NavLink to="/home">
-        <Box>Football</Box>
-      </NavLink>
-      <NavLink to="/home">
-        <Box>Table tennis</Box>
-      </NavLink>
-      <NavLink to="/home">
-        <Box>Kabaddi</Box>
-      </NavLink>
-      <NavLink to="/home">
-        <Box>Basketball</Box>
-      </NavLink>
-      <NavLink to="/home">
-        <Box>VollyBall</Box>
-      </NavLink>
-      <NavLink to="/home">
-        <Box>Baccart</Box>
-      </NavLink>
-      <NavLink to="/home">
-        <Box>Cards</Box>
-      </NavLink>
-      <NavLink to="/home">
-        <Box>Teenpatti</Box>
-      </NavLink>
-      <NavLink to="/home">
-        <Box>Poker </Box>
-      </NavLink>
-      <NavLink to="/home">
-        <Box>Lucky 7</Box>
-      </NavLink>
-    </Stack>
+      </Stack>
 
       {/* Navbar for mobile */}
-      {/* <Box display={{ base: "flex", md: "none" }}>
-        <HStack p="4" bg="teal.500" color="white" spacing="4" w="100%">
-          <Heading size="md" mr="auto">
-            My Website
-          </Heading>
-          <Box flex="1" textAlign="right">
-            <Button onClick={onOpen} colorScheme="teal" variant="outline">
-              Menu
-            </Button>
-          </Box>
-        </HStack>
-        <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
-          <DrawerOverlay>
-            <DrawerContent>
-              <DrawerCloseButton />
-              <DrawerHeader>Menu</DrawerHeader>
-              <DrawerBody>
-                <VStack spacing="4">
-                  <Link href="#" color="teal.500">
-                    Home
-                  </Link>
-                  <Link href="#" color="teal.500">
-                    About
-                  </Link>
-                  <Link href="#" color="teal.500">
-                    Services
-                  </Link>
-                  <Link href="#" color="teal.500">
-                    Contact
-                  </Link>
-                  <Button colorScheme="teal" variant="outline">
-                    Sign In
-                  </Button>
-                </VStack>
-              </DrawerBody>
-            </DrawerContent>
-          </DrawerOverlay>
-        </Drawer>
-      </Box> */}
+     
     </Box>
   );
 };
 
 export default Navbar;
+
+
+// mr="8rem" mt="1.9rem"

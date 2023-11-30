@@ -34,36 +34,25 @@ import Cardsv from '../images/32cardsA_v.jpeg'
  import WorldMatka from "../images/worli_v.jpeg";
 import { NavLink } from 'react-router-dom'
 
-
-
-
-
-
-
-
-
-
 const Home = () => {
   return (
-
-
 <>
-<Box className="Home" padding="4">
-      <Heading as="h1" textAlign="center" marginBottom="4">
+<Box className="Home" padding="4"  >
+      <Heading as="h1" textAlign="center" marginBottom="4"  >
         Our Casino
       </Heading>
 
-      <Grid templateColumns={{ base: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)', lg: 'repeat(6, 1fr)' }} gap={6}>
-        <GridItem colSpan={{ base: 2, md: 1 }}>
+      <Grid templateColumns={{ base: 'repeat(3, 1fr)', md: 'repeat(3, 1fr)', lg: 'repeat(6, 1fr)' }} gap={6}>
+        <GridItem >
         <NavLink to="/andarbahar">
           <Box className="custom-box">
             <Image src={War} alt="Casino-war" />
-            <span>CASINO WAR</span>
+            <span >CASINO WAR</span>
           </Box>
             </NavLink>
         </GridItem>
 
-        <GridItem colSpan={{ base: 2, md: 1 }}>
+        <GridItem >
         <NavLink to="/andarbahar">
           <Box className="custom-box">
             <Image src={Teenpatti} alt="teenpatti" />
@@ -73,7 +62,7 @@ const Home = () => {
         </GridItem>
 
 
-        <GridItem colSpan={{ base: 2, md: 1 }}>
+        <GridItem >
         <NavLink to="/andarbahar">
           <Box className="custom-box">
             <Image src={fluid} alt="teenpatti" />
@@ -82,7 +71,7 @@ const Home = () => {
           </NavLink>
         </GridItem>
 
-        <GridItem colSpan={{ base: 2, md: 1 }}>
+        <GridItem >
         <NavLink to="/andarbahar">
           <Box className="custom-box">
             <Image src={Worlimatka} alt="teenpatti" />
@@ -91,7 +80,7 @@ const Home = () => {
           </NavLink>
         </GridItem>
 
-        <GridItem colSpan={{ base: 2, md: 1 }}>
+        <GridItem >
             <NavLink to="/andarbahar">
           <Box className="custom-box">
             <Image src={andarBahar} alt="teenpatti" />
@@ -100,7 +89,7 @@ const Home = () => {
           </NavLink>
         </GridItem>
 
-        <GridItem colSpan={{ base: 2, md: 1 }}>
+        <GridItem >
         <NavLink to="/andarbahar">
           <Box className="custom-box">
             <Image src={WorldMatka} alt="teenpatti" />
@@ -109,14 +98,14 @@ const Home = () => {
           </NavLink>
         </GridItem>
 
-        <GridItem colSpan={{ base: 2, md: 1 }}>
+        <GridItem >
           <Box className="custom-box">
             <Image src={Race2020} alt="teenpatti" />
             <span> RACE 20-20</span>
           </Box>
         </GridItem>
 
-        <GridItem colSpan={{ base: 2, md: 1 }}>
+        <GridItem >
         <NavLink to="/andarbahar">
           <Box className="custom-box">
             <Image src={Race2020} alt="teenpatti" />
@@ -125,42 +114,42 @@ const Home = () => {
           </NavLink>
         </GridItem>
 
-        <GridItem colSpan={{ base: 2, md: 1 }}>
+        <GridItem >
           <Box className="custom-box">
             <Image src={Casinometer} alt="teenpatti" />
             <span>   CASINO METER</span>
           </Box>
         </GridItem>
 
-        <GridItem colSpan={{ base: 2, md: 1 }}>
+        <GridItem >
           <Box className="custom-box">
             <Image src={fluid} alt="teenpatti" />
             <span> 20-20 POKER</span>
           </Box>
         </GridItem>
 
-        <GridItem colSpan={{ base: 2, md: 1 }}>
+        <GridItem >
           <Box className="custom-box">
             <Image src={Trio} alt="teenpatti" />
             <span>  TRIO</span>
           </Box>
         </GridItem>
 
-        <GridItem colSpan={{ base: 2, md: 1 }}>
+        <GridItem >
           <Box className="custom-box">
             <Image src={Roulette} alt="teenpatti" />
             <span> ROULETTE</span>
           </Box>
         </GridItem>
 
-        <GridItem colSpan={{ base: 2, md: 1 }}>
+        <GridItem >
           <Box className="custom-box">
             <Image src={CardCasino} alt="teenpatti" />
             <span>   CARD CASINO.</span>
           </Box>
         </GridItem>
 
-        <GridItem colSpan={{ base: 2, md: 1 }}>
+        <GridItem >
           <Box className="custom-box">
             <Image src={aaa} alt="teenpatti" />
             <span>    AMAR
@@ -169,21 +158,21 @@ const Home = () => {
           </Box>
         </GridItem>
 
-        <GridItem colSpan={{ base: 2, md: 1 }}>
+        <GridItem >
           <Box className="custom-box">
             <Image src={trap} alt="teenpatti" />
             <span> Trap</span>
           </Box>
         </GridItem>
 
-        <GridItem colSpan={{ base: 2, md: 1 }}>
+        <GridItem >
           <Box className="custom-box">
             <Image src={DragonTigerv} alt="teenpatti" />
             <span>   DRAGON TIGER</span>
           </Box>
         </GridItem>
 
-        <GridItem colSpan={{ base: 2, md: 1 }}>
+        <GridItem >
           <Box className="custom-box">
             <Image src={Teenpatti} alt="teenpatti" />
             <span>  1 DAY TEENPATTI</span>
@@ -191,21 +180,21 @@ const Home = () => {
         </GridItem>
 
 
-        <GridItem colSpan={{ base: 2, md: 1 }}>
+        <GridItem >
           <Box className="custom-box">
             <Image src={AndarBahar} alt="teenpatti" />
             <span>   ANDAR BAHAR</span>
           </Box>
         </GridItem>
 
-        <GridItem colSpan={{ base: 2, md: 1 }}>
+        <GridItem >
           <Box className="custom-box">
             <Image src={BollywoodCasino} alt="teenpatti" />
             <span>    BOLLYWOOD CASINO</span>
           </Box>
         </GridItem>
 
-        <GridItem colSpan={{ base: 2, md: 1 }}>
+        <GridItem >
           <Box className="custom-box">
             <Image src={Teenvirtual} alt="teenpatti" />
             <span>    TEENPATTI 
@@ -214,21 +203,21 @@ const Home = () => {
           </Box>
         </GridItem>
 
-        <GridItem colSpan={{ base: 2, md: 1 }}>
+        <GridItem >
           <Box className="custom-box">
             <Image src={PokerV} alt="teenpatti" />
             <span>    POKER VIRTUAL</span>
           </Box>
         </GridItem>
 
-        <GridItem colSpan={{ base: 2, md: 1 }}>
+        <GridItem >
           <Box className="custom-box">
             <Image src={Teenpatti} alt="teenpatti" />
             <span>   TEENPATTI T20</span>
           </Box>
         </GridItem>
 
-        <GridItem colSpan={{ base: 2, md: 1 }}>
+        <GridItem >
           <Box className="custom-box">
             <Image src={Hilow} alt="teenpatti" />
             <span>     HII-LOW</span>
@@ -236,7 +225,7 @@ const Home = () => {
         </GridItem>
 
         
-        <GridItem colSpan={{ base: 2, md: 1 }}>
+        <GridItem >
           <Box className="custom-box">
             <Image src={baccarat} alt="teenpatti" />
             <span>      BACCARAT</span>
@@ -244,63 +233,63 @@ const Home = () => {
         </GridItem>
 
 
-        <GridItem colSpan={{ base: 2, md: 1 }}>
+        <GridItem >
           <Box className="custom-box">
             <Image src={Teenvirtual} alt="teenpatti" />
             <span>      TEENPATTI T20 VIRTUAL</span>
           </Box>
         </GridItem>
 
-        <GridItem colSpan={{ base: 2, md: 1 }}>
+        <GridItem >
           <Box className="custom-box">
             <Image src={Teenpatti} alt="teenpatti" />
             <span>       MULFIS TEENPATTI</span>
           </Box>
         </GridItem>
 
-        <GridItem colSpan={{ base: 2, md: 1 }}>
+        <GridItem >
           <Box className="custom-box">
             <Image src={Updown} alt="teenpatti" />
             <span>    7 UP AND DOWN</span>
           </Box>
         </GridItem>
 
-        <GridItem colSpan={{ base: 2, md: 1 }}>
+        <GridItem >
           <Box className="custom-box">
             <Image src={sicbo} alt="teenpatti" />
             <span>    SCIBO</span>
           </Box>
         </GridItem>
 
-        <GridItem colSpan={{ base: 2, md: 1 }}>
+        <GridItem >
           <Box className="custom-box">
             <Image src={Upanddown} alt="teenpatti" />
             <span>    7 UP&DOWN</span>
           </Box>
         </GridItem>
 
-        <GridItem colSpan={{ base: 2, md: 1 }}>
+        <GridItem >
           <Box className="custom-box">
             <Image src={sixplayerpoker} alt="teenpatti" />
             <span>   SIX PLAYER POKER (VIRTUAL)</span>
           </Box>
         </GridItem>
 
-        <GridItem colSpan={{ base: 2, md: 1 }}>
+        <GridItem >
           <Box className="custom-box">
             <Image src={Teenpatti} alt="teenpatti" />
             <span> TEST TEENPATTI</span>
           </Box>
         </GridItem>
 
-        <GridItem colSpan={{ base: 2, md: 1 }}>
+        <GridItem >
           <Box className="custom-box">
             <Image src={DragonTiger} alt="teenpatti" />
             <span> 1 DAY DRAGON TIGER </span>
           </Box>
         </GridItem>
 
-        <GridItem colSpan={{ base: 2, md: 1 }}>
+        <GridItem >
           <Box className="custom-box">
             <Image src={Cardsv} alt="teenpatti" />
             <span>32 CARD (VIRTUALS) </span>
@@ -308,7 +297,7 @@ const Home = () => {
         </GridItem>
 
 
-        <GridItem colSpan={{ base: 2, md: 1 }}>
+        <GridItem >
           <Box className="custom-box">
             <Image src={Hilowv} alt="teenpatti" />
             <span>   HII-LOW (VIRTUAL)</span>

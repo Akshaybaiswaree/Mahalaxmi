@@ -8,7 +8,9 @@ import {
   Button,
   Flex,
 } from "@chakra-ui/react";
-import LOGO from "../images/Logo.jpg";
+//  import LOGO from "../images/Logo.png";
+
+import Logo from '@/assets/Logo.png';
 
 import { Icon } from "@iconify/react";
 import LoginIcon from "@mui/icons-material/Login";
@@ -27,7 +29,7 @@ const Login = () => {
       >
         <Box borderColor="gray.200" width="27%" p="4">
           <Flex align="center" justify="center" mb={2}>
-            <img src={LOGO} alt="" width="150px" />
+            <img src={Logo} alt="" width="150px" />
           </Flex>
 
           <Box bg="white" color="black" p="4" borderRadius="10px">
