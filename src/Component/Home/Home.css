@@ -108,3 +108,9 @@ span{
       margin: 1em 0;
   }
 }
+
+/* @media (max-width : 767px) {
+  .cards_Container{
+    grid-template-columns: repeat(4, 1fr);
+  }
+} */

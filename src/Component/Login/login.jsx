@@ -8,7 +8,9 @@ import {
   Button,
   Flex,
 } from "@chakra-ui/react";
-import LOGO from "../images/Logo.jpg";
+//  import LOGO from "../images/Logo.png";
+
+import Logo from '@/assets/Logo.png';
 
 import { Icon } from "@iconify/react";
 import LoginIcon from "@mui/icons-material/Login";
@@ -30,7 +32,7 @@ const Login = () => {
           p={["2", "4"]} // Adjust padding for different screen sizes
         >
           <Flex align="center" justify="center" mb={2}>
-            <img src={LOGO} alt="" width="150px" />
+            <img src={Logo} alt="" width="150px" />
           </Flex>
 
           <Box bg="white" color="black" p="4" borderRadius="10px">

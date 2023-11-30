@@ -65,33 +65,42 @@ const AndarBahar = () => {
                 justifyContent="space-between"
                 padding="10px"
               >
-                <Text color="white" position="absolute" left="10px" bottom="10px">
+                <Text
+                  color="white"
+                  position="absolute"
+                  left="10px"
+                  bottom="10px"
+                >
                   Volume
                 </Text>
-                <Text color="white" position="absolute" right="10px" bottom="10px">
+                <Text
+                  color="white"
+                  position="absolute"
+                  right="10px"
+                  bottom="10px"
+                >
                   00:00 / 05:30
                 </Text>
               </Flex>
             </Box>
 
             {/* {/ SmallAsideSection /} */}
-            <Accordion width={{ base: "100%", md: "40%" }} >
+            <Accordion width={{ base: "100%", md: "40%" }}>
               <AccordionItem bg="#092844" color="white" borderLeftRadius="5">
                 <h2>
                   <AccordionButton>
                     <Box as="span" flex="1" textAlign="left">
                       Place Bet
                     </Box>
-                    <AccordionIcon/>
+                    <AccordionIcon />
                   </AccordionButton>
                 </h2>
                 <AccordionPanel pb={4}>
-                  
                   <NumberInput>
                     <NumberInputField />
                     <NumberInputStepper>
-                      <NumberIncrementStepper  color="white"/>
-                      <NumberDecrementStepper color="white"/>
+                      <NumberIncrementStepper color="white" />
+                      <NumberDecrementStepper color="white" />
                     </NumberInputStepper>
                   </NumberInput>
                   <Flex justify="space-around" m={3}>
@@ -108,7 +117,7 @@ const AndarBahar = () => {
                   </Flex>
                 </AccordionPanel>
               </AccordionItem>
-              <AccordionItem bg="#092844" color="white" borderLeftRadius="5"> 
+              <AccordionItem bg="#092844" color="white" borderLeftRadius="5">
                 <h2>
                   <AccordionButton>
                     <Box as="span" flex="1" textAlign="left">
@@ -122,24 +131,41 @@ const AndarBahar = () => {
                 </AccordionPanel>
               </AccordionItem>
 
-             
-              <Box width="100%" height="30px" bg="#cccccc" mt={1} ml={1} borderBottom="2px"
-              borderBottomColor="black.200">
-              <Flex align="center" justify="space-between" height="100%" px={2} >
-                <Text color="white" fontWeight="600">
-                  Match bet
-                </Text>
-                <Text color="white" fontWeight="600">
-                  Odds
-                </Text>
-                <Text color="white" fontWeight="600">
-                  Stacks
-                </Text>
-              </Flex>
-            </Box>
-            <Box width="99%" height="30px" bg="white" borderBottom="1px"  borderBottomColor="gray.200">
-              <Text textAlign="center">No records Found</Text>
-            </Box>
+              <Box
+                width="100%"
+                height="30px"
+                bg="#cccccc"
+                mt={1}
+                ml={1}
+                borderBottom="2px"
+                borderBottomColor="black.200"
+              >
+                <Flex
+                  align="center"
+                  justify="space-between"
+                  height="100%"
+                  px={2}
+                >
+                  <Text color="white" fontWeight="600">
+                    Match bet
+                  </Text>
+                  <Text color="white" fontWeight="600">
+                    Odds
+                  </Text>
+                  <Text color="white" fontWeight="600">
+                    Stacks
+                  </Text>
+                </Flex>
+              </Box>
+              <Box
+                width="99%"
+                height="30px"
+                bg="white"
+                borderBottom="1px"
+                borderBottomColor="gray.200"
+              >
+                <Text textAlign="center">No records Found</Text>
+              </Box>
             </Accordion>
           </Flex>
         </Box>
@@ -266,12 +292,14 @@ const AndarBahar = () => {
               height="2rem"
               borderRadius="50%"
               bgColor="#355e3b"
-              display="flex"
-              align="center"
-              justify="center"
               margin="5px"
             >
-              <Text color="white" fontWeight="bold" fontSize="lg">
+              <Text
+                color="white"
+                fontWeight="bold"
+                fontSize="lg"
+                textAlign="center"
+              >
                 A
               </Text>
             </Box>
@@ -282,12 +310,14 @@ const AndarBahar = () => {
               height="2rem"
               borderRadius="50%"
               bgColor="#355e3b"
-              display="flex"
-              align="center"
-              justify="center"
               margin="5px"
             >
-              <Text color="white" fontWeight="bold" fontSize="lg">
+              <Text
+                color="white"
+                fontWeight="bold"
+                fontSize="lg"
+                textAlign="center"
+              >
                 B
               </Text>
             </Box>
@@ -298,12 +328,14 @@ const AndarBahar = () => {
               height="2rem"
               borderRadius="50%"
               bgColor="#355e3b"
-              display="flex"
-              align="center"
-              justify="center"
               margin="5px"
             >
-              <Text color="white" fontWeight="bold" fontSize="lg">
+              <Text
+                color="white"
+                fontWeight="bold"
+                fontSize="lg"
+                textAlign="center"
+              >
                 A
               </Text>
             </Box>
@@ -313,12 +345,14 @@ const AndarBahar = () => {
               height="2rem"
               borderRadius="50%"
               bgColor="#355e3b"
-              display="flex"
-              align="center"
-              justify="center"
               margin="5px"
             >
-              <Text color="white" fontWeight="bold" fontSize="lg">
+              <Text
+                color="white"
+                fontWeight="bold"
+                fontSize="lg"
+                textAlign="center"
+              >
                 A
               </Text>
             </Box>
@@ -329,12 +363,14 @@ const AndarBahar = () => {
               height="2rem"
               borderRadius="50%"
               bgColor="#355e3b"
-              display="flex"
-              align="center"
-              justify="center"
               margin="5px"
             >
-              <Text color="white" fontWeight="bold" fontSize="lg">
+              <Text
+                color="white"
+                fontWeight="bold"
+                fontSize="lg"
+                textAlign="center"
+              >
                 A
               </Text>
             </Box>
@@ -344,12 +380,14 @@ const AndarBahar = () => {
               height="2rem"
               borderRadius="50%"
               bgColor="#355e3b"
-              display="flex"
-              align="center"
-              justify="center"
               margin="5px"
             >
-              <Text color="white" fontWeight="bold" fontSize="lg">
+              <Text
+                color="white"
+                fontWeight="bold"
+                fontSize="lg"
+                textAlign="center"
+              >
                 A
               </Text>
             </Box>
@@ -360,12 +398,14 @@ const AndarBahar = () => {
               height="2rem"
               borderRadius="50%"
               bgColor="#355e3b"
-              display="flex"
-              align="center"
-              justify="center"
               margin="5px"
             >
-              <Text color="white" fontWeight="bold" fontSize="lg">
+              <Text
+                color="white"
+                fontWeight="bold"
+                fontSize="lg"
+                textAlign="center"
+              >
                 A
               </Text>
             </Box>
@@ -376,12 +416,14 @@ const AndarBahar = () => {
               height="2rem"
               borderRadius="50%"
               bgColor="#355e3b"
-              display="flex"
-              align="center"
-              justify="center"
               margin="5px"
             >
-              <Text color="white" fontWeight="bold" fontSize="lg">
+              <Text
+                color="white"
+                fontWeight="bold"
+                fontSize="lg"
+                textAlign="center"
+              >
                 A
               </Text>
             </Box>
@@ -392,9 +434,6 @@ const AndarBahar = () => {
               height="2rem"
               borderRadius="50%"
               bgColor="#355e3b"
-              display="flex"
-              align="center"
-              justify="center"
               margin="5px"
             >
               <Text

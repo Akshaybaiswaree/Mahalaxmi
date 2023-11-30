@@ -2,6 +2,7 @@ import {
   ChakraProvider,
   Box,
   HStack,
+  Flex,
   VStack,
   Link,
   Button,
@@ -28,9 +29,11 @@ import {
   MenuItem,
   useMediaQuery,
 } from "@chakra-ui/react";
-import LOGO from "../images/Logo.jpg";
+// import Marquee from "react-marquee-slider";
+import LOGO from "@/assets/Logo.png";
 import { SearchIcon } from "@chakra-ui/icons";
 import { NavLink } from "react-router-dom";
+// import Marquee from "react-marquee-slider";
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -39,7 +42,7 @@ const Navbar = () => {
     const [isMobile] = useMediaQuery("(max-width: 600px)");
 
   return (
-    <Box>
+    <Box width="100">
       {/* Navbar for desktop */}
       <HStack
       bg="#2b329b"
@@ -120,12 +123,15 @@ const Navbar = () => {
 
       {isMobile && (
         <Menu>
-          <MenuButton m={3} variant="outline" color="white">
-            Mahalakshmi{" "}
-            <span>
+
+          <MenuButton variant="outline" color="white">
+            <Text>Mahalakshmi{" "}  <span>
               <Icon icon="icon-park:down" />
-            </span>
+            </span></Text>
+            
           </MenuButton>
+        {/* <marquee>This is an example of html marquee </marquee>   */}
+         
           <MenuList color={"black"}>
             <MenuItem>Account Statement</MenuItem>
             <MenuItem>Profile Loss Report</MenuItem>
@@ -140,7 +146,6 @@ const Navbar = () => {
       )}
     </HStack>
 
-
       <Stack
         alignContent={"center"}
         alignItems={"center"}
@@ -150,7 +155,7 @@ const Navbar = () => {
         bg="#092844"
         color="white"
         p={2}
-        spacing={14}
+        spacing={12}
         overflowX={{ base: "auto", md: "visible" }}
         css={{
           "&::-webkit-scrollbar": {
