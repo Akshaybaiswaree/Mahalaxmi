@@ -20,24 +20,31 @@ const Login = () => {
   return (
     <>
       <Box
-        width="100vw"
-        height="100vh"
+        width="100%"
+        minHeight="100vh"
         bgGradient="linear( #2B329B, #0b2948)"
         display="flex"
         alignItems="center"
         justifyContent="center"
       >
-        <Box borderColor="gray.200" width="27%" p="4">
+        <Box
+          width={["90%", "70%", "50%", "30%"]} // Adjust width for different screen sizes
+          p={["2", "4"]} // Adjust padding for different screen sizes
+        >
           <Flex align="center" justify="center" mb={2}>
             <img src={Logo} alt="" width="150px" />
           </Flex>
 
           <Box bg="white" color="black" p="4" borderRadius="10px">
             <Flex align="center" justify="center" mb={3} gap={1} color="blue">
-              <Text fontSize="3xl">LOGIN</Text>
-              <Box height={"1.5rem"} marginLeft={"0.5rem"} marginTop={"0.6rem"}>
+              <Text fontSize={["2xl", "3xl"]}>LOGIN</Text>
+              <Box
+                height={["1rem", "1.5rem"]}
+                marginLeft={["0.2rem", "0.5rem"]}
+                marginTop={["0.3rem", "0.6rem"]}
+              >
                 <Icon
-                  height={"1.8rem"}
+                  height={["1.5rem", "1.8rem"]}
                   icon="fa-solid:hand-point-down"
                   ml={2}
                   boxSize={6}
@@ -59,30 +66,29 @@ const Login = () => {
               </InputRightElement>
             </InputGroup>
 
-                <NavLink to="mainpage">
-            <Button colorScheme="blue" width="100%" mb="1">
-              <Flex justify="space-between" align="center">
-                <Text marginLeft="auto">Login</Text>
+            <NavLink to="mainpage">
+              <Button colorScheme="blue" width="100%" mb="2">
+                <Flex justify="space-between" align="center">
+                  <Text marginLeft="auto">Login</Text>
+                  <LoginIcon />
+                </Flex>
+              </Button>
+            </NavLink>
 
-                <LoginIcon />
-              </Flex>
-            </Button>
-                </NavLink>
-
-            <Text fontWeight="lighter" fontSize="sm" mb="1">
+            <Text fontWeight="lighter" fontSize="sm" mb="2">
               This site is protected by reCAPTCHA and the Google{" "}
               <a href="#">Privacy Policy</a> and{" "}
               <a href="#">Terms of Service</a> apply.
             </Text>
 
-              <NavLink to="mainpage">
-            <Button colorScheme="blue" width="100%">
-              <Flex justify="space-between" align="center">
-                LogIn with Demo
-                <Icon icon="entypo:login" ml={2} />
-              </Flex>
-            </Button>
-                </NavLink>
+            <NavLink to="mainpage">
+              <Button colorScheme="blue" width="100%">
+                <Flex justify="space-between" align="center">
+                  LogIn with Demo
+                  <Icon icon="entypo:login" ml={2} />
+                </Flex>
+              </Button>
+            </NavLink>
           </Box>
         </Box>
       </Box>

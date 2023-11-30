@@ -21,8 +21,10 @@ function RootLayout() {
 
         {/* Main Content */}
         <Box
-        marginLeft={'1rem'}
-        flexBasis={{ base: "100%", md: "80%" }}>
+        mx={{base:"1rem", md:"2rem"}}
+        mr={{base:"4rem"}}
+        marginLeft={{base:'0rem',md:"1rem"}}
+        flexBasis={{ base: "300%", md: "80%" }}>
           <Outlet 
           />
         </Box>
