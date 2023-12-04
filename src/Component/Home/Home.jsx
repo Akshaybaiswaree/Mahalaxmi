@@ -1,16 +1,27 @@
-
 //import './Home.css'
 // import War from '../Image/war.jpeg'
-import War from '../images/war.jpeg'
-import Teenpatti from '../images/teenpatti.jpg'
-import { Box, Center, Flex, Grid, GridItem, Heading, Image, Wrap, WrapItem,Text } from '@chakra-ui/react'
-import  fluid from '../images/poker.jpeg'
-import Worlimatka from '../images/worli.jpeg'
-import andarBahar from '../images/andar-bahar_v.jpeg'
-import Race2020 from '../images/race20.jpg'
-import Casinometer from '../images/cmeter.jpg'
-import Trio from '../images/trio.jpeg'
-import Roulette from '../images/roulette_v.jpeg'
+import War from "../images/war.jpeg";
+import Teenpatti from "../images/teenpatti.jpg";
+import {
+  Box,
+  Center,
+  Flex,
+  Grid,
+  GridItem,
+  Heading,
+  Image,
+  Wrap,
+  WrapItem,
+  Text,
+  Stack,
+} from "@chakra-ui/react";
+import fluid from "../images/poker.jpeg";
+import Worlimatka from "../images/worli.jpeg";
+import andarBahar from "../images/andar-bahar_v.jpeg";
+import Race2020 from "../images/race20.jpg";
+import Casinometer from "../images/cmeter.jpg";
+import Trio from "../images/trio.jpeg";
+import Roulette from "../images/roulette_v.jpeg";
 // import CasinoQueen from '../images/queen.jpeg'
 import CardCasino from "../images/32cardsA.jpg";
 import aaa from "../images/aaa.jpeg";
@@ -37,335 +48,130 @@ import { NavLink } from "react-router-dom";
 const Home = () => {
   return (
     <>
-      {/* <Stack
-     
-      alignContent={"center"}
-      alignItems={"center"}
-      justifyContent={"center"}
-      maxW={"100%"}
-      direction={{ base: "row", md: "row" }}
-      bg="#CCCCCC"
-      color="black"
-      
-      p={0.5}
-      spacing={10}
-      mt={1}
-      overflowX={{ base: "auto", md: "visible" }}
-      css={{
-        "&::-webkit-scrollbar": {
-          display: "none",
-        },
-      }}
-    >
-      <NavLink to="/home">
-        <Box borderRight="1px" borderColor="black" h="100%">
-             Football
-            </Box>
-      </NavLink>
-      <NavLink to="/home" >
-        <Box>Tennis</Box>
-      </NavLink>
-      <NavLink to="/home">
-        <Box>Cricket</Box>
-      </NavLink>
-      <NavLink to="/home">
-        <Box>Horse Racing</Box>
-      </NavLink>
-      <NavLink to="/home">
-        <Box>ice Hockey</Box>
-      </NavLink>
-      <NavLink to="/home">
-        <Box>VollyBall</Box>
-      </NavLink>
-      <NavLink to="/home">
-        <Box>Basketball</Box>
-      </NavLink>
-      <NavLink to="/home">
-        <Box>Table Tennis</Box>
-      </NavLink>
-      <NavLink to="/home">
-        <Box>Kabaddi</Box>
-      </NavLink>
-      <NavLink to="/home">
-        <Box>Boxing</Box>
-      </NavLink>
-      <NavLink to="/home">
-        <Box>Mixed material Arts</Box>
-      </NavLink>
-      <NavLink to="/home">
-        <Box>E Game</Box>
-      </NavLink>
-    </Stack> */}
+          <Stack
+        alignContent={"center"}
+        alignItems={"center"}
+        justifyContent={"center"}
+        maxW={["50%" , "10  0%"]}
+        direction={{ base: "row", md: "row" }}
+        bg="#092844"
+        color="white"
+        p={2}
+        spacing={12}
+        overflowX={{ base: "auto", md: "visible" }}
+        css={{
+          "&::-webkit-scrollbar": {
+            display: "none",
+          },
+        }}
+      >
+        <NavLink to="/home">
+          <Box>Cricket</Box>
+        </NavLink>
+        <NavLink to="/home">
+          <Box>Tennis</Box>
+        </NavLink>
+        <NavLink to="/home">
+          <Box>Football</Box>
+        </NavLink>
+        <NavLink to="/home">
+          <Box>Table tennis</Box>
+        </NavLink>
+        <NavLink to="/home">
+          <Box>Kabaddi</Box>
+        </NavLink>
+        <NavLink to="/home">
+          <Box>Basketball</Box>
+        </NavLink>
+        <NavLink to="/home">
+          <Box>VollyBall</Box>
+        </NavLink>
+        <NavLink to="/home">
+          <Box>Baccart</Box>
+        </NavLink>
+        <NavLink to="/home">
+          <Box>Cards</Box>
+        </NavLink>
+        <NavLink to="/home">
+          <Box>Teenpatti</Box>
+        </NavLink>
+        <NavLink to="/home">
+          <Box>Poker </Box>
+        </NavLink>
+        <NavLink to="/home">
+          <Box>Lucky 7</Box>
+        </NavLink>
+      </Stack>
 
-      <Flex>
-        <Wrap
-          spacing=""
-          align="center"
-          maxW={"100%"}
-          direction={{ base: "row", md: "row" }}
-          bg="#CCCCCC"
-          color="black"
-          mt={2}
-          ml={0}
-        >
-          <NavLink>
-            <WrapItem
-              paddingRight={2}
-              borderRight="1px"
-              borderColor="black"
-              h="100%"
-              _hover={{ textColor: "#CCCCCC", bg: "#092844" }}
-            >
-              <Center w="80px" h="40px">
-                Football
-              </Center>
-            </WrapItem>
-          </NavLink>
-
-          <NavLink to="/home">
-            <WrapItem
-              paddingRight={2}
-              borderRight="1px"
-              borderColor="black"
-              h="100%"
-              _hover={{ textColor: "#CCCCCC", bg: "#092844" }}
-            >
-              <Center w="80px" h="40px">
-                Tennis
-              </Center>
-            </WrapItem>
-          </NavLink>
-
-          <NavLink>
-            <WrapItem
-              paddingRight={2}
-              borderRight="1px"
-              borderColor="black"
-              h="100%"
-              _hover={{ textColor: "#CCCCCC", bg: "#092844" }}
-            >
-              <Center w="80px" h="40px">
-                Cricket
-              </Center>
-            </WrapItem>
-          </NavLink>
-
-          <NavLink>
-            <WrapItem
-              paddingRight={2}
-              borderRight="1px"
-              borderColor="black"
-              h="100%"
-              _hover={{ textColor: "#CCCCCC", bg: "#092844" }}
-            >
-              <Center w="107px" h="40px">
-                Horse Racing
-              </Center>
-            </WrapItem>
-          </NavLink>
-
-          <NavLink>
-            <WrapItem
-              paddingRight={2}
-              borderRight="1px"
-              borderColor="black"
-              h="100%"
-              _hover={{ textColor: "#CCCCCC", bg: "#092844" }}
-            >
-              <Center w="100px" h="40px">
-                ice Hockey
-              </Center>
-            </WrapItem>
-          </NavLink>
-
-          <NavLink>
-            <WrapItem
-              paddingRight={2}
-              borderRight="1px"
-              borderColor="black"
-              h="100%"
-              _hover={{ textColor: "#CCCCCC", bg: "#092844" }}
-            >
-              <Center w="80px" h="40px">
-                VollyBall
-              </Center>
-            </WrapItem>
-          </NavLink>
-
-          <NavLink>
-            <WrapItem
-              paddingRight={2}
-              borderRight="1px"
-              borderColor="black"
-              h="100%"
-              _hover={{ textColor: "#CCCCCC", bg: "#092844" }}
-            >
-              <Center w="87px" h="40px">
-                Basketball
-              </Center>
-            </WrapItem>
-          </NavLink>
-
-          <NavLink>
-            <WrapItem
-              paddingRight={2}
-              borderRight="1px"
-              borderColor="black"
-              h="100%"
-              _hover={{ textColor: "#CCCCCC", bg: "#092844" }}
-            >
-              <Center w="100px" h="40px">
-                Table Tennis
-              </Center>
-            </WrapItem>
-          </NavLink>
-
-          <NavLink>
-            <WrapItem
-              paddingRight={2}
-              borderRight="1px"
-              borderColor="black"
-              h="100%"
-              _hover={{ textColor: "#CCCCCC", bg: "#092844" }}
-            >
-              <Center w="80px" h="40px">
-                Kabaddi
-              </Center>
-            </WrapItem>
-          </NavLink>
-
-          <NavLink>
-            <WrapItem
-              paddingRight={2}
-              borderRight="1px"
-              borderColor="black"
-              h="100%"
-              _hover={{ textColor: "#CCCCCC", bg: "#092844" }}
-            >
-              <Center w="60px" h="40px">
-                Boxing
-              </Center>
-            </WrapItem>
-          </NavLink>
-
-          <NavLink>
-            <WrapItem
-              paddingRight={2}
-              borderRight="1px"
-              borderColor="black"
-              h="100%"
-              _hover={{ textColor: "#CCCCCC", bg: "#092844" }}
-            >
-              <Center w="150px" h="40px">
-                Mixed material Arts
-              </Center>
-            </WrapItem>
-          </NavLink>
-
-          <NavLink>
-            <WrapItem
-              paddingRight={2}
-              borderRight="1px"
-              borderColor="black"
-              h="100%"
-              _hover={{ textColor: "#CCCCCC", bg: "#092844" }}
-            >
-              <Center w="75px" h="40px">
-                E Game
-              </Center>
-            </WrapItem>
-          </NavLink>
-        </Wrap>
+      <Flex align="center" direction="row" justify="space-between">
+        {/* Left side */}
+        <Text fontSize="m" fontWeight="600" p={2}>
+          Game
+        </Text>
+        <Flex direction="row" align="center">
+          <WrapItem paddingRight={2}>
+            <Center w="135px" h="40px">
+              1
+            </Center>
+          </WrapItem>
+          <WrapItem paddingRight={2}>
+            <Center w="135px" h="40px">
+              x
+            </Center>
+          </WrapItem>
+          <WrapItem paddingRight={2}>
+            <Center w="135px" h="40px">
+              2
+            </Center>
+          </WrapItem>
+        </Flex>
       </Flex>
 
-
-      <Flex align="center" direction= "row" justify= "space-between"  >
-      {/* Left side */}
-        <Text fontSize="m" fontWeight= "600" p={2}>Game</Text>
+      <Flex
+        align="center"
+        direction="row"
+        justify="space-between"
+        borderTop="1px"
+        borderBottom="1px"
+        borderColor="#ccc"
+      >
+        {/* Left side */}
+        <Text fontSize="m" p={2} fontWeight="500">
+          Bangladesh v New Zealand/Nov 29 2023 09:00AM(IST)
+        </Text>
         <Flex direction="row" align="center">
-            <WrapItem
-              paddingRight={2}                     
-            >
-              <Center w="135px" h="40px" >1</Center>
-            </WrapItem>
-            <WrapItem
-              paddingRight={2}                     
-            >
-              <Center w="135px" h="40px">x</Center>
-            </WrapItem>
-            <WrapItem
-              paddingRight={2} 
-                                  
-            >
-              <Center w="135px" h="40px">2</Center>
-            </WrapItem>
-      </Flex> 
-      
-         
-      
-      
-      
-      
-
-
-
-      
-
-
-
-    </Flex>
-
-    <Flex align="center" direction= "row" justify= "space-between" borderTop= "1px" borderBottom="1px" borderColor="#ccc"  >
-      {/* Left side */}
-        <Text fontSize="m" p={2} fontWeight= "500">Bangladesh v New Zealand/Nov 29 2023 09:00AM(IST)</Text>
-        <Flex direction="row" align="center">
-        <WrapItem>
-    <Center w='70px' h='30px' bg='blue.200'>
-      Box 1
-    </Center>
-  </WrapItem>
-  <WrapItem>
-    <Center w='70px' h='30px' bg='pink.200'>
-      Box 2
-    </Center>
-  </WrapItem>
-  <WrapItem>
-    <Center w='70px' h='30px' bg='blue.200'>
-      Box 3
-    </Center>
-  </WrapItem>
-  <WrapItem>
-    <Center w='70px' h='30px' bg='pink.200'>
-      Box 4
-    </Center>
-  </WrapItem>
-  <WrapItem>
-    <Center w='70px' h='30px' bg='blue.200'>
-      Box 5
-    </Center>
-  </WrapItem>
-  <WrapItem marginRight="2">
-    <Center w='70px' h='30px' bg='pink.200'>
-      6
-    </Center>
-  </WrapItem>
-      </Flex> 
-      
-         
-      
-      
-      
-      
-
-
-
-      
-
-
-
-    </Flex>
-
-
+          <WrapItem>
+            <Center w="70px" h="30px" bg="blue.200">
+              Box 1
+            </Center>
+          </WrapItem>
+          <WrapItem>
+            <Center w="70px" h="30px" bg="pink.200">
+              Box 2
+            </Center>
+          </WrapItem>
+          <WrapItem>
+            <Center w="70px" h="30px" bg="blue.200">
+              Box 3
+            </Center>
+          </WrapItem>
+          <WrapItem>
+            <Center w="70px" h="30px" bg="pink.200">
+              Box 4
+            </Center>
+          </WrapItem>
+          <WrapItem>
+            <Center w="70px" h="30px" bg="blue.200">
+              Box 5
+            </Center>
+          </WrapItem>
+          <WrapItem marginRight="2">
+            <Center w="70px" h="30px" bg="pink.200">
+              6
+            </Center>
+          </WrapItem>
+        </Flex>
+      </Flex>
 
       {/* <Wrap spacing='30px' align='center'>
   
@@ -694,9 +500,8 @@ const Home = () => {
           {/* Repeat the above pattern for other custom-box components */}
         </Grid>
       </Box>
-
     </>
   );
-}
+};
 
 export default Home;
