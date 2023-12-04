@@ -388,7 +388,7 @@ const Home = () => {
           </GridItem>
 
           <GridItem colSpan={{ base: 4, md: 1 }}>
-            <NavLink to="/andarbahar">
+            <NavLink to="/racegame">
               <Box className="custom-box">
                 <Image src={WorldMatka} alt="teenpatti" />
                 <span> WORLD MATKA (VIRTUAL)</span>
@@ -397,14 +397,18 @@ const Home = () => {
           </GridItem>
 
           <GridItem colSpan={{ base: 4, md: 1 }}>
+            <NavLink to="/RaceGame">
             <Box className="custom-box">
               <Image src={Race2020} alt="teenpatti" />
               <span> RACE 20-20</span>
             </Box>
+
+            </NavLink>
+            
           </GridItem>
 
           <GridItem colSpan={{ base: 4, md: 1 }}>
-            <NavLink to="/andarbahar">
+            <NavLink to="/RaceGame">
               <Box className="custom-box">
                 <Image src={Race2020} alt="teenpatti" />
                 <span> RACE 20-20</span>

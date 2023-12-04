@@ -105,7 +105,7 @@ const cardsForSectionB = getRandomCards(6);
             <img
               src={imagePath}
               alt={`Card ${index + 1}`}
-              style={{ width: '20px', height: '25px' }}
+              style={{ width: '70px', height: '75px' }}
             />
           </div>
         ))}
@@ -117,7 +117,7 @@ const cardsForSectionB = getRandomCards(6);
             <img
               src={imagePath}
               alt={`Card ${index + 1}`}
-              style={{ width: '20px', height: '25px' }}
+              style={{  width: '70px', height: '75px' }}
             />
           </div>
         ))}

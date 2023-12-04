@@ -81,11 +81,11 @@ const Login = () => {
               <a href="#">Terms of Service</a> apply.
             </Text>
 
-            <NavLink to="/SignUp">
+            <NavLink to="/mainpage">
               <Button colorScheme="blue" width="100%">
                 <Flex justify="space-between" align="center">
-                  SignUp
-                  <Icon icon="entypo:login" ml={2} />
+                  Login With Demo <LoginIcon />
+                  {/* <Icon icon="entypo:login" ml={2} /> */}
                 </Flex>
               </Button>
             </NavLink>
