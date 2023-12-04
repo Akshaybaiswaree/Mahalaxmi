@@ -18,6 +18,7 @@ import {
   Button,
   WrapItem,
 } from "@chakra-ui/react";
+import Card from './Card'
 import { Icon } from "@iconify/react";
 import { AspectRatio } from "@chakra-ui/react";
 
@@ -33,17 +34,18 @@ const AndarBahar = () => {
             flex="wrap"
             gap={1}
           >
-            {/* {/ AsideSection /} */}
+      
             <Box
-              flex="1"
-              bgColor="#333"
-              display="flex"
-              alignItems="center"
-              justifyContent="center"
-              position="relative"
-              width={{ base: "100%", md: "10%" }}
-              height="500px"
-              p={2}
+           flex="1"
+           bgColor="#333"
+           display="flex"
+           alignItems="center"
+           justifyContent="center"
+           position="relative"
+          width={{ base: "125%", md: "105%", lg: "50%" }} 
+           height={{ base: "auto", md: "500px" }}
+           p={2}
+       
             >
               <AspectRatio
                 width="100%"
@@ -52,10 +54,11 @@ const AndarBahar = () => {
                 controls
               >
                 <iframe
-                  title="naruto"
-                  src="https://www.youtube.com/embed/QhBnZ6NPOY0"
-                  allowFullScreen
-                  style={{ objectFit: "cover", borderRadius: "10px" }}
+              title="naruto"
+              src="https://www.youtube.com/embed/QhBnZ6NPOY0"
+              allowFullScreen
+              style={{ objectFit: "cover", borderRadius: "10px" }}
+      
                 />
               </AspectRatio>
               <Flex
@@ -85,7 +88,7 @@ const AndarBahar = () => {
             </Box>
 
             {/* {/ SmallAsideSection /} */}
-            <Accordion width={{ base: "100%", md: "40%" }}>
+            <Accordion width={{base: "125%", md: "105%", lg: "50%" }}>
               <AccordionItem bg="#092844" color="white" borderLeftRadius="5">
                 <h2>
                   <AccordionButton>
@@ -163,15 +166,22 @@ const AndarBahar = () => {
                 bg="white"
                 borderBottom="1px"
                 borderBottomColor="gray.200"
+                base= "125%" md= "105%" lg= "50%"
               >
                 <Text textAlign="center">No records Found</Text>
+              
+                
               </Box>
+              <Card/>
+            
+            
+          
             </Accordion>
           </Flex>
         </Box>
 
         {/* {/ CardBahar /} */}
-        <Box width={{ base: "100%", md: "62%" }} height="400px" mt={3}>
+        <Box width={{ base: "125%", md: "105%", lg: "50%" }} height="400px" mt={3}>
           <Text fontWeight="bold">1st Card Bahar 25%:</Text>
           <Box width="100%">
             <Flex
@@ -283,10 +293,10 @@ const AndarBahar = () => {
             </Flex>
           </Box>
 
-          {/* {/ Small circles /} */}
+          
           <Flex justify="flex-end" align="center">
-            {/* {/  for Circle  /}
-             {/ Circle 1 /} */}
+          
+        
             <Box
               width="2rem"
               height="2rem"
@@ -357,7 +367,7 @@ const AndarBahar = () => {
               </Text>
             </Box>
 
-            {/* {/ 5th Circle /} */}
+          
             <Box
               width="2rem"
               height="2rem"
@@ -374,7 +384,7 @@ const AndarBahar = () => {
                 A
               </Text>
             </Box>
-            {/* {/ 6th Circle /} */}
+           
             <Box
               width="2rem"
               height="2rem"
