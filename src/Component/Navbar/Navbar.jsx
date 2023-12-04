@@ -81,7 +81,7 @@ const Navbar = () => {
 <Box fontWeight={"600"} fontSize={"1em"} cursor="pointer" position="relative" right="6vw" >
   <Menu isOpen={isMenuOpen} onClose={closeMenu}>
     <MenuButton as={Button} onClick={handleMahalakshmiClick}>
-      <Text  fontSize={"2em"}>
+      <Text  fontSize={"1.5em"}>
         Mahalakshmi{" "}
         <span>
           <Icon icon="icon-park:down" />
@@ -153,7 +153,7 @@ const Navbar = () => {
         )}
 
         {isMobile ? (
-          <Box>
+          <Box marginBottom={'0.5rem'}>
             <InputGroup>
               <Input
                 type="text"

@@ -1,16 +1,27 @@
-
 //import './Home.css'
 // import War from '../Image/war.jpeg'
-import War from '../images/war.jpeg'
-import Teenpatti from '../images/teenpatti.jpg'
-import { Box, Center, Flex, Grid, GridItem, Heading, Image, Wrap, WrapItem,Text } from '@chakra-ui/react'
-import  fluid from '../images/poker.jpeg'
-import Worlimatka from '../images/worli.jpeg'
-import andarBahar from '../images/andar-bahar_v.jpeg'
-import Race2020 from '../images/race20.jpg'
-import Casinometer from '../images/cmeter.jpg'
-import Trio from '../images/trio.jpeg'
-import Roulette from '../images/roulette_v.jpeg'
+import War from "../images/war.jpeg";
+import Teenpatti from "../images/teenpatti.jpg";
+import {
+  Box,
+  Center,
+  Flex,
+  Grid,
+  GridItem,
+  Heading,
+  Image,
+  Wrap,
+  WrapItem,
+  Text,
+  Stack,
+} from "@chakra-ui/react";
+import fluid from "../images/poker.jpeg";
+import Worlimatka from "../images/worli.jpeg";
+import andarBahar from "../images/andar-bahar_v.jpeg";
+import Race2020 from "../images/race20.jpg";
+import Casinometer from "../images/cmeter.jpg";
+import Trio from "../images/trio.jpeg";
+import Roulette from "../images/roulette_v.jpeg";
 // import CasinoQueen from '../images/queen.jpeg'
 import CardCasino from "../images/32cardsA.jpg";
 import aaa from "../images/aaa.jpeg";
@@ -601,9 +612,8 @@ const Home = () => {
           
         </Grid>
       </Box>
-
     </>
   );
-}
+};
 
 export default Home;
