@@ -1,3 +1,4 @@
+import  { useState } from "react";
 import {
   ChakraProvider,
   Box,
@@ -29,122 +30,184 @@ import {
   MenuItem,
   useMediaQuery,
 } from "@chakra-ui/react";
-// import Marquee from "react-marquee-slider";
+
 import LOGO from "@/assets/Logo.png";
 import { SearchIcon } from "@chakra-ui/icons";
 import { NavLink } from "react-router-dom";
-// import Marquee from "react-marquee-slider";
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
- 
-    const [isMobile] = useMediaQuery("(max-width: 600px)");
+  const handleMahalakshmiClick = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  const [isMobile] = useMediaQuery("(max-width: 800px)");
 
   return (
-    <Box width="100">
-      {/* Navbar for desktop */}
-      <HStack
+    <Box width={{ base: "125.4%", md: "100%" }}>
+    <HStack
       bg="#2b329b"
       color="white"
       spacing="4"
       p={1}
       w="100%"
-      flexWrap={isMobile ? "wrap" : "nowrap"}
+      justifyContent="space-between"
+      align="center"
+      flexWrap={{ base: "wrap", md: "nowrap" }}
     >
-      <Image width={"4rem"} height={"3rem"} m={3} src={LOGO} />
+     
+  
+  
+        <Image  width={{ base: "30%", md: "4rem" }} 
+    height={{ base: "auto", md: "3rem" }}   m={3} src={LOGO} />
 
-      <Box fontWeight={"600"} fontSize={isMobile ? "1.2rem" : "1.6rem"}>
-        Mahalakshmi
-      </Box>
-
-      {isMobile && (
-        <Spacer />
-      )}
-
-      {isMobile ? (
-        <Box>
-          <IconButton
-            variant="ghost"
-            color="teal.500"
-            icon={<Icon as={SearchIcon} />}
-            aria-label="Search"
-          />
-        </Box>
-      ) : (
-        <Box
-          as="nav"
-          bg="2b329b"
-          p={4}
-          display="flex"
-          justifyContent="space-between"
-          alignItems="center"
-          color="white"
-        >
-          {/* Your other navbar items go here */}
-
-          {/* Search Bar */}
-          <InputGroup>
-            <Input
-              type="text"
-              placeholder="Search..."
-              borderRadius="full"
-              bg="white"
+        {isMobile && (
+          <Box>
+            {/* <IconButton
+              variant="ghost"
               color="teal.500"
-              _placeholder={{ color: "teal.300" }}
-            />
-            <InputRightElement>
-              <IconButton
-                variant="ghost"
+              icon={<Icon as={SearchIcon} />}
+              aria-label="Search"
+            /> */}
+          </Box>
+        )}
+ {isMobile ? (
+<Box fontWeight={"600"} fontSize={"3em"} cursor="pointer" position="relative" right="6vw" >
+  <Menu isOpen={isMenuOpen} onClose={closeMenu}>
+    <MenuButton as={Button} onClick={handleMahalakshmiClick}>
+      <Text  fontSize={"2em"}>
+        Mahalakshmi{" "}
+        <span>
+          <Icon icon="icon-park:down" />
+        </span>
+      </Text>
+    </MenuButton>
+    <MenuList color={"black"} onClose={closeMenu}>
+      <MenuItem>Account Statement</MenuItem>
+      <MenuItem>Profile Loss Report</MenuItem>
+      <MenuItem>Bet History</MenuItem>
+      <MenuItem>Unsettled Bet</MenuItem>
+      <MenuItem>Set Button Values</MenuItem>
+      <MenuItem>Change Password</MenuItem>
+      <Button marginLeft={"1.8rem"}>SignOut</Button>
+    </MenuList>
+  </Menu>
+</Box>
+ ):(
+
+<Box fontWeight={"600"} fontSize={"1em"} cursor="pointer" position="relative" left="53vw" >
+  <Menu isOpen={isMenuOpen} onClose={closeMenu}>
+    <MenuButton as={Button} onClick={handleMahalakshmiClick}>
+      <Text>
+        Mahalakshmi{" "}
+        <span>
+          <Icon icon="icon-park:down" />
+        </span>
+      </Text>
+    </MenuButton>
+    <MenuList color={"black"} onClose={closeMenu}>
+      <MenuItem>Account Statement</MenuItem>
+      <MenuItem>Profile Loss Report</MenuItem>
+      <MenuItem>Bet History</MenuItem>
+      <MenuItem>Unsettled Bet</MenuItem>
+      <MenuItem>Set Button Values</MenuItem>
+      <MenuItem>Change Password</MenuItem>
+      <Button marginLeft={"1.8rem"}>SignOut</Button>
+    </MenuList>
+  </Menu>
+</Box>
+ )}
+
+        {isMobile ? (
+          <Box>
+            <Link href="#" color="white" textAlign="center" position="relative" bottom="5vw" left="25vw" fontSize="8vw" >
+              Balance: 0 Exposure: 0
+            </Link>
+          </Box>
+        ) : (
+          <Box>
+            <Link href="#" color="white" textAlign="right" position="relative" left="42vw">
+              Balance: 0 Exposure: 0
+            </Link>
+          </Box>
+        )}
+
+        {isMobile ? (
+          <Box>
+            <Link href="#" color="white" textAlign="right" position="relative" right="50vw" bottom="15vw" fontSize="8vw">
+              Rules
+            </Link>
+          </Box>
+        ) : (
+          <Box>
+            <Link href="#" color="white" textAlign="right">
+              Rules
+            </Link>
+          </Box>
+        )}
+
+        {isMobile ? (
+          <Box>
+            <InputGroup>
+              <Input
+                type="text"
+                placeholder="Search..."
+                borderRadius="full"
+                bg="white"
                 color="teal.500"
-                icon={<Icon as={SearchIcon} />}
-                aria-label="Search"
+              
+                _placeholder={{ color: "teal.300" }}
+                position="relative" 
+                width="25rem"
+                left="7vw"
+               
               />
-            </InputRightElement>
-          </InputGroup>
-        </Box>
-      )}
-
-      <Box>
-        <Link href="#" color="white">
-          Balance:0 Exposure:0
-        </Link>
-      </Box>
-
-      {isMobile && (
-        <Spacer />
-      )}
-
-      <Box>
-        <Link href="#" color="white">
-          Rules
-        </Link>
-      </Box>
-
-      {isMobile && (
-        <Menu>
-
-          <MenuButton variant="outline" color="white">
-            <Text>Mahalakshmi{" "}  <span>
-              <Icon icon="icon-park:down" />
-            </span></Text>
-            
-          </MenuButton>
-        {/* <marquee>This is an example of html marquee </marquee>   */}
-         
-          <MenuList color={"black"}>
-            <MenuItem>Account Statement</MenuItem>
-            <MenuItem>Profile Loss Report</MenuItem>
-            <MenuItem>Bet History</MenuItem>
-            <MenuItem>Unsettled Bet</MenuItem>
-            <MenuItem>Set Button Values</MenuItem>
-            <MenuItem>Change Password</MenuItem>
-            <Button marginLeft={"0.8rem"}>SignOut</Button>
-            {/* Add more items as needed */}
-          </MenuList>
-        </Menu>
-      )}
-    </HStack>
+              <InputRightElement>
+                <IconButton
+                  variant="ghost"
+                  color="teal.500"
+                  icon={<Icon as={SearchIcon} />}
+                  aria-label="Search"
+                  position="relative" 
+                  left="7vw"
+                />
+              </InputRightElement>
+            </InputGroup>
+          </Box>
+        ) : (
+          <Box>
+            <InputGroup>
+              <Input
+                type="text"
+                placeholder="Search..."
+                borderRadius="full"
+                bg="white"
+                color="teal.500"
+                textAlign="left"
+                _placeholder={{ color: "teal.300" }}
+                position="relative" 
+                right="35vw"
+              />
+              <InputRightElement>
+                <IconButton
+                  variant="ghost"
+                  color="teal.500"
+                  icon={<Icon as={SearchIcon} />}
+                  aria-label="Search"
+                  position="relative" 
+                right="35vw"
+                />
+              </InputRightElement>
+            </InputGroup>
+          </Box>
+        )}
+      </HStack>
 
       <Stack
         alignContent={"center"}
@@ -160,6 +223,9 @@ const Navbar = () => {
         css={{
           "&::-webkit-scrollbar": {
             display: "none",
+          },
+          '@media screen and (max-width: 765px)': {
+            display: 'none',
           },
         }}
       >
