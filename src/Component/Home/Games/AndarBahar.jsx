@@ -21,6 +21,7 @@ import {
 import Card from './Card'
 import { Icon } from "@iconify/react";
 import { AspectRatio } from "@chakra-ui/react";
+import video from '../Games/AnderBahar.mp4'
 
 const AndarBahar = () => {
   return (
@@ -55,7 +56,7 @@ const AndarBahar = () => {
               >
                 <iframe
               title="naruto"
-              src="https://www.youtube.com/embed/QhBnZ6NPOY0"
+              src={video}
               allowFullScreen
               style={{ objectFit: "cover", borderRadius: "10px" }}
       
