@@ -357,7 +357,7 @@ const Home = () => {
             <NavLink to="/andarbahar">
               <Box className="custom-box">
                 <Image src={War} alt="Casino-war" />
-                <span>CASINO WAR</span>
+                <Text >CASINO WAR</Text>
               </Box>
             </NavLink>
           </GridItem>
