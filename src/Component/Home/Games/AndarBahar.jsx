@@ -55,7 +55,7 @@ const AndarBahar = () => {
               >
                 <iframe
               title="naruto"
-              src="https://www.youtube.com/embed/QhBnZ6NPOY0"
+              src="https://www.youtube.com/watch?v=h43hSDb81zw"
               allowFullScreen
               style={{ objectFit: "cover", borderRadius: "10px" }}
       
