@@ -78,7 +78,7 @@ const Navbar = () => {
           </Box>
         )}
  {isMobile ? (
-<Box fontWeight={"600"} fontSize={"3em"} cursor="pointer" position="relative" right="6vw" >
+<Box fontWeight={"600"} fontSize={"1em"} cursor="pointer" position="relative" right="6vw" >
   <Menu isOpen={isMenuOpen} onClose={closeMenu}>
     <MenuButton as={Button} onClick={handleMahalakshmiClick}>
       <Text  fontSize={"2em"}>
@@ -88,7 +88,7 @@ const Navbar = () => {
         </span>
       </Text>
     </MenuButton>
-    <MenuList color={"black"} onClose={closeMenu}>
+    <MenuList color={"black"} onClose={closeMenu} fontSize={"0.7em"}>
       <MenuItem>Account Statement</MenuItem>
       <MenuItem>Profile Loss Report</MenuItem>
       <MenuItem>Bet History</MenuItem>
@@ -219,15 +219,10 @@ const Navbar = () => {
         color="white"
         p={2}
         spacing={12}
-        overflowX={{ base: "auto", md: "visible" }}
-        css={{
-          "&::-webkit-scrollbar": {
-            display: "none",
-          },
-          '@media screen and (max-width: 765px)': {
-            display: 'none',
-          },
-        }}
+        overflowX={{ base: "scroll", md: "visible" }}
+        
+       
+       
       >
         <NavLink to="/home">
           <Box>Cricket</Box>
