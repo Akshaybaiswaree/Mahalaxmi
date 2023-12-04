@@ -64,8 +64,8 @@ const Navbar = () => {
      
   
   
-        <Image  width={{ base: "30%", md: "4rem" }} 
-    height={{ base: "auto", md: "3rem" }}   m={3} src={LOGO} />
+        <Image  width={{ base: "40%", md: "6rem", lg:"9rem"}} 
+    height={{ base: "30%", md:"4rem", lg:"7rem" }}   m={3} src={LOGO} />
 
         {isMobile && (
           <Box>
