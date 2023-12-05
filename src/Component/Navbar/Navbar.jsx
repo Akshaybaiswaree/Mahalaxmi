@@ -275,15 +275,32 @@
 
 // export default Navbar;
 
-import { Container,HStack,Box,Image,Text, Flex,Stack } from '@chakra-ui/react'
+import { Container,HStack,Box,Image,Text, Flex,Stack, MenuItem, MenuList, Button, Icon, MenuButton, Menu, useDisclosure, VStack } from '@chakra-ui/react'
 import { AccountBalance, ZoomIn } from '@mui/icons-material'
 import { Link, NavLink } from 'react-router-dom'
 import LOGO from "@/assets/Logo.png";
 import SearchIcon from '@mui/icons-material/Search';
+import { useState } from 'react';
+
+
+
 
 //import React from 'react'
 
 const Navbar = () => {
+
+  const [isSectionOpen, setIsSectionOpen] = useState(false);
+
+  const handleToggleSection = () => {
+    setIsSectionOpen(!isSectionOpen);
+  };
+
+  const handleItemClick = (item) => {
+    // Handle item click as needed
+    console.log(`Clicked on item: ${item}`);
+  };
+
+    
   return (
     <Container 
     p="0"
@@ -298,30 +315,115 @@ const Navbar = () => {
   
 
      >
-      <Box display="flex" justifyContent="space-between" >       
-        <Image width={{base:"5rem", md: "6 rem",lg:"7rem"}} height={{base:"5rem",md:"6rem",lg:"7rem"}} m={1} src={LOGO}/>
+      <Box display="flex"  >       
+        <Image width={{base:"5rem", md: "6 rem",lg:"7rem"}} 
+        height={{base:"5rem",md:"6rem",lg:"7rem"}} m={1} src={LOGO}/>
+        
+        <Box marginTop={{ base:"2rem",lg:"3.5rem"}}>
+        <Text>Mahalaxmi</Text>
+      </Box>
         
       </Box>
+      
+    
       <Box 
         alignItems="flex-start"
         
         >
-          <Box display={{base:"grid", md:"flex", lg:"flex"}}
-          
+          <Box 
+          paddingRight={{lg:"30"}}
+          display={{base:"grid", md:"flex", lg:"flex"}}
+          justifyContent={{lg:"space-between"}}
+          gap={{lg:"4"}}
+
           >
 
-            <Box display={{base:"none",md:"flex", lg:"flex"}}>
+            <Box display={{base:"none",md:"flex", lg:"flex"}}
+            gap={{lg:"4"}}
+            marginTop={{lg:"2"}}
+            >
             <ZoomIn/>
+            
+            <Text display={{base:"none",mg:"flex",lg:"fl"}}>Rule</Text>
             </Box>
-          
-            <Text display={{lg:"none"}}>< AccountBalance /> </Text>
+            <Text display={{base:"none", lg:"none"}} >< AccountBalance /> </Text>
                  
-            <Text>Balance:0</Text>
-            <Text textDecor={{lg:"underline"}}>Exposure:0</Text>
+            <Text  marginTop={{lg:"2"}} >Balance:0</Text>
+            <Text 
+            textDecor={{lg:"underline"}}
+            marginTop={{lg:"2"}}
+            >Exposure:0</Text>
+           
+           
+           
+            {/* <select style={{background:"#2b329b",color:"white" }} placeholder='Mahalaxmi9' 
+           
+            >
+              <option value="option1">Account Statement</option>
+              <option value="option1">Profile Loss Report</option>
+              <option value="option1">Bet History</option>
+            </select>
             {/* <Link textDecor={{base: "underline"}} >
             Mahalaxmi
             </Link> */}
-            
+
+{/* <Box  >
+   <Menu isOpen={isMenuOpen} onClose={closeMenu}>
+     <Box 
+     bg="#2b329b"
+      textColor="white"
+      marginTop={{ lg:"0.5"}}
+      
+
+       as={Button} onClick={handleMahalakshmiClick}>
+       <Text  >
+         Mahalakshmi{" "}
+         <span>
+          <Icon icon="icon-park:down" />
+         </span>
+       </Text>
+     </Box>
+     <MenuList
+     position={{base:"relative" , lg:"relative"}}
+     alignItems="flex-end"
+      color={"black"} onClose={closeMenu}>
+       <MenuItem>Account Statement</MenuItem>
+       <MenuItem>Profile Loss Report</MenuItem>
+      <MenuItem>Bet History</MenuItem>
+       <MenuItem>Unsettled Bet</MenuItem>
+       <MenuItem>Set Button Values</MenuItem>
+       <MenuItem>Change Password</MenuItem>
+       <Button marginLeft={"1.8rem"}>SignOut</Button>
+     </MenuList>
+   </Menu>
+ </Box> */}
+
+{/* <Text
+
+        textDecoration="underline"
+        margin={{lg:"2"}}
+        cursor="pointer"
+        onClick={handleToggleSection}
+      >
+        Click me 
+      </Text> */}
+
+      {isSectionOpen && (
+        <VStack align="start" spacing={2}>
+          <Link onClick={() => handleItemClick("Item 1")}>Item 1</Link>
+          <Link onClick={() => handleItemClick("Item 2")}>Item 2</Link>
+          <Link onClick={() => handleItemClick("Item 3")}>Item 3</Link>
+          <Link onClick={() => handleItemClick("Item 4")}>Item 4</Link>
+        </VStack>
+      )}
+
+
+
+
+
+
+
+             
             </Box>
        
         </Box>  
@@ -331,12 +433,13 @@ const Navbar = () => {
     <HStack>
 
     <Flex  padding="0">
-      <Box display= {{base:"flex", md:"flex", lg:"none"}} alignItems="flex-start"
+      <Box display= {{base:"flex", md:"flex", lg:"flex"}} alignItems="flex-start"
 
       >
        <Box 
        width={{ base: "7",lg:"40%"}}
        padding={{base:"1"}} 
+       
        > <SearchIcon/>
        </Box>
       
