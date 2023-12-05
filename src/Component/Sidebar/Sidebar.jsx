@@ -62,7 +62,9 @@ class Sidebar extends React.Component {
         </button>
         {this.state.showSidebar && (
           <div className="sidebar">
-            <ul>
+            <ul 
+            style={{width:"100%"}}
+            >
               <li className="blinking">
                 <Link to="/live-casino">Live Casino</Link>
               </li>

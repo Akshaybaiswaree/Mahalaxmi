@@ -242,6 +242,7 @@ const Home = () => {
   direction="row"
   justify="space-between"
   flexWrap={{ base: "wrap", md: "nowrap" }}
+  display={{base:"none", md:"flex" , lg: "flex"}}
 >
 <Text
   fontSize="m"
@@ -252,7 +253,9 @@ const Home = () => {
 >
   Game
 </Text>
-<Flex  direction="row" align="center" flexWrap="wrap" >
+<Flex  direction="row" align="center" flexWrap="wrap"
+display={{base:"none", md: "flex" ,lg:"flex"}}
+ >
   <WrapItem paddingRight={{ base: 34, md: 2 }}>
     <Center w={{ base: '130px', md: '135px' }} h="40px">
       1
@@ -283,6 +286,7 @@ const Home = () => {
   borderBottom="1px"
   borderColor="#ccc"
   flexWrap="wrap"
+  display={{base:"none", md:"flex", lg:"flex"}}
 >
  
 <Text fontSize="m" p={2} fontWeight="400" width={{ base: "90%", md: "auto" }}>
@@ -327,8 +331,8 @@ const Home = () => {
 
 
 
-      <Box className="Home" paddingLeft="12" >
-        <Heading as="h1" textAlign="center" marginBottom="4">
+      <Box className="Home" paddingLeft="2" >
+        <Heading as="h1" textAlign={{base: "start", md: "center",lg: "center"}} marginBottom="4">
           Our Casino
         </Heading>
 
@@ -351,6 +355,48 @@ const Home = () => {
     },
   }}
 >
+
+       <GridItem colSpan={{ base: 4, md: 1 }}>
+            <NavLink to="/andarbahar">
+              <Box className="custom-box">
+                <Image src={andarBahar} alt="teenpatti" />
+                <span> ANDAR BAHAR (Virtual)</span>
+              </Box>
+            </NavLink>
+          </GridItem>
+
+          <GridItem colSpan={{ base: 4, md: 1 }}>
+          <NavLink to="/andarbahar">
+            <Box className="custom-box">
+              <Image src={Roulette} alt="teenpatti" />
+              <Text> ROULETTE</Text>
+            </Box>
+
+            </NavLink>        
+          </GridItem>
+
+          <GridItem colSpan={{ base: 4, md: 1 }}>
+            <NavLink to="/andarbahar">
+            <Box className="custom-box">
+              <Image src={DragonTiger} alt="teenpatti" />
+              <span> 1 DAY DRAGON TIGER </span>
+            </Box>
+
+            </NavLink>
+            
+          </GridItem>
+
+          <GridItem colSpan={{ base: 4, md: 1 }}>
+          <NavLink to="/andarbahar">
+            <Box className="custom-box">
+              <Image src={AndarBahar} alt="teenpatti" />
+              <span> ANDAR BAHAR</span>
+            </Box>
+
+            </NavLink>
+            
+          </GridItem>
+
 
 
           <GridItem colSpan={{ base: 4, md: 1 }}>
@@ -389,15 +435,7 @@ const Home = () => {
             </NavLink>
           </GridItem>
 
-          <GridItem colSpan={{ base: 4, md: 1 }}>
-            <NavLink to="/andarbahar">
-              <Box className="custom-box">
-                <Image src={andarBahar} alt="teenpatti" />
-                <span> ANDAR BAHAR (Virtual)</span>
-              </Box>
-            </NavLink>
-          </GridItem>
-
+         
           <GridItem colSpan={{ base: 4, md: 1 }}>
             <NavLink to="/racegame">
               <Box className="custom-box">
@@ -448,12 +486,7 @@ const Home = () => {
             </Box>
           </GridItem>
 
-          <GridItem colSpan={{ base: 4, md: 1 }}>
-            <Box className="custom-box">
-              <Image src={Roulette} alt="teenpatti" />
-              <span> ROULETTE</span>
-            </Box>
-          </GridItem>
+          
 
           <GridItem colSpan={{ base: 4, md: 1 }}>
             <Box className="custom-box">
@@ -490,12 +523,7 @@ const Home = () => {
             </Box>
           </GridItem>
 
-          <GridItem colSpan={{ base: 4, md: 1 }}>
-            <Box className="custom-box">
-              <Image src={AndarBahar} alt="teenpatti" />
-              <span> ANDAR BAHAR</span>
-            </Box>
-          </GridItem>
+          
 
           <GridItem colSpan={{ base: 4, md: 1 }}>
             <Box className="custom-box">
@@ -588,12 +616,7 @@ const Home = () => {
             </Box>
           </GridItem>
 
-          <GridItem colSpan={{ base: 4, md: 1 }}>
-            <Box className="custom-box">
-              <Image src={DragonTiger} alt="teenpatti" />
-              <span> 1 DAY DRAGON TIGER </span>
-            </Box>
-          </GridItem>
+         
 
           <GridItem colSpan={{ base: 4, md: 1 }}>
             <Box className="custom-box">
@@ -611,6 +634,8 @@ const Home = () => {
 
           
         </Grid>
+
+        
       </Box>
     </>
   );

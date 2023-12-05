@@ -1,5 +1,5 @@
 .sidebar {
-    width: 20vw; 
+    width: 15; 
     background-color: rgb(188, 188, 188);
     
 }
@@ -71,6 +71,10 @@
   @media screen and (min-width : 320px){
         .sideBar_btn_NavLind{
             display: none;
+           
+            
+         
+            
         }
         
   }
@@ -78,6 +82,9 @@
   @media screen and (min-width : 768px){
     .sideBar_btn_NavLind{
         display: block;
+        
+        
+       
     }
   }
 

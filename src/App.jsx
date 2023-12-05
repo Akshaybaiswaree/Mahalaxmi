@@ -20,6 +20,8 @@ const router = createBrowserRouter(
       <Route path="SignUp" element={<SignUP />} />
       <Route path="SignUp" element={<Login/>} />
       <Route path= "racegame" element = {<RaceGame/>}/>
+      <Route path= "Routele" element = {<RaceGame/>}/>
+      
 
 
       <Route path="/" element={<RootLayout />}>
