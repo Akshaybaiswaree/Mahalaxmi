@@ -246,7 +246,7 @@ const Home = () => {
 >
 <Text
   fontSize="m"
-  fontWeight="600"
+  fontWeight="700"
   p={2}
   width={{ base: "100%", md: "auto" }}
   display={{ base: "none", md: "block" }}
@@ -289,7 +289,7 @@ display={{base:"none", md: "flex" ,lg:"flex"}}
   display={{base:"none", md:"flex", lg:"flex"}}
 >
  
-<Text fontSize="m" p={2} fontWeight="400" width={{ base: "90%", md: "auto" }}>
+<Text fontSize="m" p={2} fontWeight="600" width={{ base: "90%", md: "auto" }}>
   Bangladesh v New Zealand/Nov 29 2023 09:00 AM (IST)
 </Text>
 

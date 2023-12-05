@@ -341,17 +341,21 @@ const Navbar = () => {
             <Box display={{base:"none",md:"flex", lg:"flex"}}
             gap={{lg:"4"}}
             marginTop={{lg:"2"}}
-            >
-            <ZoomIn/>
             
-            <Text display={{base:"none",mg:"flex",lg:"fl"}}>Rule</Text>
+            >
+            <ZoomIn />
+            
+            <Text display={{base:"none",mg:"flex",lg:"fl"}} marginRight={{lg:'1.5rem'}} fontSize={{lg:'20'}}>Rule</Text>
             </Box>
             <Text display={{base:"none", lg:"none"}} >< AccountBalance /> </Text>
                  
-            <Text  marginTop={{lg:"2"}} >Balance:0</Text>
+            <Text  marginTop={{lg:"2"}} marginRight={{lg:'1.5rem'}} fontSize={{lg:'20'}}>Balance:0</Text>
             <Text 
             textDecor={{lg:"underline"}}
             marginTop={{lg:"2"}}
+            fontSize={{lg:'20'}}
+            marginRight={{lg:'1.5rem'}}
+
             >Exposure:0</Text>
            
            
@@ -440,7 +444,7 @@ const Navbar = () => {
        width={{ base: "7",lg:"40%"}}
        padding={{base:"1"}} 
        
-       > <SearchIcon/>
+       > 
        </Box>
       
        <Box 

@@ -28,7 +28,7 @@ const AndarBahar = () => {
     <>
       <ChakraProvider>
         {/* {/ AsideSection /} */}
-        <Box width="100%">
+        <Box width={{base:"85%",lg:"100%"}}>
           <Flex
             direction={{ base: "column", md: "row" }}
             justify="space-evenly"
@@ -43,7 +43,7 @@ const AndarBahar = () => {
            alignItems="center"
            justifyContent="center"
            position="relative"
-          width={{ base: "125%", md: "105%", lg: "50%" }} 
+          width={{ base: "122%", md: "105%", lg: "50%" }} 
            height={{ base: "auto", md: "500px" }}
            p={2}
        
@@ -59,6 +59,7 @@ const AndarBahar = () => {
               src={video}
               allowFullScreen
               style={{ objectFit: "cover", borderRadius: "10px" }}
+              
       
                 />
               </AspectRatio>
@@ -89,7 +90,7 @@ const AndarBahar = () => {
             </Box>
 
             {/* {/ SmallAsideSection /} */}
-            <Accordion width={{base: "125%", md: "105%", lg: "50%" }}>
+            <Accordion width={{base: "123%", md: "105%", lg: "50%" }}>
               <AccordionItem bg="#092844" color="white" borderLeftRadius="5">
                 <h2>
                   <AccordionButton>
@@ -182,7 +183,7 @@ const AndarBahar = () => {
         </Box>
 
         {/* {/ CardBahar /} */}
-        <Box width={{ base: "125%", md: "105%", lg: "50%" }} height="400px" mt={3}>
+        <Box width={{ base: "100%", md: "105%", lg: "50%" }} height="400px" mt={3}>
           <Text fontWeight="bold">1st Card Bahar 25%:</Text>
           <Box width="100%">
             <Flex
