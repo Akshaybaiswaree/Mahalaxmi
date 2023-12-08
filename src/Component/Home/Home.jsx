@@ -366,7 +366,7 @@ display={{base:"none", md: "flex" ,lg:"flex"}}
           </GridItem>
 
           <GridItem colSpan={{ base: 4, md: 1 }}>
-          <NavLink to="/andarbahar">
+          <NavLink to="/Rouette">
             <Box className="custom-box">
               <Image src={Roulette} alt="teenpatti" />
               <Text> ROULETTE</Text>
@@ -376,7 +376,7 @@ display={{base:"none", md: "flex" ,lg:"flex"}}
           </GridItem>
 
           <GridItem colSpan={{ base: 4, md: 1 }}>
-            <NavLink to="/andarbahar">
+            <NavLink to="/DragonTiger">
             <Box className="custom-box">
               <Image src={DragonTiger} alt="teenpatti" />
               <span> 1 DAY DRAGON TIGER </span>

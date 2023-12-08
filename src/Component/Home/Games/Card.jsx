@@ -54,6 +54,11 @@ import spadesJack from './Image/spades_jack.png';
 import spadesAce from './Image/spades_ace.png';
 import spadesKing from './Image/spades_king.png';
 import spadesQueen from './Image/spades_queen.png';
+import DemoImage1 from './Image/DemoImage1.svg';
+import DemoImage2 from './Image/DemoImage2.svg';
+import DemoImage3 from './Image/DemoImage3.svg';
+
+
 import './CardDeck.css';
 
 const CardDeck = () => {
@@ -105,7 +110,7 @@ const cardsForSectionB = getRandomCards(6);
             <img
               src={imagePath}
               alt={`Card ${index + 1}`}
-              style={{ width: '70px', height: '75px' }}
+              style={{ width: '100px', height: '75px' }}
             />
           </div>
         ))}
@@ -119,10 +124,36 @@ const cardsForSectionB = getRandomCards(6);
               alt={`Card ${index + 1}`}
               style={{  width: '70px', height: '75px' }}
             />
+
+            {/* <div
+            style={{
+              marginTop:'70px'
+
+            }} 
+            >
+              <img src={DemoImage1} 
+              alt="DemoImage" 
+              style={{  width: '70px', height: '75px' }}
+              />
+
+<           img src={DemoImage2} 
+              alt="DemoImage" 
+              style={{  width: '70px', height: '75px' }}
+              
+              />
+
+              <img src={DemoImage3} 
+              alt="DemoImage"
+              style={{  width: '70px', height: '75px' }} 
+              />
+            </div> */}
+
+
           </div>
         ))}
       </div>
     </div>
+    
   );
 };
 
