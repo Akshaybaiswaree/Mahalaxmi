@@ -360,66 +360,29 @@ const Navbar = () => {
            
            
            
-            {/* <select style={{background:"#2b329b",color:"white" }} placeholder='Mahalaxmi9' 
+            <select style={{background:"#2b329b",color:"white" }} placeholder='Mahalaxmi9'           
+            >  
            
-            >
-              <option value="option1">Account Statement</option>
-              <option value="option1">Profile Loss Report</option>
-              <option value="option1">Bet History</option>
+             <option value="option1" >Mahalaxmi Gaming</option>
+               
+              <option value="option2">Account Statement</option>
+              <option value="option3">Profile Loss Report</option>
+              <option value="option4">Bet History</option>
+              <option value="option5">Unsettled Bet </option>
+              <option value="option6">Set Button Value</option>
+              <option value="option7">Current Password</option>
+              <option value="option8">Sign Out</option>
+              <option value="option9">Bet History</option>
+
+           
+           
             </select>
-            {/* <Link textDecor={{base: "underline"}} >
-            Mahalaxmi
-            </Link> */}
+            
+ 
 
-{/* <Box  >
-   <Menu isOpen={isMenuOpen} onClose={closeMenu}>
-     <Box 
-     bg="#2b329b"
-      textColor="white"
-      marginTop={{ lg:"0.5"}}
-      
+ 
 
-       as={Button} onClick={handleMahalakshmiClick}>
-       <Text  >
-         Mahalakshmi{" "}
-         <span>
-          <Icon icon="icon-park:down" />
-         </span>
-       </Text>
-     </Box>
-     <MenuList
-     position={{base:"relative" , lg:"relative"}}
-     alignItems="flex-end"
-      color={"black"} onClose={closeMenu}>
-       <MenuItem>Account Statement</MenuItem>
-       <MenuItem>Profile Loss Report</MenuItem>
-      <MenuItem>Bet History</MenuItem>
-       <MenuItem>Unsettled Bet</MenuItem>
-       <MenuItem>Set Button Values</MenuItem>
-       <MenuItem>Change Password</MenuItem>
-       <Button marginLeft={"1.8rem"}>SignOut</Button>
-     </MenuList>
-   </Menu>
- </Box> */}
-
-{/* <Text
-
-        textDecoration="underline"
-        margin={{lg:"2"}}
-        cursor="pointer"
-        onClick={handleToggleSection}
-      >
-        Click me 
-      </Text> */}
-
-      {isSectionOpen && (
-        <VStack align="start" spacing={2}>
-          <Link onClick={() => handleItemClick("Item 1")}>Item 1</Link>
-          <Link onClick={() => handleItemClick("Item 2")}>Item 2</Link>
-          <Link onClick={() => handleItemClick("Item 3")}>Item 3</Link>
-          <Link onClick={() => handleItemClick("Item 4")}>Item 4</Link>
-        </VStack>
-      )}
+     
 
 
 
