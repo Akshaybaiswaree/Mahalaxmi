@@ -18,35 +18,63 @@ import {
   Button,
   WrapItem,
 } from "@chakra-ui/react";
-import Card from './Card'
+import Card from "./Card";
 import { Icon } from "@iconify/react";
 import { AspectRatio } from "@chakra-ui/react";
-import video from '../Games/AnderBahar.mp4'
+import video from "../Games/AnderBahar.mp4";
+import { useState } from "react";
 
 const AndarBahar = () => {
+  const [toggle, setToggle] = useState(false); // toggle Functionallity
+  const [toggle2, setToggle2] = useState(false);
+  const [userCoine, setUserCoine] = useState(500); // Actual Coin
+  const [inputValue, setInputValue] = useState(""); // For Input
+
+  const togglhandler = () => {
+    setToggle(!toggle);
+  };
+  const togglhandler2 = () => {
+    setToggle2(!toggle2);
+  };
+
+  const AndarHandler = () => {
+    const totalCoin = userCoine - Number(inputValue);
+    // console.log(totalCoin, "total Coin");
+    if(inputValue > userCoine ){
+      alert("Bhai minus mai cala jayega tu")
+      setUserCoine(0)
+    }
+    setUserCoine(totalCoin);
+    setInputValue(""); // Set to an empty string to clear the input
+  };
+
+  const BaharHandler = () => {
+    const totalCoin = userCoine - Number(inputValue);
+    console.log(totalCoin, "total Coin");
+    setUserCoine(totalCoin);
+    setInputValue(""); // Set to an empty string to clear the input
+  };
   return (
     <>
       <ChakraProvider>
         {/* {/ AsideSection /} */}
-        <Box width={{base:"85%",lg:"100%"}}>
+        <Box width={{ base: "85%", lg: "100%" }}>
           <Flex
             direction={{ base: "column", md: "row" }}
             justify="space-evenly"
             flex="wrap"
             gap={1}
           >
-      
             <Box
-           flex="1"
-           bgColor="#333"
-           display="flex"
-           alignItems="center"
-           justifyContent="center"
-           position="relative"
-          width={{ base: "122%", md: "105%", lg: "50%" }} 
-           height={{ base: "auto", md: "500px" }}
-           p={2}
-       
+              flex="1"
+              bgColor="#333"
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+              position="relative"
+              width={{ base: "122%", md: "105%", lg: "50%" }}
+              height={{ base: "auto", md: "500px" }}
+              p={2}
             >
               <AspectRatio
                 width="100%"
@@ -55,12 +83,10 @@ const AndarBahar = () => {
                 controls
               >
                 <iframe
-              title="naruto"
-              src={video}
-              allowFullScreen
-              style={{ objectFit: "cover", borderRadius: "10px" }}
-              
-      
+                  title="naruto"
+                  src={video}
+                  allowFullScreen
+                  style={{ objectFit: "cover", borderRadius: "10px" }}
                 />
               </AspectRatio>
               <Flex
@@ -90,32 +116,46 @@ const AndarBahar = () => {
             </Box>
 
             {/* {/ SmallAsideSection /} */}
-            <Accordion width={{base: "123%", md: "105%", lg: "50%" }}>
+            <Accordion width={{ base: "123%", md: "105%", lg: "50%" }}>
               <AccordionItem bg="#092844" color="white" borderLeftRadius="5">
                 <h2>
-                  <AccordionButton>
+                  <AccordionButton onClick={togglhandler}>
                     <Box as="span" flex="1" textAlign="left">
                       Place Bet
                     </Box>
                     <AccordionIcon />
                   </AccordionButton>
                 </h2>
-                <AccordionPanel pb={4}>
-                  <NumberInput>
-                    <NumberInputField />
-                    <NumberInputStepper>
-                      <NumberIncrementStepper color="white" />
-                      <NumberDecrementStepper color="white" />
-                    </NumberInputStepper>
-                  </NumberInput>
+                <AccordionPanel pb={4} display={toggle ? "block" : "none"}>
+                  {
+                    <NumberInput>
+                      <NumberInputField
+                        value={inputValue}
+                        onChange={(e) => setInputValue(e.target.value)}
+                      />
+                      <NumberInputStepper>
+                        <NumberIncrementStepper color="white" />
+                        <NumberDecrementStepper color="white" />
+                      </NumberInputStepper>
+                    </NumberInput>
+                  }
+
                   <Flex justify="space-around" m={3}>
                     <WrapItem>
-                      <Button colorScheme="red" size="lg">
+                      <Button
+                        colorScheme="red"
+                        size="lg"
+                        onClick={AndarHandler}
+                      >
                         Andar
                       </Button>
                     </WrapItem>
                     <WrapItem>
-                      <Button colorScheme="green" size="lg">
+                      <Button
+                        colorScheme="green"
+                        size="lg"
+                        onClick={BaharHandler}
+                      >
                         Bahar
                       </Button>
                     </WrapItem>
@@ -124,15 +164,17 @@ const AndarBahar = () => {
               </AccordionItem>
               <AccordionItem bg="#092844" color="white" borderLeftRadius="5">
                 <h2>
-                  <AccordionButton>
+                  <AccordionButton onClick={togglhandler2} >
                     <Box as="span" flex="1" textAlign="left">
                       My Bet
                     </Box>
                     <AccordionIcon />
                   </AccordionButton>
                 </h2>
-                <AccordionPanel pb={4}>
-                  <h1>Your Coins</h1>
+                <AccordionPanel pb={4}  display={toggle2 ? "block" : "none"}>
+                  {
+                  <h1>{userCoine}</h1>
+                  }
                 </AccordionPanel>
               </AccordionItem>
 
@@ -168,22 +210,23 @@ const AndarBahar = () => {
                 bg="white"
                 borderBottom="1px"
                 borderBottomColor="gray.200"
-                base= "125%" md= "105%" lg= "50%"
+                base="125%"
+                md="105%"
+                lg="50%"
               >
                 <Text textAlign="center">No records Found</Text>
-              
-                
               </Box>
-              <Card/>
-            
-            
-          
+              <Card />
             </Accordion>
           </Flex>
         </Box>
 
         {/* {/ CardBahar /} */}
-        <Box width={{ base: "100%", md: "105%", lg: "50%" }} height="400px" mt={3}>
+        <Box
+          width={{ base: "100%", md: "105%", lg: "50%" }}
+          height="400px"
+          mt={3}
+        >
           <Text fontWeight="bold">1st Card Bahar 25%:</Text>
           <Box width="100%">
             <Flex
@@ -295,10 +338,7 @@ const AndarBahar = () => {
             </Flex>
           </Box>
 
-          
           <Flex justify="flex-end" align="center">
-          
-        
             <Box
               width="2rem"
               height="2rem"
@@ -369,7 +409,6 @@ const AndarBahar = () => {
               </Text>
             </Box>
 
-          
             <Box
               width="2rem"
               height="2rem"
@@ -386,7 +425,7 @@ const AndarBahar = () => {
                 A
               </Text>
             </Box>
-           
+
             <Box
               width="2rem"
               height="2rem"

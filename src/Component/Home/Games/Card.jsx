@@ -70,22 +70,24 @@ const CardDeck = () => {
     spades2, spades3, spades4, spades5, spades6, spades7, spades8, spades9, spades10, spadesAceSimple, spadesJack, spadesAce, spadesKing, spadesQueen,
   ];
 
-  const [deck, setDeck] = useState(initialDeck);
+  const [deck, setDeck] = useState(initialDeck); // for all card
+  const [showFirstImage, setShowFirstImage] = useState(true); // for the Image
+  const [winningCard, setWinningCard] = useState(null);
 
   const shuffleArray = (array) => {
     let newArray = array.slice();
-
     for (let i = newArray.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
     }
-
     return newArray;
   };
 
   const shuffleDeck = () => {
     const shuffledDeck = shuffleArray(deck);
     setDeck(shuffledDeck);
+    setShowFirstImage(true);
+    setWinningCard(shuffledDeck[1]);
   };
 
   const getRandomCards = (count) => {
@@ -94,15 +96,37 @@ const CardDeck = () => {
   };
 
   useEffect(() => {
-    shuffleDeck();
-  }, []);
+     const firstImageTimeout = setTimeout(() => {
+      shuffleDeck(); // Shuffle the deck after 5 seconds
+    }, 5000);
 
+    return () => clearTimeout(firstImageTimeout); // Cleanup timeout on component unmount
+  }, []);
   const cardsForSectionA = getRandomCards(7);
-const cardsForSectionB = getRandomCards(6);
+  const cardsForSectionB = getRandomCards(6);
+
+  const isWinningCardInSections = cardsForSectionA.includes(winningCard) || cardsForSectionB.includes(winningCard);
+
+  useEffect(() => {
+    if (isWinningCardInSections) {
+      //  Display an alert indicating a win
+       alert('Congratulations! You won!');
+    }
+  }, [isWinningCardInSections]);
+
+  
 
 
   return (
     <div className="card-container">
+         {showFirstImage && (
+        <img
+          className='firstImage'
+          src={winningCard} // Display the winning card
+          style={{ width: '70px', height: '75px' }}
+          alt="First Image"
+        />
+      )}
       <div className="section">
         <h2> A </h2>
         {cardsForSectionA.map((imagePath, index) => (
