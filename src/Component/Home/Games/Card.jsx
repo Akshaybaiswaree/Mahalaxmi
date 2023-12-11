@@ -71,6 +71,7 @@ const CardDeck = () => {
   ];
 
   const [deck, setDeck] = useState(initialDeck); // for all card
+  
   const [showFirstImage, setShowFirstImage] = useState(true); // for the Image
   const [winningCard, setWinningCard] = useState(null);
 

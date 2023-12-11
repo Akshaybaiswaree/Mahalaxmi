@@ -54,10 +54,16 @@ const AndarBahar = () => {
   };
 
   const BaharHandler = () => {
-    const totalCoin = userCoine - Number(inputValue);
-    console.log(totalCoin, "total Coin");
-    setUserCoine(totalCoin);
-    setInputValue(""); // Set to an empty string to clear the input
+    if (inputValue > userCoine) {
+      alert(
+        "Insufficient funds in your account. Please add funds to continue."
+      );
+      setInputValue(0);
+    } else {
+      const totalCoin = userCoine - inputValue;
+      setUserCoine(totalCoin);
+      setInputValue(0);
+    }
   };
   return (
     <>

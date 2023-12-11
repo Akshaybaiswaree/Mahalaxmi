@@ -366,13 +366,24 @@ display={{base:"none", md: "flex" ,lg:"flex"}}
           </GridItem>
 
           <GridItem colSpan={{ base: 4, md: 1 }}>
-          <NavLink to="/Rouette">
+            <NavLink to = "/andarbahar">
             <Box className="custom-box">
-              <Image src={Roulette} alt="teenpatti" />
-              <Text> ROULETTE</Text>
+              <Image src={aaa} alt="teenpatti" />
+              <span> AMAR AKBAR ANTHONY</span>
             </Box>
 
-            </NavLink>        
+            </NavLink>
+            
+          </GridItem>
+
+          
+             <GridItem colSpan={{ base: 4, md: 1 }}>
+             <NavLink to = "/andarbahar">
+            <Box className="custom-box">
+              <Image src={Teenpatti} alt="teenpatti" />
+              <span> TEENPATTI T20</span>
+            </Box>
+            </NavLink>
           </GridItem>
 
           <GridItem colSpan={{ base: 4, md: 1 }}>
@@ -381,9 +392,17 @@ display={{base:"none", md: "flex" ,lg:"flex"}}
               <Image src={DragonTiger} alt="teenpatti" />
               <span> 1 DAY DRAGON TIGER </span>
             </Box>
+            </NavLink>            
+          </GridItem>
 
-            </NavLink>
-            
+          <GridItem colSpan={{ base: 4, md: 1 }}>
+          <NavLink to="/Rouette">
+            <Box className="custom-box">
+              <Image src={Roulette} alt="teenpatti" />
+              <Text> ROULETTE</Text>
+            </Box>
+
+            </NavLink>        
           </GridItem>
 
           <GridItem colSpan={{ base: 4, md: 1 }}>
@@ -495,12 +514,7 @@ display={{base:"none", md: "flex" ,lg:"flex"}}
             </Box>
           </GridItem>
 
-          <GridItem colSpan={{ base: 4, md: 1 }}>
-            <Box className="custom-box">
-              <Image src={aaa} alt="teenpatti" />
-              <span> AMAR AKBAR ANTHONY</span>
-            </Box>
-          </GridItem>
+          
 
           <GridItem colSpan={{ base: 4, md: 1 }}>
             <Box className="custom-box">
@@ -546,12 +560,7 @@ display={{base:"none", md: "flex" ,lg:"flex"}}
             </Box>
           </GridItem>
 
-          <GridItem colSpan={{ base: 4, md: 1 }}>
-            <Box className="custom-box">
-              <Image src={Teenpatti} alt="teenpatti" />
-              <span> TEENPATTI T20</span>
-            </Box>
-          </GridItem>
+          
 
           <GridItem colSpan={{ base: 4, md: 1 }}>
             <Box className="custom-box">

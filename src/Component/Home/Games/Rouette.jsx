@@ -1,412 +1,657 @@
 import {
-    ChakraProvider,
-    Box,
-    Text,
-    Flex,
-    Center,
-    Tooltip,
-    Accordion,
-    AccordionItem,
-    AccordionButton,
-    AccordionPanel,
-    AccordionIcon,
-    NumberInput,
-    NumberInputField,
-    NumberInputStepper,
-    NumberIncrementStepper,
-    NumberDecrementStepper,
-    Button,
-    WrapItem,
-    HStack,
-    Grid,GridItem
-  } from "@chakra-ui/react";
-  import Card from './Card'
-  import { Icon } from "@iconify/react";
-  import { AspectRatio} from "@chakra-ui/react";
-  import video from '../Games/GameVideo/Roullete.mp4'
-  
-  const Roulette = () => {
-    return (
-      <>
-        <ChakraProvider>
-          {/* {/ AsideSection /} */}
-          <Box width={{base:"85%",lg:"100%"}}>
-            <Flex
-              direction={{ base: "column", md: "row" }}
-              justify="space-evenly"
-              Flex="wrap"
-              gap={5}
+  ChakraProvider,
+  Box,
+  Text,
+  Flex,
+  Center,
+  Tooltip,
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+  AccordionIcon,
+  NumberInput,
+  NumberInputField,
+  NumberInputStepper,
+  NumberIncrementStepper,
+  NumberDecrementStepper,
+  Button,
+  WrapItem,
+  HStack,
+  Grid,
+  GridItem,
+  Wrap,
+  Stack,
+  useBreakpointValue,
+} from "@chakra-ui/react";
+import Card from "./Card";
+import { Icon } from "@iconify/react";
+import { AspectRatio } from "@chakra-ui/react";
+import video from "../Games/GameVideo/Roullete.mp4";
+
+const Roulette = () => {
+  const stackDirection = useBreakpointValue ({base:'column', md: 'row', lg: 'row'});
+
+
+  return (
+    <>
+      <ChakraProvider>
+        {/* {/ AsideSection /} */}
+        <Box width={{ base: "85%", lg: "100%" }}>
+          <Flex
+            direction={{ base: "column", md: "row" }}
+            justify="space-evenly"
+            Flex="wrap"
+            gap={5}
+          >
+            <Box
+              Flex="1"
+              bgColor="#333"
+              display="Flex"
+              alignItems="center"
+              justifyContent="center"
+              position="relative"
+              width={{ base: "121%", md: "105%", lg: "70%" }}
+              height={{ base: "auto", md: "500px" }}
+              p={2}
             >
-        
-              <Box
-             Flex="1"
-             bgColor="#333"
-             display="Flex"
-             alignItems="center"
-             justifyContent="center"
-             position="relative"
-            width={{ base: "125%", md: "105%", lg: "70%" }} 
-             height={{ base: "auto", md: "500px" }}
-             p={2}
-         
+              <AspectRatio
+                width="100%"
+                height="500px"
+                borderRadius="10px"
+                controls
               >
-                <AspectRatio
-                  width="100%"
-                  height="500px"
-                  borderRadius="10px"
-                  controls
-                >
-                  <iframe
-                title="naruto"
-                src={video}
-                allowFullScreen
-                style={{ objectFit: "cover", borderRadius: "10px" }}
-        
-                  />
-                </AspectRatio>
-                <Flex
+                <iframe
+                  title="naruto"
+                  src={video}
+                  allowFullScreen
+                  style={{ objectFit: "cover", borderRadius: "10px" }}
+                />
+              </AspectRatio>
+              <Flex
+                position="absolute"
+                bottom="0"
+                width="100%"
+                justifyContent="space-between"
+                padding="10px"
+              >
+                <Text
+                  color="white"
                   position="absolute"
-                  bottom="0"
-                  width="100%"
-                  justifyContent="space-between"
-                  padding="10px"
+                  left="10px"
+                  bottom="10px"
                 >
-                  <Text
-                    color="white"
-                    position="absolute"
-                    left="10px"
-                    bottom="10px"
-                  >
-                    Volume
+                  Volume
+                </Text>
+                <Text
+                  color="white"
+                  position="absolute"
+                  right="10px"
+                  bottom="10px"
+                >
+                  00:00 / 05:30
+                </Text>
+              </Flex>
+            </Box>
+
+            {/* {/ SmallAsideSection /} */}
+            <Accordion width={{ base: "120%", md: "105%", lg: "50%" }}>
+              <AccordionItem bg="#092844" color="white" borderLeftRadius="5">
+                <h2>
+                  <AccordionButton>
+                    <Box as="span" Flex="1" textAlign="left">
+                      Last Result
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+                </h2>
+                <AccordionPanel pb={4} bg="white" color="black">
+                  <Flex justify="Flex-start" align="center">
+                    <Box
+                      width="2rem"
+                      height="2rem"
+                      borderRadius="50%"
+                      bgColor="black"
+                      margin="5px"
+                    >
+                      <Text
+                        color="white"
+                        fontWeight="bold"
+                        fontSize="lg"
+                        textAlign="center"
+                      >
+                        2
+                      </Text>
+                    </Box>
+                    <Box
+                      width="2rem"
+                      height="2rem"
+                      borderRadius="50%"
+                      bgColor="red"
+                      margin="5px"
+                    >
+                      <Text
+                        color="white"
+                        fontWeight="bold"
+                        fontSize="lg"
+                        textAlign="center"
+                      >
+                        5
+                      </Text>
+                    </Box>
+                    <Box
+                      width="2rem"
+                      height="2rem"
+                      borderRadius="50%"
+                      bgColor="red"
+                      margin="5px"
+                    >
+                      <Text
+                        color="white"
+                        fontWeight="bold"
+                        fontSize="lg"
+                        textAlign="center"
+                      >
+                        7
+                      </Text>
+                    </Box>
+                    <Box
+                      width="2rem"
+                      height="2rem"
+                      borderRadius="50%"
+                      bgColor="black"
+                      margin="5px"
+                    >
+                      <Text
+                        color="white"
+                        fontWeight="bold"
+                        fontSize="lg"
+                        textAlign="center"
+                      >
+                        15
+                      </Text>
+                    </Box>
+
+                    <Box
+                      width="2rem"
+                      height="2rem"
+                      borderRadius="50%"
+                      bgColor="red"
+                      margin="5px"
+                    >
+                      <Text
+                        color="white"
+                        fontWeight="bold"
+                        fontSize="lg"
+                        textAlign="center"
+                      >
+                        21
+                      </Text>
+                    </Box>
+                    <Box
+                      width="2rem"
+                      height="2rem"
+                      borderRadius="50%"
+                      bgColor="black"
+                      margin="5px"
+                    >
+                      <Text
+                        color="white"
+                        fontWeight="bold"
+                        fontSize="lg"
+                        textAlign="center"
+                      >
+                        17
+                      </Text>
+                    </Box>
+                    <Box
+                      width="2rem"
+                      height="2rem"
+                      borderRadius="50%"
+                      bgColor="black"
+                      margin="5px"
+                    >
+                      <Text
+                        color="white"
+                        fontWeight="bold"
+                        fontSize="lg"
+                        textAlign="center"
+                      >
+                        20
+                      </Text>
+                    </Box>
+                    <Box
+                      width="2rem"
+                      height="2rem"
+                      borderRadius="50%"
+                      bgColor="black"
+                      margin="5px"
+                    >
+                      <Text
+                        color="white"
+                        fontWeight="bold"
+                        fontSize="lg"
+                        textAlign="center"
+                      >
+                        22
+                      </Text>
+                    </Box>
+                    <Box
+                      width="2rem"
+                      height="2rem"
+                      borderRadius="50%"
+                      bgColor="red"
+                      margin="5px"
+                    >
+                      <Text
+                        color="white"
+                        fontWeight="bold"
+                        fontSize="lg"
+                        textAlign="center"
+                      >
+                        23
+                      </Text>
+                    </Box>
+                    <Box
+                      width="2rem"
+                      height="2rem"
+                      borderRadius="50%"
+                      bgColor="black"
+                      margin="5px"
+                    >
+                      <Text
+                        color="white"
+                        fontWeight="bold"
+                        fontSize="lg"
+                        textAlign="center"
+                      >
+                        26
+                      </Text>
+                    </Box>
+
+                    <Box
+                      width="2rem"
+                      height="2rem"
+                      borderRadius="50%"
+                      bgColor="red"
+                      margin="5px"
+                    >
+                      <Text
+                        color="white"
+                        fontWeight="bold"
+                        fontSize="lg"
+                        textAlign="center"
+                      >
+                        1
+                      </Text>
+                    </Box>
+                    <Box
+                      width="2rem"
+                      height="2rem"
+                      borderRadius="50%"
+                      bgColor="black"
+                      margin="5px"
+                    >
+                      <Text
+                        color="white"
+                        fontWeight="bold"
+                        fontSize="lg"
+                        textAlign="center"
+                      >
+                        28
+                      </Text>
+                    </Box>
+                    <Box
+                      width="2rem"
+                      height="2rem"
+                      borderRadius="50%"
+                      bgColor="black"
+                      margin="5px"
+                    >
+                      <Text
+                        color="white"
+                        fontWeight="bold"
+                        fontSize="lg"
+                        textAlign="center"
+                      >
+                        29
+                      </Text>
+                    </Box>
+                  </Flex>
+                </AccordionPanel>
+              </AccordionItem>
+
+              <AccordionItem bg="#092844" color="white" borderLeftRadius="5">
+                <h2>
+                  <AccordionButton>
+                    <Box as="span" Flex="1" textAlign="left">
+                      Place Bet
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+                </h2>
+                <AccordionPanel></AccordionPanel>
+              </AccordionItem>
+
+              <AccordionItem bg="#092844" color="white" borderLeftRadius="5">
+                <h2>
+                  <AccordionButton>
+                    <Box as="span" Flex="1" textAlign="left">
+                      My Bet
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+                </h2>
+                <AccordionPanel pb={4}>
+                  <h1>Your Coins</h1>
+                </AccordionPanel>
+              </AccordionItem>
+
+              <Box
+                width="100%"
+                height="30px"
+                bg="#cccccc"
+                mt={1}
+                ml={1}
+                borderBottom="2px"
+                borderBottomColor="black.200"
+              >
+                <Flex
+                  align="center"
+                  justify="space-between"
+                  height="100%"
+                  px={2}
+                >
+                  <Text color="black" fontWeight="600">
+                    Match bet
                   </Text>
-                  <Text
-                    color="white"
-                    position="absolute"
-                    right="10px"
-                    bottom="10px"
-                  >
-                    00:00 / 05:30
+                  <Text color="black" fontWeight="600">
+                    Odds
+                  </Text>
+                  <Text color="black" fontWeight="600">
+                    Stacks
                   </Text>
                 </Flex>
               </Box>
-  
-              {/* {/ SmallAsideSection /} */}
-              <Accordion width={{base: "125%", md: "105%", lg: "50%" }}>
+              <Box
+                width="99%"
+                height="30px"
+                bg="white"
+                borderBottom="1px"
+                borderBottomColor="gray.200"
+                base="100%"
+                md="105%"
+                lg="50%"
+              >
+                <Text textAlign="center">No records Found</Text>
+              </Box>
+            </Accordion>
+          </Flex>
+        </Box>
 
-              <AccordionItem bg="#092844" color="white" borderLeftRadius="5">
-                  <h2>
-                    <AccordionButton>
-                      <Box as="span" Flex="1" textAlign="left">
-                        Last Result
-                      </Box>
-                      <AccordionIcon />
-                    </AccordionButton>
-                  </h2>
-                  <AccordionPanel pb={4} bg="white" color="black">
-                  <Flex justify="Flex-start" align="center">
+        {/* {/ rullete numbers /} */}
 
-                  <Box
-                width="2rem"
-                height="2rem"
-                borderRadius="50%"
-                bgColor="black"
-                margin="5px"
-              >
-                <Text
-                  color="white"
-                  fontWeight="bold"
-                  fontSize="lg"
-                  textAlign="center"
-                >
-                  2
-                </Text>
-              </Box>
-              <Box
-                width="2rem"
-                height="2rem"
-                borderRadius="50%"
-                bgColor="red"
-                margin="5px"
-              >
-                <Text
-                  color="white"
-                  fontWeight="bold"
-                  fontSize="lg"
-                  textAlign="center"
-                >
-                  5
-                </Text>
-              </Box>
-              <Box
-                width="2rem"
-                height="2rem"
-                borderRadius="50%"
-                bgColor="red"
-                margin="5px"
-              >
-                <Text
-                  color="white"
-                  fontWeight="bold"
-                  fontSize="lg"
-                  textAlign="center"
-                >
-                  7
-                </Text>
-              </Box>
-              <Box
-                width="2rem"
-                height="2rem"
-                borderRadius="50%"
-                bgColor="black"
-                margin="5px"
-              >
-                <Text
-                  color="white"
-                  fontWeight="bold"
-                  fontSize="lg"
-                  textAlign="center"
-                >
-                 15
-                </Text>
-              </Box>
-                
-              <Box
-                width="2rem"
-                height="2rem"
-                borderRadius="50%"
-                bgColor="red"
-                margin="5px"
-              >
-                <Text
-                  color="white"
-                  fontWeight="bold"
-                  fontSize="lg"
-                  textAlign="center"
-                >
-                  21
-                </Text>
-              </Box>
-              <Box
-                width="2rem"
-                height="2rem"
-                borderRadius="50%"
-                bgColor="black"
-                margin="5px"
-              >
-                <Text
-                  color="white"
-                  fontWeight="bold"
-                  fontSize="lg"
-                  textAlign="center"
-                >
-                  17
-                </Text>
-              </Box>
-              <Box
-                width="2rem"
-                height="2rem"
-                borderRadius="50%"
-                bgColor="black"
-                margin="5px"
-              >
-                <Text
-                  color="white"
-                  fontWeight="bold"
-                  fontSize="lg"
-                  textAlign="center"
-                >
-                  20
-                </Text>
-              </Box>
-              <Box
-                width="2rem"
-                height="2rem"
-                borderRadius="50%"
-                bgColor="black"
-                margin="5px"
-              >
-                <Text
-                  color="white"
-                  fontWeight="bold"
-                  fontSize="lg"
-                  textAlign="center"
-                >
-                  22
-                </Text>
-              </Box>
-              <Box
-                width="2rem"
-                height="2rem"
-                borderRadius="50%"
-                bgColor="red"
-                margin="5px"
-              >
-                <Text
-                  color="white"
-                  fontWeight="bold"
-                  fontSize="lg"
-                  textAlign="center"
-                >
-                  23
-                </Text>
-              </Box>
-              <Box
-                width="2rem"
-                height="2rem"
-                borderRadius="50%"
-                bgColor="black"
-                margin="5px"
-              >
-                <Text
-                  color="white"
-                  fontWeight="bold"
-                  fontSize="lg"
-                  textAlign="center"
-                >
-                  26
-                </Text>
-              </Box>
+        {/* <Stack  >
 
-              <Box
-                width="2rem"
-                height="2rem"
-                borderRadius="50%"
-                bgColor="red"
-                margin="5px"
-              >
-                <Text
-                  color="white"
-                  fontWeight="bold"
-                  fontSize="lg"
-                  textAlign="center"
-                >
-                  1
-                </Text>
-              </Box>
-              <Box
-                width="2rem"
-                height="2rem"
-                borderRadius="50%"
-                bgColor="black"
-                margin="5px"
-              >
-                <Text
-                  color="white"
-                  fontWeight="bold"
-                  fontSize="lg"
-                  textAlign="center"
-                >
-                  28
-                </Text>
-              </Box>
-              <Box
-                width="2rem"
-                height="2rem"
-                borderRadius="50%"
-                bgColor="black"
-                margin="5px"
-              >
-                <Text
-                  color="white"
-                  fontWeight="bold"
-                  fontSize="lg"
-                  textAlign="center"
-                >
-                  29
-                </Text>
-              </Box>
-
-
-
-                  </Flex>
-                  </AccordionPanel>
-                </AccordionItem>
-
-                <AccordionItem bg="#092844" color="white" borderLeftRadius="5">
-                  <h2>
-                    <AccordionButton>
-                      <Box as="span" Flex="1" textAlign="left">
-                        Place Bet
-                      </Box>
-                      <AccordionIcon />
-                    </AccordionButton>
-                  </h2>
-                  <AccordionPanel>
-                    
-                  </AccordionPanel>
-                </AccordionItem>
-
-
-
-                <AccordionItem bg="#092844" color="white" borderLeftRadius="5">
-                  <h2>
-                    <AccordionButton>
-                      <Box as="span" Flex="1" textAlign="left">
-                        My Bet
-                      </Box>
-                      <AccordionIcon />
-                    </AccordionButton>
-                  </h2>
-                  <AccordionPanel pb={4}>
-                    <h1>Your Coins</h1>
-                  </AccordionPanel>
-                </AccordionItem>
-  
-                <Box
-                  width="100%"
-                  height="30px"
-                  bg="#cccccc"
-                  mt={1}
-                  ml={1}
-                  borderBottom="2px"
-                  borderBottomColor="black.200"
-                >
-                  <Flex
-                    align="center"
-                    justify="space-between"
-                    height="100%"
-                    px={2}
-                  >
-                    <Text color="black" fontWeight="600">
-                      Match bet
-                    </Text>
-                    <Text color="black" fontWeight="600">
-                      Odds
-                    </Text>
-                    <Text color="black" fontWeight="600">
-                      Stacks
-                    </Text>
-                  </Flex>
-                </Box>
-                <Box
-                  width="99%"
-                  height="30px"
-                  bg="white"
-                  borderBottom="1px"
-                  borderBottomColor="gray.200"
-                  base= "125%" md= "105%" lg= "50%"
-                >
-                  <Text textAlign="center">No records Found</Text>
-                
-                  
-                </Box>
-               
-              
-              
-            
-              </Accordion>
-            </Flex>
+          <HStack direction={stackDirection} spacing="2px" >
+          <Grid >
+         <Box w="40px" h="80px" bg="yellow.200" justifyContent="space-between" >
+            <center >1-18</center>
           </Box>
-  
-          {/* {/ rullete numbers /} */}
-          <Box width={{ base: "125%", md: "105%", lg: "75%" }} height="400px" mt={5}>
-            
-            
-  
+          <Box w="40px" h="80px" bg="tomato" align = "center" textAlign="center">
+            2
+          </Box>
+          <Box w="40px" h="80px" bg="pink.100">
+            3
+          </Box>
+          <Box w="40px" h="80px" bg="yellow.200">
+            1
+          </Box>
+          <Box w="40px" h="80px" bg="tomato">
+            2
+          </Box>
+          <Box w="40px" h="80px" bg="pink.100">
+            3
+          </Box>
+
+         </Grid>
+
+         <Grid>
+         <Box w="40px" h="160px" bg="yellow.200">
+            1
+          </Box>
+          
+          <Box w="40px" h="160px" bg="pink.100">
+            2
+          </Box>
+         
+          <Box w="40px" h="160px" bg="tomato">
+            3
+          </Box>
+          
+
+         </Grid>
+
+
+         <Grid gap={2}>
+
+         <Flex>
+
+         <Box w="50px" h="40px" bg="tomato">
+            3
+          </Box>
+          <Box w="50px" h="40px" bg="tomato">
+            3
+          </Box>
+          <Box w="50px" h="40px" bg="tomato">
+            3
+          </Box>
+
+          
+
+         </Flex>
+         <Flex>
+          
+          <Box w="50px" h="40px" bg="tomato">
+             3
+           </Box>
+           <Box w="50px" h="40px" bg="tomato">
+             3
+           </Box>
+           <Box w="50px" h="40px" bg="tomato">
+             3
+           </Box>
+ 
            
+ 
+          </Flex>
+
+          <Flex>
+          
+          <Box w="50px" h="40px" bg="tomato">
+             3
+           </Box>
+           <Box w="50px" h="40px" bg="tomato">
+             3
+           </Box>
+           <Box w="50px" h="40px" bg="tomato">
+             3
+           </Box>
+ 
            
-  
+ 
+          </Flex>
+
+          <Flex>
+          
+          <Box w="50px" h="40px" bg="tomato">
+             3
+           </Box>
+           <Box w="50px" h="40px" bg="tomato">
+             3
+           </Box>
+           <Box w="50px" h="40px" bg="tomato">
+             3
+           </Box>
+ 
+           
+ 
+          </Flex>
+          <Flex>
+          
+          <Box w="50px" h="40px" bg="tomato">
+             3
+           </Box>
+           <Box w="50px" h="40px" bg="tomato">
+             3
+           </Box>
+           <Box w="50px" h="40px" bg="tomato">
+             3
+           </Box>
+ 
+           
+ 
+          </Flex>
+          <Flex>
+          
+          <Box w="50px" h="40px" bg="tomato">
+             3
+           </Box>
+           <Box w="50px" h="40px" bg="tomato">
+             3
+           </Box>
+           <Box w="50px" h="40px" bg="tomato">
+             3
+           </Box>
+ 
+           
+ 
+          </Flex>
+          <Flex>
+          
+          <Box w="50px" h="40px" bg="tomato">
+             3
+           </Box>
+           <Box w="50px" h="40px" bg="tomato">
+             3
+           </Box>
+           <Box w="50px" h="40px" bg="tomato">
+             3
+           </Box>
+ 
+           
+ 
+          </Flex>
+          <Flex>
+          
+          <Box w="50px" h="40px" bg="tomato">
+             3
+           </Box>
+           <Box w="50px" h="40px" bg="tomato">
+             3
+           </Box>
+           <Box w="50px" h="40px" bg="tomato">
+             3
+           </Box>
+ 
+           
+ 
+          </Flex>
+          <Flex>
+          
+          <Box w="50px" h="40px" bg="tomato">
+             3
+           </Box>
+           <Box w="50px" h="40px" bg="tomato">
+             3
+           </Box>
+           <Box w="50px" h="40px" bg="tomato">
+             3
+           </Box>
+ 
+           
+ 
+          </Flex>
+          <Flex>
+          
+          <Box w="50px" h="40px" bg="tomato">
+             3
+           </Box>
+           <Box w="50px" h="40px" bg="tomato">
+             3
+           </Box>
+           <Box w="50px" h="40px" bg="tomato">
+             3
+           </Box>
+ 
+           
+ 
+          </Flex>
+          
+          
+ 
+
+         </Grid>
+
+         
+         
+         
+         
+         
+         
+
+
+          </HStack>
+        
+          
+         
+
+
+          
+        
+         
+
+
+
+
+          
+        </Stack> */}
+
+
+     
+        {/* <Flex direction={stackDirection} spacing="2px"  >
+         <Box w="40px" h="80px" bg="yellow.200" justifyContent="space-between" >
+            <center >1-18</center>
+          </Box>
+          <Box w="40px" h="80px" bg="tomato" align = "center" textAlign="center">
+            2
+          </Box>
+          <Box w="40px" h="80px" bg="pink.100">
+            3
+          </Box>
+          <Box w="40px" h="80px" bg="yellow.200">
+            1
+          </Box>
+          <Box w="40px" h="80px" bg="tomato">
+            2
+          </Box>
+          <Box w="40px" h="80px" bg="pink.100">
+            3
+          </Box>
+
+         </Flex> */}
+     
+   
+     
+       
+    
+
+
+<Box width={{ base: "100%", md: "105%", lg: "45%" }} height="400px" mt={5} transform={{ base: "rotate(90deg)", lg: "rotate(0deg)"}}
+position={{base:"relative",top:"20px",left: "0"}} 
+>
             
+
             <Grid templateColumns='repeat(13, 1fr)' gap={1}>
               
              <GridItem w='100%' h='10' bg='red' color="white">
@@ -470,7 +715,7 @@ import {
             
             <GridItem w='100%' h='10' bg='grey' color="white">
               <Flex justifyContent='space-around'fontSize='x-large'>
-                2to 1
+                2to1
               </Flex>
     
             </GridItem>
@@ -539,7 +784,7 @@ import {
 
             <GridItem w='100%' h='10' bg='grey' color="white">
               <Flex justifyContent='space-around'fontSize='x-large'>
-                2to 1
+                2to1
               </Flex>
     
             </GridItem>
@@ -610,14 +855,14 @@ import {
 
             <GridItem w='100%' h='10' bg='grey' color="white">
               <Flex justifyContent='space-around'fontSize='x-large'>
-                2to 1
+                2to1
               </Flex>
     
             </GridItem>
             </Grid>
 
 
-            <Grid templateColumns='repeat(13, 1fr)' gap={1}>
+            <Grid templateColumns='repeat(13, 1fr)' gap={1} >
 
            
             <GridItem w='100%' h='10' bg='grey'color="white" colSpan={4} mt={1}>
@@ -692,10 +937,18 @@ import {
 
 
           </Box>
-        </ChakraProvider>
-      </>
-    );
-  };
-  
-  export default Roulette;
-  
+
+       
+
+
+
+
+
+
+
+      </ChakraProvider>
+    </>
+  );
+};
+
+export default Roulette;
