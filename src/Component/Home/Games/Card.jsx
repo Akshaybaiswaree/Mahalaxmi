@@ -71,7 +71,7 @@ const CardDeck = () => {
   ];
 
   const [deck, setDeck] = useState(initialDeck); // for all card
-  
+
   const [showFirstImage, setShowFirstImage] = useState(true); // for the Image
   const [winningCard, setWinningCard] = useState(null);
 
@@ -80,7 +80,9 @@ const CardDeck = () => {
     for (let i = newArray.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+
     }
+    
     return newArray;
   };
 
@@ -147,8 +149,13 @@ const CardDeck = () => {
             <img
               src={imagePath}
               alt={`Card ${index + 1}`}
-              style={{  width: '70px', height: '75px' }}
+              style={{  width: '100px', height: '75px' }}
             />
+
+
+
+
+
 
             {/* <div
             style={{

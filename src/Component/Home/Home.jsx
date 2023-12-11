@@ -366,7 +366,7 @@ display={{base:"none", md: "flex" ,lg:"flex"}}
           </GridItem>
 
           <GridItem colSpan={{ base: 4, md: 1 }}>
-            <NavLink to = "/andarbahar">
+            <NavLink to = "/AmarAkbarAnthony">
             <Box className="custom-box">
               <Image src={aaa} alt="teenpatti" />
               <span> AMAR AKBAR ANTHONY</span>

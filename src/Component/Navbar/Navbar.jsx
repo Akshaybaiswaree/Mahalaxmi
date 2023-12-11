@@ -349,7 +349,7 @@ const Navbar = () => {
             </Box>
             <Text display={{base:"none", lg:"none"}} >< AccountBalance /> </Text>
                  
-            <Text  marginTop={{lg:"2"}} marginRight={{lg:'1.5rem'}} fontSize={{lg:'20'}}>Balance:0</Text>
+            <Text  marginTop={{lg:"2"}} marginRight={{lg:'1.5rem'}} fontSize={{lg:'20'}} justifyContent={{base: "end"}}>Balance:0</Text>
             <Text 
             textDecor={{lg:"underline"}}
             marginTop={{lg:"2"}}
