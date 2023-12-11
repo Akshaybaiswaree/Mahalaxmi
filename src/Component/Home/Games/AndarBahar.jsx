@@ -22,14 +22,17 @@ import Card from "./Card";
 import { Icon } from "@iconify/react";
 import { AspectRatio } from "@chakra-ui/react";
 import video from "../Games/AnderBahar.mp4";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const AndarBahar = () => {
   const [toggle, setToggle] = useState(false); // toggle Functionallity
   const [toggle2, setToggle2] = useState(false);
   const [userCoine, setUserCoine] = useState(500); // Actual Coin
-  const [inputValue, setInputValue] = useState(""); // For Input
+  const [inputValue, setInputValue] = useState(0); // For Input
 
+  console.log(inputValue);
+
+  useEffect(() => {}, [inputValue]);
   const togglhandler = () => {
     setToggle(!toggle);
   };
@@ -38,14 +41,16 @@ const AndarBahar = () => {
   };
 
   const AndarHandler = () => {
-    const totalCoin = userCoine - Number(inputValue);
-    // console.log(totalCoin, "total Coin");
-    if(inputValue > userCoine ){
-      alert("Bhai minus mai cala jayega tu")
-      setUserCoine(0)
+    if (inputValue > userCoine) {
+      alert(
+        "Insufficient funds in your account. Please add funds to continue."
+      );
+      setInputValue(0);
+    } else {
+      const totalCoin = userCoine - inputValue;
+      setUserCoine(totalCoin);
+      setInputValue(0);
     }
-    setUserCoine(totalCoin);
-    setInputValue(""); // Set to an empty string to clear the input
   };
 
   const BaharHandler = () => {
@@ -127,18 +132,13 @@ const AndarBahar = () => {
                   </AccordionButton>
                 </h2>
                 <AccordionPanel pb={4} display={toggle ? "block" : "none"}>
-                  {
-                    <NumberInput>
-                      <NumberInputField
-                        value={inputValue}
-                        onChange={(e) => setInputValue(e.target.value)}
-                      />
-                      <NumberInputStepper>
-                        <NumberIncrementStepper color="white" />
-                        <NumberDecrementStepper color="white" />
-                      </NumberInputStepper>
-                    </NumberInput>
-                  }
+                  <NumberInput value={inputValue}>
+                    <NumberInputField />
+                    <NumberInputStepper>
+                      <NumberIncrementStepper color="white" />
+                      <NumberDecrementStepper color="white" />
+                    </NumberInputStepper>
+                  </NumberInput>
 
                   <Flex justify="space-around" m={3}>
                     <WrapItem>
@@ -160,21 +160,103 @@ const AndarBahar = () => {
                       </Button>
                     </WrapItem>
                   </Flex>
+
+                  <Flex gap={"10px"}>
+                    <Button
+                      colorScheme="teal"
+                      size="xs"
+                      onClick={() => {
+                        setInputValue((prev) => prev + 5);
+                      }}
+                    >
+                      +5
+                    </Button>
+                    <Button
+                      colorScheme="teal"
+                      size="xs"
+                      onClick={() => {
+                        setInputValue((prev) => prev + 10);
+                      }}
+                    >
+                      +10
+                    </Button>
+                    <Button
+                      colorScheme="teal"
+                      size="xs"
+                      onClick={() => {
+                        setInputValue((prev) => prev + 50);
+                      }}
+                    >
+                      +50
+                    </Button>
+                    <Button
+                      colorScheme="teal"
+                      size="xs"
+                      onClick={() => {
+                        setInputValue((prev) => prev + 100);
+                      }}
+                    >
+                      +100
+                    </Button>
+                    <Button
+                      colorScheme="teal"
+                      size="xs"
+                      onClick={() => {
+                        setInputValue((prev) => prev + 500);
+                      }}
+                    >
+                      +500
+                    </Button>
+                    <Button
+                      colorScheme="teal"
+                      size="xs"
+                      onClick={() => {
+                        setInputValue((prev) => prev + 1000);
+                      }}
+                    >
+                      +1k
+                    </Button>
+                    <Button
+                      colorScheme="teal"
+                      size="xs"
+                      onClick={() => {
+                        setInputValue((prev) => prev + 5000);
+                      }}
+                    >
+                      +5k
+                    </Button>
+                    <Button
+                      colorScheme="teal"
+                      size="xs"
+                      onClick={() => {
+                        setInputValue((prev) => prev + 10000);
+                      }}
+                    >
+                      +10k
+                    </Button>
+                    <Button
+                      colorScheme="blue"
+                      size="xs"
+                      onClick={() => {
+                        setInputValue(0);
+                      }}
+                    >
+                      Clear bet
+                    </Button>
+                  </Flex>
                 </AccordionPanel>
               </AccordionItem>
               <AccordionItem bg="#092844" color="white" borderLeftRadius="5">
                 <h2>
-                  <AccordionButton onClick={togglhandler2} >
+                  <AccordionButton onClick={togglhandler2}>
                     <Box as="span" flex="1" textAlign="left">
                       My Bet
                     </Box>
                     <AccordionIcon />
                   </AccordionButton>
                 </h2>
-                <AccordionPanel pb={4}  display={toggle2 ? "block" : "none"}>
-                  {
-                  <h1>{userCoine}</h1>
-                  }
+                <AccordionPanel pb={4} display={toggle2 ? "block" : "none"}>
+                  {<h1>{userCoine}</h1>}
                 </AccordionPanel>
               </AccordionItem>
 
