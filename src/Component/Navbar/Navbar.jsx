@@ -309,7 +309,7 @@ const Navbar = () => {
   };
 
   return (
-    <Container p="0" bg="#2b329b" textColor="white" width="100vw">
+    <Container p="0" bg="#2b329b" textColor="white" maxW="100vw">
       <HStack
         spacing={4}
         justify="space-between"
@@ -351,10 +351,15 @@ const Navbar = () => {
                 Rule
               </Text>
             </Box>
+
+            <Box>
             <Text display={{  lg: "none" }}>
               <AccountBalance />{" "}
             </Text>
 
+
+            </Box>
+            
             <Text
               marginTop={{ lg: "2" }}
               marginRight={{ lg: "1.5rem" }}
