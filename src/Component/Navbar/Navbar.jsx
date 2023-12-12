@@ -50,9 +50,9 @@
 //   const [isMobile] = useMediaQuery("(max-width: 800px)");
 
 //   return (
-//     <Box 
+//     <Box
 //     width={{ base: "125.4%", md: "100%" }}
-    
+
 //     >
 //     <HStack
 //       bg="#2b329b"
@@ -65,10 +65,8 @@
 //       flexWrap={{ base: "wrap", md: "nowrap" }}
 //       height={{base:'60'}}
 //     >
-     
-  
-  
-//         <Image  width={{ base: "30%", md: "6rem", lg:"9rem"}} 
+
+//         <Image  width={{ base: "30%", md: "6rem", lg:"9rem"}}
 //     height={{ base: "50%", md:"4rem", lg:"7rem" }}   m={3} src={LOGO} />
 
 //         {isMobile && (
@@ -147,7 +145,7 @@
 
 //         {isMobile ? (
 //           <Box>
-//             <Link href="#" color="white" textAlign="right" position="relative" right="50vw" bottom="15vw" fontSize="8vw" 
+//             <Link href="#" color="white" textAlign="right" position="relative" right="50vw" bottom="15vw" fontSize="8vw"
 //             display={{base:"none"}}>
 //               Rules
 //             </Link>
@@ -169,12 +167,12 @@
 //                 borderRadius="full"
 //                 bg="white"
 //                 color="teal.500"
-              
+
 //                 _placeholder={{ color: "teal.300" }}
-//                 position="relative" 
+//                 position="relative"
 //                 width="25rem"
 //                 left="7vw"
-               
+
 //               />
 //               <InputRightElement>
 //                 <IconButton
@@ -182,7 +180,7 @@
 //                   color="teal.500"
 //                   icon={<Icon as={SearchIcon} />}
 //                   aria-label="Search"
-//                   position="relative" 
+//                   position="relative"
 //                   left="7vw"
 //                 />
 //               </InputRightElement>
@@ -199,7 +197,7 @@
 //                 color="teal.500"
 //                 textAlign="left"
 //                 _placeholder={{ color: "teal.300" }}
-//                 position="relative" 
+//                 position="relative"
 //                 right="35vw"
 //               />
 //               <InputRightElement>
@@ -208,7 +206,7 @@
 //                   color="teal.500"
 //                   icon={<Icon as={SearchIcon} />}
 //                   aria-label="Search"
-//                   position="relative" 
+//                   position="relative"
 //                 right="35vw"
 //                 />
 //               </InputRightElement>
@@ -228,9 +226,7 @@
 //         p={2}
 //         spacing={12}
 //         overflowX={{ base: "scroll", md: "visible" }}
-        
-       
-       
+
 //       >
 //         <NavLink to="/home">
 //           <Box>Cricket</Box>
@@ -275,20 +271,32 @@
 
 // export default Navbar;
 
-import { Container,HStack,Box,Image,Text, Flex,Stack, MenuItem, MenuList, Button, Icon, MenuButton, Menu, useDisclosure, VStack } from '@chakra-ui/react'
-import { AccountBalance, ZoomIn } from '@mui/icons-material'
-import { Link, NavLink } from 'react-router-dom'
+import {
+  Container,
+  HStack,
+  Box,
+  Image,
+  Text,
+  Flex,
+  Stack,
+  MenuItem,
+  MenuList,
+  Button,
+  Icon,
+  MenuButton,
+  Menu,
+  useDisclosure,
+  VStack,
+} from "@chakra-ui/react";
+import { AccountBalance, ZoomIn } from "@mui/icons-material";
+import { Link, NavLink } from "react-router-dom";
 import LOGO from "@/assets/Logo.png";
-import SearchIcon from '@mui/icons-material/Search';
-import { useState } from 'react';
-
-
-
+import SearchIcon from "@mui/icons-material/Search";
+import { useState } from "react";
 
 //import React from 'react'
 
 const Navbar = () => {
-
   const [isSectionOpen, setIsSectionOpen] = useState(false);
 
   const handleToggleSection = () => {
@@ -300,133 +308,97 @@ const Navbar = () => {
     console.log(`Clicked on item: ${item}`);
   };
 
-    
   return (
-    <Container 
-    p="0"
-    bg="#2b329b" textColor="white"
-    maxW="100%"
-   >
-
-    <HStack
-     spacing={4}
-     justify="space-between"
-     height={{base:"20",lg:"20"}}
-  
-
-     >
-      <Box display="flex"  >       
-        <Image width={{base:"5rem", md: "6 rem",lg:"7rem"}} 
-        height={{base:"5rem",md:"6rem",lg:"7rem"}} m={1} src={LOGO}/>
-        
-        <Box marginTop={{ base:"2rem",lg:"3.5rem"}}>
-        <Text>Mahalaxmi</Text>
-      </Box>
-        
-      </Box>
-      
-    
-      <Box 
-        alignItems="flex-start"
-        
-        >
-          <Box 
-          paddingRight={{lg:"30"}}
-          display={{base:"grid", md:"flex", lg:"flex"}}
-          justifyContent={{lg:"space-between"}}
-          gap={{lg:"4"}}
-
-          >
-
-            <Box display={{base:"none",md:"flex", lg:"flex"}}
-            gap={{lg:"4"}}
-            marginTop={{lg:"2"}}
-            
-            >
-            <ZoomIn />
-            
-            <Text display={{base:"none",mg:"flex",lg:"fl"}} marginRight={{lg:'1.5rem'}} fontSize={{lg:'20'}}>Rule</Text>
-            </Box>
-            <Text display={{base:"none", lg:"none"}} >< AccountBalance /> </Text>
-                 
-            <Text  marginTop={{lg:"2"}} marginRight={{lg:'1.5rem'}} fontSize={{lg:'20'}}>Balance:0</Text>
-            <Text 
-            textDecor={{lg:"underline"}}
-            marginTop={{lg:"2"}}
-            fontSize={{lg:'20'}}
-            marginRight={{lg:'1.5rem'}}
-
-            >Exposure:0</Text>
-           
-           
-           
-            <select style={{background:"#2b329b",color:"white" }} placeholder='Mahalaxmi9'           
-            >  
-           
-             <option value="option1" >Mahalaxmi Gaming</option>
-               
-              <option value="option2">Account Statement</option>
-              <option value="option3">Profile Loss Report</option>
-              <option value="option4">Bet History</option>
-              <option value="option5">Unsettled Bet </option>
-              <option value="option6">Set Button Value</option>
-              <option value="option7">Current Password</option>
-              <option value="option8">Sign Out</option>
-              <option value="option9">Bet History</option>
-
-           
-           
-            </select>
-            
- 
-
- 
-
-     
-
-
-
-
-
-
-
-             
-            </Box>
-       
-        </Box>  
-    </HStack>
-   
-
-    <HStack>
-
-    <Flex  padding="0">
-      <Box display= {{base:"flex", md:"flex", lg:"flex"}} alignItems="flex-start"
-
+    <Container p="0" bg="#2b329b" textColor="white" width="100vw">
+      <HStack
+        spacing={4}
+        justify="space-between"
+        height={{ base: "20", lg: "20" }}
       >
-       <Box 
-       width={{ base: "7",lg:"40%"}}
-       padding={{base:"1"}} 
-       
-       > 
-       </Box>
-      
-       <Box 
-       width={{base:"100%", }}
-       alignItems={{lg:"flex-end"}}
+        <Box display="flex">
+          <Image
+            width={{ base: "5rem", md: "6 rem", lg: "7rem" }}
+            height={{ base: "5rem", md: "6rem", lg: "7rem" }}
+            m={1}
+            src={LOGO}
+          />
 
-       >
-        <marquee behavior="scroll" direction="left" scrolldelay ="100" >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis quae nam dignissimos vel, aliquam ipsum veniam reiciendis ex, commodi consectetur similique, aliquid incidunt! Repellendus laudantium non voluptas facilis, facere voluptatem.</marquee>
-         </Box>
-        
+          <Box marginTop={{ base: "2rem", lg: "3.5rem" }}>
+            <Text>Mahalaxmi</Text>
+          </Box>
+        </Box>
 
+        <Box alignItems="flex-start">
+          <Box
+            paddingRight={{ lg: "30" }}
+            display={{ base: "grid", md: "flex", lg: "flex" }}
+            justifyContent={{ lg: "space-between" }}
+            gap={{ lg: "4" }}
+          >
+            <Box
+              display={{ base: "none", md: "flex", lg: "flex" }}
+              gap={{ lg: "4" }}
+              marginTop={{ lg: "2" }}
+              justifyContent="end"
+            >
+              <ZoomIn />
 
-      </Box>
-      
-    </Flex>
+              <Text
+                display={{ base: "none", mg: "flex", lg: "fl" }}
+                marginRight={{ lg: "1.5rem" }}
+                fontSize={{ lg: "20" }}
+              >
+                Rule
+              </Text>
+            </Box>
+            <Text display={{  lg: "none" }}>
+              <AccountBalance />{" "}
+            </Text>
 
-    </HStack>
+            <Text
+              marginTop={{ lg: "2" }}
+              marginRight={{ lg: "1.5rem" }}
+              fontSize={{ lg: "20" }}
+              justifyContent={{ base: "end" }}
+              display={{base:'none'}}
+            >
+              Balance:0
+            </Text>
+            <Text
+              textDecor={{ lg: "underline" }}
+              marginTop={{ lg: "2" }}
+              fontSize={{ lg: "20" }}
+              marginRight={{ lg: "1.5rem" }}
+            >
+              Exposure:0
+            </Text>
 
-    <Stack
+           
+          </Box>
+        </Box>
+      </HStack>
+
+      <HStack>
+        <Flex padding="0">
+          <Box
+            display={{ base: "flex", md: "flex", lg: "flex" }}
+            alignItems="flex-start"
+          >
+            <Box width={{ base: "7", lg: "40%" }} padding={{ base: "1" }}></Box>
+
+            <Box width={{ base: "100%" }} alignItems={{ lg: "flex-end" }}>
+              <marquee behavior="scroll" direction="left" scrolldelay="100">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Corporis quae nam dignissimos vel, aliquam ipsum veniam
+                reiciendis ex, commodi consectetur similique, aliquid incidunt!
+                Repellendus laudantium non voluptas facilis, facere voluptatem.
+              </marquee>
+            </Box>
+          </Box>
+        </Flex>
+      </HStack>
+
+      <Stack
         alignContent={"center"}
         alignItems={"center"}
         justifyContent={"center"}
@@ -437,9 +409,6 @@ const Navbar = () => {
         p={2}
         spacing={12}
         overflowX={{ base: "scroll", md: "visible" }}
-        
-       
-       
       >
         <NavLink to="/home">
           <Box>Cricket</Box>
@@ -479,7 +448,7 @@ const Navbar = () => {
         </NavLink>
       </Stack>
     </Container>
-  )
-}
+  );
+};
 
- export default Navbar
+export default Navbar;

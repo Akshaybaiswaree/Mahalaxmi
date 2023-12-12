@@ -17,6 +17,7 @@ import {
   NumberDecrementStepper,
   Button,
   WrapItem,
+  Wrap,
 } from "@chakra-ui/react";
 import Card from "./Card";
 import { Icon } from "@iconify/react";
@@ -167,7 +168,10 @@ const AndarBahar = () => {
                     </WrapItem>
                   </Flex>
 
-                  <Flex gap={"10px"}>
+
+                  <Wrap 
+                  gap={{base:"20px",lg: "10px"}}   >
+
                     <Button
                       colorScheme="teal"
                       size="xs"
@@ -249,7 +253,8 @@ const AndarBahar = () => {
                     >
                       Clear bet
                     </Button>
-                  </Flex>
+                  </Wrap>
+
                 </AccordionPanel>
               </AccordionItem>
               <AccordionItem bg="#092844" color="white" borderLeftRadius="5">

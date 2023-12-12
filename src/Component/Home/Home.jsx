@@ -1,5 +1,4 @@
-//import './Home.css'
-// import War from '../Image/war.jpeg'
+
 import War from "../images/war.jpeg";
 import Teenpatti from "../images/teenpatti.jpg";
 import {
@@ -366,7 +365,7 @@ display={{base:"none", md: "flex" ,lg:"flex"}}
           </GridItem>
 
           <GridItem colSpan={{ base: 4, md: 1 }}>
-            <NavLink to = "/andarbahar">
+            <NavLink to = "/AmarAkbarAnthony">
             <Box className="custom-box">
               <Image src={aaa} alt="teenpatti" />
               <span> AMAR AKBAR ANTHONY</span>
@@ -378,7 +377,7 @@ display={{base:"none", md: "flex" ,lg:"flex"}}
 
           
              <GridItem colSpan={{ base: 4, md: 1 }}>
-             <NavLink to = "/andarbahar">
+             <NavLink to = "/TeenpattiVirtual">
             <Box className="custom-box">
               <Image src={Teenpatti} alt="teenpatti" />
               <span> TEENPATTI T20</span>
