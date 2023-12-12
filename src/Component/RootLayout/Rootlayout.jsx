@@ -28,7 +28,8 @@ function RootLayout() {
         marginLeft={{base:'0rem',md:"1rem"}}
         flexBasis={{ base: "300%", md: "80%" }}
         alignItems={{base:"flex-start"}}
-
+        width={{base: '100vw'}}
+        
         
         >
           <Outlet 

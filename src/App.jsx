@@ -15,6 +15,7 @@ import RaceGame from "./Component/Home/Games/RaceGame";
 import Roulette from "./Component/Home/Games/Rouette";
 import DragonTiger from "./Component/Home/Games/DragonTiger";
 import AmarAkbarAnthony from "./Component/Home/Games/AmarAkbarAnthony";
+import TeenpattiVirtual from "./Component/Home/Games/TeenpattiVirtual";
 
 const router = createBrowserRouter(
   createRoutesFromElements( 
@@ -34,6 +35,7 @@ const router = createBrowserRouter(
         <Route path= "Rouette" element = {<Roulette/>}/>
         <Route path= "DragonTiger" element = {<DragonTiger/>}/>
         <Route path= "AmarAkbarAnthony" element = {<AmarAkbarAnthony/>}/>
+        <Route path="TeenpattiVirtual" element = {<TeenpattiVirtual/>}/>
 
         
       </Route>

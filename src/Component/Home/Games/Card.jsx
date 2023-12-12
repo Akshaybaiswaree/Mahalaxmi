@@ -54,9 +54,6 @@ import spadesJack from './Image/spades_jack.png';
 import spadesAce from './Image/spades_ace.png';
 import spadesKing from './Image/spades_king.png';
 import spadesQueen from './Image/spades_queen.png';
-import DemoImage1 from './Image/DemoImage1.svg';
-import DemoImage2 from './Image/DemoImage2.svg';
-import DemoImage3 from './Image/DemoImage3.svg';
 
 
 import './CardDeck.css';

@@ -41,26 +41,25 @@ import { blue, blueGrey, grey } from "@mui/material/colors";
              alignItems="center"
              justifyContent="center"
              position="relative"
-            width={{ base: "100vw", md: "105%", lg: "70%" }} 
+            width={{ base: "100vw", md: "105%", lg: "48vw" }} 
              height={{ base: "auto", md: "500px" }}
              p={2}
          
               >
-                <AspectRatio
-                  width="100vw"
-                  height="500px"
-                  borderRadius="10px"
-                  controls
-                >
-                  <iframe
-                title="naruto"
-                src={video}
-                allowFullScreen
+                 <AspectRatio
+                width="100vw"
+                height="500px"
+                borderRadius="10px"
+                controls
+              >
+                <iframe
 
-                style={{ objectFit: "cover", borderRadius: "10px" }}
-        
-                  />
-                </AspectRatio>
+                  title="naruto"
+                  src={video}
+                  allowFullScreen
+                  style={{ objectFit: "cover", borderRadius: "10px" }}
+                />
+              </AspectRatio>
                 <Flex
                   position="absolute"
                   bottom="0"
@@ -170,23 +169,23 @@ import { blue, blueGrey, grey } from "@mui/material/colors";
            {/* <Box width={{ base: "125%", md: "105%", lg: "60%" }} height="400px" mt={5} bg='black'> </Box>  */}
           
 
-          <Box width={{ base:'80vw' ,lg:'60%'}} bg="gray.100" display='flex' direction='row' mt={5} align={{base: "center"}}
-
+          <Box width={{ base:'100vw' ,lg:'60%'}} bg="gray.100" display='flex' direction='row' mt={5} p={5} 
+         
 
           >
 
-            <Flex gap={{base: "3px"}} textAlign="center">
-            <Flex width={{base:'33vw'}}>
-                <Box bg="blue.300" color="black" width={{base: '20vw'}} >2.12</Box>
-                <Box bg="pink.300" color="black" width={{base: '20vw'}} >2.22</Box>
+            <Flex gap={{base: "6px"}} textAlign="center" >
+            <Flex width={{base:'30vw',lg: '14vw' }} height={{base:"10"}}>
+                <Box bg="blue.300" color="black" width={{base:'150%'}}>2.12</Box>
+                <Box bg="pink.300" color="black" width={{base:'150%'}} >2.22</Box>
               </Flex>
-              <Flex width={{base:'33vw'}}>
-                <Box bg="blue.300" color="black" width={{base: '20vw'}} >2.12</Box>
-                <Box bg="pink.300" color="black" width={{base: '20vw'}}>2.22</Box>
+              <Flex width={{base:'30vw',lg: '15vw'}}>
+                <Box bg="blue.300" color="black" width={{base:'150%'}} >2.12</Box>
+                <Box bg="pink.300" color="black" width={{base:'150%'}} >2.22</Box>
               </Flex>
-              <Flex width={{base:'33vw'}}>
-                <Box bg="blue.300" color="black"  width={{base: '20vw'}} >2.12</Box>
-                <Box bg="pink.300" color="black"width={{base: '20vw'}}>2.22</Box>
+              <Flex width={{base: '30vw', lg: "15vw"}}>
+                <Box bg="blue.300" color="black" width={{base:'150%'}}>2.12</Box>
+                <Box bg="pink.300" color="black"width={{base:'150%'}}>2.22</Box>
               </Flex>
 
             </Flex>
@@ -227,7 +226,7 @@ import { blue, blueGrey, grey } from "@mui/material/colors";
          </Box>
 
 
-          <Stack direction={{base:'column',md:'row', lg:'row',}} display='flex' flex='wrap'  >
+          <Stack direction={{base:'column',md:'row', lg:'row',}} display='flex' flex='wrap' marginTop={{base:'5', lg:"10"}}  >
           <VStack  w={{lg:'230px'}} h={200} bg="gray.100" p={2}>
               <h3>1.8</h3>
               <Button  background='#091e79' width='full' color='white'>Odd</Button>
