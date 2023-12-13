@@ -2,6 +2,7 @@
 
 import {
   Box,
+  Button,
   Heading,
   Table,
   Tbody,
@@ -10,6 +11,8 @@ import {
   Thead,
   Tr,
 } from "@chakra-ui/react";
+
+import { NavLink } from "react-router-dom";
 
 export default function ProfitLossReport() {
   const gamesData = [
@@ -29,9 +32,26 @@ export default function ProfitLossReport() {
 
   return (
     <Box p={4}>
-      <Heading as="h1" mb={4}>
-        Profit-Loss Report
-      </Heading>
+      <Box
+        mb={4}
+        display="flex"
+        justifyContent="space-between"
+        alignItems="center"
+      >
+        <Heading as="h1" mb={4}>
+          Profit-Loss Report
+        </Heading>
+        <Button
+          as={NavLink}
+          to="/admin/dashboard"
+          colorScheme="teal"
+          backgroundColor={"#2b329b"}
+          textColor={"white"}
+          _hover={{ textColor: "black" }}
+        >
+          Dashboard
+        </Button>
+      </Box>
 
       {/* Game-wise breakdown */}
       <Box mb={8}>

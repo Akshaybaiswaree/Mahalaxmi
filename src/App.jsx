@@ -22,6 +22,7 @@ import AccountStatement from "./Component/Admin/AccountStatement";
 import UserRegistration from "./Component/Admin/UserRegistration";
 import ProfitLossReport from "./Component/Admin/ProfitLossReport";
 import BetHistory from "./Component/Admin/BetHistory";
+import ListOfGames from "./Component/Admin/ListOfGames";
 
 
 
@@ -49,6 +50,8 @@ const router = createBrowserRouter(
         <Route path="admin/accountstatement" element={<AccountStatement />} />
         <Route path="admin/profitlossreport" element={<ProfitLossReport />} />
         <Route path="admin/bethistory" element={<BetHistory />} />
+        <Route path="admin/listofgames" element={<ListOfGames />} />
+
 
 
       </Route>

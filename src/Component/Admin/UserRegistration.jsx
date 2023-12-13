@@ -3,10 +3,12 @@ import {
   Button,
   FormControl,
   FormLabel,
+  Heading,
   Input,
   VStack,
 } from "@chakra-ui/react";
 
+import { NavLink } from "react-router-dom";
 import { useState } from "react";
 
 // import AdminNavbar from "./AdminNavbar";
@@ -48,6 +50,26 @@ export default function UserRegistration() {
         alignItems="center"
         marginTop="-2rem"
       >
+        <Box
+        mb={4}
+        display="flex"
+        justifyContent="space-between"
+        alignItems="center"
+      >
+        <Heading as="h1" mb={4}>
+          Profit-Loss Report
+        </Heading>
+        <Button
+          as={NavLink}
+          to="/admin/dashboard"
+          colorScheme="teal"
+          backgroundColor={"#2b329b"}
+          textColor={"white"}
+          _hover={{ textColor: "black" }}
+        >
+          Dashboard
+        </Button>
+      </Box>
         <VStack spacing={4} width="400px">
           {/* Email */}
           <FormControl>
