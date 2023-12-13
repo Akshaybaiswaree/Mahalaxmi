@@ -281,18 +281,17 @@ import {
   Stack,
   MenuItem,
   MenuList,
-  Button,
-  Icon,
   MenuButton,
+  MenuDivider,
   Menu,
-  useDisclosure,
-  VStack,
+  Button,
 } from "@chakra-ui/react";
 import { AccountBalance, ZoomIn } from "@mui/icons-material";
 import { Link, NavLink } from "react-router-dom";
 import LOGO from "@/assets/Logo.png";
 import SearchIcon from "@mui/icons-material/Search";
 import { useState } from "react";
+import { ChevronDownIcon } from "@chakra-ui/icons";
 
 //import React from 'react'
 
@@ -324,7 +323,7 @@ const Navbar = () => {
           />
 
           <Box marginTop={{ base: "2rem", lg: "3.5rem" }}>
-            <Text>Mahalaxmi</Text>
+            <Text fontWeight={{lg:'600'}}>MahaLaxmi</Text>
           </Box>
         </Box>
 
@@ -353,19 +352,17 @@ const Navbar = () => {
             </Box>
 
             <Box>
-            <Text display={{  lg: "none" }}>
-              <AccountBalance />{" "}
-            </Text>
-
-
+              <Text display={{ lg: "none" }}>
+                <AccountBalance />{" "}
+              </Text>
             </Box>
-            
+
             <Text
               marginTop={{ lg: "2" }}
               marginRight={{ lg: "1.5rem" }}
               fontSize={{ lg: "20" }}
               justifyContent={{ base: "end" }}
-              display={{base:'none'}}
+              display={{ base: "none", md: "flex", lg: "flex" }}
             >
               Balance:0
             </Text>
@@ -377,6 +374,40 @@ const Navbar = () => {
             >
               Exposure:0
             </Text>
+            <Menu>
+              <MenuButton
+                px={4}
+                py={2}
+                // transition="all 0.2s"
+                // borderRadius="md"
+                // borderWidth="1px"
+                _hover={{ bg: "gray.400" }}
+                _expanded={{ bg: "blue.400" }}
+                _focus={{ boxShadow: "outline" }}
+                fontSize={{lg:'16'}}
+                fontWeight={{base:'500',md:'500',lg: "600"}}
+               
+
+              >MahaLaxmi<ChevronDownIcon />
+              </MenuButton>
+              <MenuList  textColor="black">
+                <MenuItem>Account Statement</MenuItem>
+                <MenuItem>Profit Loss Report</MenuItem>
+                
+                <MenuItem>Bet History</MenuItem>
+                <MenuItem>Unsettled Bet</MenuItem>
+                <MenuItem>Set Button Value</MenuItem>
+                <MenuItem>Change Password</MenuItem>
+                <MenuDivider />
+                <MenuItem>SignOut</MenuItem>
+              </MenuList>
+            </Menu>
+            
+            <Box bg="#2b329b">
+              <NavLink to="/admin">
+                <Button>Admin</Button>
+              </NavLink>
+            </Box>
 
            
           </Box>
