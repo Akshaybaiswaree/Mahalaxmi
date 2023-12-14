@@ -3,20 +3,23 @@ import {
   Button,
   FormControl,
   FormLabel,
+  Heading,
   Input,
   VStack,
 } from "@chakra-ui/react";
 
+import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import axios from "axios";
 
 // import AdminNavbar from "./AdminNavbar";
-
 
 export default function UserRegistration() {
   const [formData, setFormData] = useState({
     email: "",
+    password: "",
     name: "",
-    uid: "",
+    userId: "",
     coins: "",
   });
 
@@ -30,11 +33,27 @@ export default function UserRegistration() {
   };
 
   // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit =  async(e) => {
     e.preventDefault();
     // Add your logic for form submission here
-    console.log("Form submitted:", formData);
-  };
+    try {
+      console.log(formData);
+
+      const response = await axios.post(`http://localhost:4000/admin/add-user`, formData, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      console.log(response);
+      alert("Saved successfully.");
+      // navigate("/");
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+
+
 
   return (
     <>
@@ -49,6 +68,35 @@ export default function UserRegistration() {
         marginTop="-2rem"
       >
         <VStack spacing={4} width="400px">
+          <Box
+            mb={4}
+            display="flex"
+            justifyContent="space-between"
+            alignItems="center"
+            width="100%"
+          >
+            <Heading
+              as="h1"
+              mb={4}
+              fontSize="2xl"
+              fontWeight="bold"
+              marginLeft="4px" // Adjust the margin as needed
+              // color="teal.500"
+            >
+              User Registration
+            </Heading>
+            <Button
+              as={NavLink}
+              to="/admin/dashboard"
+              colorScheme="teal"
+              backgroundColor="#2b329b"
+              textColor="white"
+              _hover={{ textColor: "black" }}
+              marginRight="4px" // Adjust the margin as needed
+            >
+              Dashboard
+            </Button>
+          </Box>
           {/* Email */}
           <FormControl>
             <FormLabel>Email</FormLabel>
@@ -63,11 +111,11 @@ export default function UserRegistration() {
 
           {/* Password */}
           <FormControl>
-            <FormLabel>PassWord</FormLabel>
+            <FormLabel>Password</FormLabel>
             <Input
-              type="password"
+              type="text"
               name="password"
-              value={formData.coins}
+              value={formData.password}
               onChange={handleInputChange}
               placeholder="*******"
             />
@@ -90,8 +138,9 @@ export default function UserRegistration() {
             <FormLabel>UID</FormLabel>
             <Input
               type="text"
-              name="uid"
-              value={formData.uid}
+              name="userId"
+              value={formData.userId
+}
               onChange={handleInputChange}
               placeholder="Enter your UID"
             />
@@ -110,9 +159,11 @@ export default function UserRegistration() {
           </FormControl>
 
           {/* Submit Button */}
-          <Button colorScheme="teal" onClick={handleSubmit} width="100%">
-            Submit
-          </Button>
+          {/* <NavLink to="/admin/listofusers"> */}
+            <Button colorScheme="teal" width="full" mt={4} type="submit" onClick={handleSubmit}>
+              Submit
+            </Button> 
+          {/* </NavLink> */}
         </VStack>
       </Box>
     </>

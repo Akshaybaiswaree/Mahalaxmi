@@ -2,6 +2,7 @@
 
 import {
   Box,
+  Button,
   Heading,
   Table,
   TableCaption,
@@ -11,6 +12,8 @@ import {
   Thead,
   Tr,
 } from "@chakra-ui/react";
+
+import { NavLink } from "react-router-dom";
 
 export default function BetHistory() {
   const games = [
@@ -80,10 +83,26 @@ export default function BetHistory() {
 
   return (
     <Box p={4}>
-      <Heading as="h1" mb={4}>
-        Bet History
-      </Heading>
-
+     <Box
+        mb={4}
+        display="flex"
+        justifyContent="space-between"
+        alignItems="center"
+      >
+        <Heading as="h1" mb={4}>
+          Bet History
+        </Heading>
+        <Button
+          as={NavLink}
+          to="/admin/dashboard"
+          colorScheme="teal"
+          backgroundColor={"#2b329b"}
+          textColor={"white"}
+          _hover={{ textColor: "black" }}
+        >
+          Dashboard
+        </Button>
+      </Box>
       {/* Table for each game */}
       {games.map((game) => (
         <Box key={game.id} mb={8}>

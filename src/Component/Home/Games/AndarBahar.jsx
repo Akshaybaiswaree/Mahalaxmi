@@ -66,6 +66,7 @@ const AndarBahar = () => {
       setInputValue(0);
     }
   };
+  
   return (
     <>
       <ChakraProvider>

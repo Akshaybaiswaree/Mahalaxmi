@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Heading,
   Table,
   TableCaption,
@@ -9,6 +10,8 @@ import {
   Thead,
   Tr,
 } from "@chakra-ui/react";
+
+import { NavLink } from "react-router-dom";
 
 // import React from "react";
 
@@ -180,9 +183,26 @@ export default function AccountStatement() {
 
   return (
     <Box p={4}>
-      <Heading as="h1" mb={4}>
-        Account Statement
-      </Heading>
+       <Box
+        mb={4}
+        display="flex"
+        justifyContent="space-between"
+        alignItems="center"
+      >
+        <Heading as="h1" mb={4}>
+          Account Statement
+        </Heading>
+        <Button
+          as={NavLink}
+          to="/admin/dashboard"
+          colorScheme="teal"
+          backgroundColor={"#2b329b"}
+          textColor={"white"}
+          _hover={{ textColor: "black" }}
+        >
+          Dashboard
+        </Button>
+      </Box>
       {users.map((user) => (
         <Box key={user.id} mb={8}>
           <Heading as="h2" size="md" mb={4}>
