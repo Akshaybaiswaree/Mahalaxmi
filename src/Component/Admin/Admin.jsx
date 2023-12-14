@@ -7,15 +7,20 @@ import {
   Input,
 } from "@chakra-ui/react";
 
-import AdminNavbar from "./AdminNavbar";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import axios from "axios";
+
+// import AdminNavbar from "./AdminNavbar";
+
+
 
 export default function Admin() {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
+
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -25,10 +30,23 @@ export default function Admin() {
     }));
   };
 
-  const handleSubmit = (e) => {
+
+  const handleLogin = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Add your logic for admin login here
+    try {
+       console.log(formData);
+      // eslint-disable-next-line no-undef
+      const response = await axios.post(`http://localhost:4000/admin/sign-in`, formData, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      console.log(response);
+      alert("Saved successfully.");
+      // navigate("/");
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
@@ -46,7 +64,7 @@ export default function Admin() {
         boxShadow="lg"
         marginTop="-20rem"
       >
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleLogin}>
           <FormControl>
             <FormLabel>Email</FormLabel>
             <Input
@@ -68,11 +86,11 @@ export default function Admin() {
               placeholder="Enter your password"
             />
           </FormControl>
-          <NavLink to="/admin/dashboard">
+          
             <Button colorScheme="teal" width="full" mt={4} type="submit">
               Submit
             </Button>
-          </NavLink>
+         
         </form>
       </Box>
     </Flex>
