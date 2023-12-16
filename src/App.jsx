@@ -23,6 +23,7 @@ import UserRegistration from "./Component/Admin/UserRegistration";
 import ProfitLossReport from "./Component/Admin/ProfitLossReport";
 import BetHistory from "./Component/Admin/BetHistory";
 import ListOfGames from "./Component/Admin/ListOfGames";
+import ListOfUsers from "./Component/Admin/ListOfUsers";
 
 
 
@@ -30,6 +31,15 @@ import ListOfGames from "./Component/Admin/ListOfGames";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
+      <Route path="admin" element={<Admin/>} />
+        <Route path="admin/dashboard" element={<AdminDashboard/>} />
+        <Route path="admin/userregistration" element={<UserRegistration />} />
+        <Route path="admin/accountstatement" element={<AccountStatement />} />
+        <Route path="admin/profitlossreport" element={<ProfitLossReport />} />
+        <Route path="admin/bethistory" element={<BetHistory />} />
+        <Route path="admin/listofgames" element={<ListOfGames />} />
+        <Route path="admin/listofusers" element={<ListOfUsers/>} />
+
       <Route index element={<Login />} />
       <Route path="SignUp" element={<SignUP />} />
       <Route path="SignUp" element={<Login />} />
@@ -44,14 +54,7 @@ const router = createBrowserRouter(
         <Route path="AmarAkbarAnthony" element={<AmarAkbarAnthony />} />
         <Route path="TeenpattiVirtual" element={<TeenpattiVirtual />} />
 
-        <Route path="admin" element={<Admin/>} />
-        <Route path="admin/dashboard" element={<AdminDashboard/>} />
-        <Route path="admin/userregistration" element={<UserRegistration />} />
-        <Route path="admin/accountstatement" element={<AccountStatement />} />
-        <Route path="admin/profitlossreport" element={<ProfitLossReport />} />
-        <Route path="admin/bethistory" element={<BetHistory />} />
-        <Route path="admin/listofgames" element={<ListOfGames />} />
-
+        
 
 
       </Route>

@@ -16,7 +16,7 @@ const AdminSidebar = () => {
         mt="-5rem"
         textColor={"white"}
         h="100vh" // Set the height to 100vh (100% of viewport height)
-        minHeight="1000px" // Set a minimum height as needed
+        minHeight="1200px" // Set a minimum height as needed
         height="100%" // Ensure the container takes full height
       >
         <Box>
@@ -45,9 +45,9 @@ const AdminSidebar = () => {
                 colorScheme="teal"
                 variant="ghost"
                 size="lg"
-                bg="#2b329b"
-                textColor="white"
-                _hover={{ bg: "#2b329b", textColor: "white" }}
+                backgroundColor={"#2b329b"}
+                textColor={"white"}
+                _hover={{ textColor: "black" }}
               >
                 Dashboard
               </Button>
@@ -58,11 +58,24 @@ const AdminSidebar = () => {
                 colorScheme="teal"
                 variant="ghost"
                 size="lg"
-                bg="#2b329b"
-                textColor="white"
-                _hover={{ bg: "#2b329b", textColor: "white" }}
+                backgroundColor={"#2b329b"}
+                textColor={"white"}
+                _hover={{ textColor: "black" }}
               >
                 List of Games
+              </Button>
+            </NavLink>
+
+            <NavLink to="/admin/listofusers" style={{ textDecoration: "none" }}>
+              <Button
+                colorScheme="teal"
+                variant="ghost"
+                size="lg"
+                backgroundColor={"#2b329b"}
+                textColor={"white"}
+                _hover={{ textColor: "black" }}
+              >
+                List of Users
               </Button>
             </NavLink>
 
@@ -74,9 +87,9 @@ const AdminSidebar = () => {
                 colorScheme="teal"
                 variant="ghost"
                 size="lg"
-                bg="#2b329b"
-                textColor="white"
-                _hover={{ bg: "#2b329b", textColor: "white" }}
+                backgroundColor={"#2b329b"}
+                textColor={"white"}
+                _hover={{ textColor: "black" }}
               >
                 Account Statement
               </Button>
@@ -90,9 +103,9 @@ const AdminSidebar = () => {
                 colorScheme="teal"
                 variant="ghost"
                 size="lg"
-                bg="#2b329b"
-                textColor="white"
-                _hover={{ bg: "#2b329b", textColor: "white" }}
+                backgroundColor={"#2b329b"}
+                textColor={"white"}
+                _hover={{ textColor: "black" }}
               >
                 Profit Loss Report
               </Button>
@@ -103,9 +116,9 @@ const AdminSidebar = () => {
                 colorScheme="teal"
                 variant="ghost"
                 size="lg"
-                bg="#2b329b"
-                textColor="white"
-                _hover={{ bg: "#2b329b", textColor: "white" }}
+                backgroundColor={"#2b329b"}
+                textColor={"white"}
+                _hover={{ textColor: "black" }}
               >
                 Bet History
               </Button>
@@ -116,9 +129,9 @@ const AdminSidebar = () => {
                 colorScheme="teal"
                 variant="ghost"
                 size="lg"
-                bg="#2b329b"
-                textColor="white"
-                _hover={{ bg: "#2b329b", textColor: "white" }}
+                backgroundColor={"#2b329b"}
+                textColor={"white"}
+                _hover={{ textColor: "black" }}
               >
                 Settings
               </Button>
@@ -129,9 +142,9 @@ const AdminSidebar = () => {
                 colorScheme="teal"
                 variant="ghost"
                 size="lg"
-                bg="#2b329b"
-                textColor="white"
-                _hover={{ bg: "#2b329b", textColor: "white" }}
+                backgroundColor={"#2b329b"}
+                textColor={"white"}
+                _hover={{ textColor: "black" }}
               >
                 Log Out
               </Button>

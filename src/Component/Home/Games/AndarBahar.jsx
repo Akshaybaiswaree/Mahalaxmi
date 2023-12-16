@@ -24,12 +24,14 @@ import { Icon } from "@iconify/react";
 import { AspectRatio } from "@chakra-ui/react";
 import video from "../Games/AnderBahar.mp4";
 import { useEffect, useState } from "react";
+import axios from "axios";
 
 const AndarBahar = () => {
   const [toggle, setToggle] = useState(false); // toggle Functionallity
   const [toggle2, setToggle2] = useState(false);
-  const [userCoine, setUserCoine] = useState(500); // Actual Coin
+  const [userCoine, setUserCoine] = useState(5000000); // Actual Coin
   const [inputValue, setInputValue] = useState(0); // For Input
+  const [bet, setBet ] = useState(0);
 
   console.log(inputValue);
 
@@ -41,7 +43,7 @@ const AndarBahar = () => {
     setToggle2(!toggle2);
   };
 
-  const AndarHandler = () => {
+  const AndarHandler =async () => {
     if (inputValue > userCoine) {
       alert(
         "Insufficient funds in your account. Please add funds to continue."
@@ -51,6 +53,18 @@ const AndarBahar = () => {
       const totalCoin = userCoine - inputValue;
       setUserCoine(totalCoin);
       setInputValue(0);
+    }
+    setBet(0)
+    try{
+       const payload = {
+        amount:inputValue,
+        type:bet
+       }
+       console.log(payload)
+        const response = await axios.post(`http://localhost:4000/user/andarBahar/create-bet`,payload)
+        console.log(response)
+      }catch(err){
+      console.log(err)
     }
   };
 
@@ -65,8 +79,21 @@ const AndarBahar = () => {
       setUserCoine(totalCoin);
       setInputValue(0);
     }
+    setBet(1)
+    console.log(bet)
+    try{
+       const payload = {
+        amount:inputValue,
+        type:bet
+       }
+       console.log(payload)
+      //  const response = await axios.post(`http://localhost:4000/user/andarBahar/create-bet`,payload)
+        //console.log(response)
+      }catch(err){
+      console.log(err)
+    }
+    
   };
-  
   return (
     <>
       <ChakraProvider>

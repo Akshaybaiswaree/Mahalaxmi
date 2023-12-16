@@ -24,7 +24,7 @@ export default function AdminNavbar() {
         <Flex alignItems="center" flex="1" justify="flex-end">
           {/* Adjusted justify */}
           {/* Styled text */}
-          <Text fontWeight="bold" textColor={"black"} mr={"7rem"}>
+          <Text fontWeight="bold" textColor={"black"} mr={"15rem"}>
             {/* Added mr to manage space */}
             Hello
             <Text as="span" fontStyle="italic">
@@ -33,7 +33,6 @@ export default function AdminNavbar() {
           </Text>
           {/* Input search field with hover effect */}
           <HStack width="fit-content" spacing={0} justify="flex-end">
-            {" "}
             {/* Adjusted width and spacing */}
             <Input
               placeholder="Search..."
@@ -41,7 +40,7 @@ export default function AdminNavbar() {
               borderColor="gray.300"
               borderRadius="full"
               p={2}
-              mr={"8rem"}
+              mr={"10rem"}
             />
           </HStack>
           {/* Avatar with demo image */}
@@ -49,7 +48,7 @@ export default function AdminNavbar() {
             size="md"
             name="John Doe"
             src="https://via.placeholder.com/150"
-            ml={"2rem"}
+            ml={"6rem"}
           />
           {/* User Registration Button */}
           <NavLink to="/admin/userregistration">
@@ -57,7 +56,7 @@ export default function AdminNavbar() {
               backgroundColor={"#2b329b"}
               textColor={"white"}
               _hover={{ textColor: "black" }}
-              ml={"1rem"}
+              ml={"4rem"}
             >
               Add User Registration
             </Button>
