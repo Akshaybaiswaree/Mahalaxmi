@@ -25,15 +25,16 @@ import { AspectRatio } from "@chakra-ui/react";
 import video from "../Games/AnderBahar.mp4";
 import { useEffect, useState } from "react";
 
+import io from "socket.io-client";
+const ENDPOINT = "http://localhost:4000"
 const AndarBahar = () => {
   const [toggle, setToggle] = useState(false); // toggle Functionallity
   const [toggle2, setToggle2] = useState(false);
   const [userCoine, setUserCoine] = useState(500); // Actual Coin
   const [inputValue, setInputValue] = useState(0); // For Input
-
-  console.log(inputValue);
-
+let socket
   useEffect(() => {}, [inputValue]);
+ socket = io(ENDPOINT)
   const togglhandler = () => {
     setToggle(!toggle);
   };
